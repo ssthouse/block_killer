@@ -40,10 +40,10 @@ module top_greedy_snake
 	wire [1:0] game_state;
 	
 	//color data
-	wire [23:0] column_0 = 1;
-	wire [23:0] column_1 = 1;
-	wire [23:0] column_2 = 1;
-	wire [23:0] column_3 = 1;
+	wire [23:0] column_0;
+	wire [23:0] column_1;
+	wire [23:0] column_2;
+	wire [23:0] column_3;
 
 	State_Ctrl state_ctrl
 	(
@@ -100,8 +100,8 @@ module top_greedy_snake
 		//game state
 		.game_state(game_state),
 		//key control
-		.left_key_press(left_key_down),
-		.right_key_press(right_key_down),
+		.left_key_press(left_key_press),
+		.right_key_press(right_key_press),
 		.down_key_press(down_key_down),
 		//output color data
 		.column_0(column_0),
@@ -113,7 +113,7 @@ module top_greedy_snake
 	);
 	
 	
-//****************************out code *****************************
+//****************************our code *****************************
 
 
 /***************************************************************************/

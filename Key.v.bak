@@ -9,7 +9,7 @@
 	//input down,
 	
 	output reg left_key_press,
-	output reg right_key_press
+	output reg right_key_press,
 	//output reg up_key_press,
 	//output reg down_key_press
 

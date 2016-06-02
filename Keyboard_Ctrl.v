@@ -14,7 +14,7 @@ module Keyboard_Ctrl
 	output reg restart_key_press
 );
 
-always@(posedge CLK_50M)
+always@(posedge CLK_50M or negedge RST_N)
 begin
 	if(!RST_N)
 		begin 

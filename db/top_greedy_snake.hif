@@ -570,42 +570,6 @@ ps2_top:U7
 
 # end
 # entity
-Keyboard_Ctrl
-# storage
-db|top_greedy_snake.(28).cnf
-db|top_greedy_snake.(28).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-Keyboard_Ctrl.v
-9a9ff239174bc9693e17913aecf1a88
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-Keyboard_Ctrl:keyboard_ctrl
-}
-# macro_sequence
-
-# end
-# entity
 VGA_Control
 # storage
 db|top_greedy_snake.(29).cnf
@@ -670,42 +634,6 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 }
 # hierarchies {
 State_Ctrl:state_ctrl
-}
-# macro_sequence
-
-# end
-# entity
-top_greedy_snake
-# storage
-db|top_greedy_snake.(0).cnf
-db|top_greedy_snake.(0).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-top_greedy_snake.v
-84f3ee87d9668c16927ae2d696ac2f
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-|
 }
 # macro_sequence
 
@@ -2322,42 +2250,6 @@ denominator0
 
 # end
 # entity
-Game_Ctrl
-# storage
-db|top_greedy_snake.(20).cnf
-db|top_greedy_snake.(20).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-Game_Ctrl.v
-60185eefd654a7c631a69ea8e6bb511
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-Game_Ctrl:game_ctrl
-}
-# macro_sequence
-
-# end
-# entity
 Display_Ctrl
 # storage
 db|top_greedy_snake.(7).cnf
@@ -2389,6 +2281,150 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 }
 # hierarchies {
 Display_Ctrl:display_ctrl
+}
+# macro_sequence
+
+# end
+# entity
+Game_Ctrl
+# storage
+db|top_greedy_snake.(20).cnf
+db|top_greedy_snake.(20).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+Game_Ctrl.v
+f83e33db99f606767e26f72103479a8
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+Game_Ctrl:game_ctrl
+}
+# macro_sequence
+
+# end
+# entity
+Keyboard_Ctrl
+# storage
+db|top_greedy_snake.(28).cnf
+db|top_greedy_snake.(28).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+Keyboard_Ctrl.v
+6489d42d74e8e2edf9f791953f79526b
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+Keyboard_Ctrl:keyboard_ctrl
+}
+# macro_sequence
+
+# end
+# entity
+top_greedy_snake
+# storage
+db|top_greedy_snake.(0).cnf
+db|top_greedy_snake.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+top_greedy_snake.v
+5841fa5ef82759ef52613a5f1db318
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+Key
+# storage
+db|top_greedy_snake.(43).cnf
+db|top_greedy_snake.(43).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+Key.v
+b171cf95479babab6a6ef9d347fc831e
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+Key:key
 }
 # macro_sequence
 

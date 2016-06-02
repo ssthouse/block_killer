@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for top_greedy_snake
-Thu Jun 02 20:39:30 2016
+Thu Jun 02 23:56:20 2016
 Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
 
 
@@ -97,23 +97,23 @@ applicable agreement for further details.
 +------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------+
 
 
-+------------------------------------------------+
-; Slow 1200mV 85C Model Fmax Summary             ;
-+----------+-----------------+------------+------+
-; Fmax     ; Restricted Fmax ; Clock Name ; Note ;
-+----------+-----------------+------------+------+
-; 92.7 MHz ; 92.7 MHz        ; CLK_50M    ;      ;
-+----------+-----------------+------------+------+
++-------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary              ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 74.58 MHz ; 74.58 MHz       ; CLK_50M    ;      ;
++-----------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
 +-------------------------------------+
 ; Slow 1200mV 85C Model Setup Summary ;
-+---------+--------+------------------+
-; Clock   ; Slack  ; End Point TNS    ;
-+---------+--------+------------------+
-; CLK_50M ; -9.787 ; -208.908         ;
-+---------+--------+------------------+
++---------+---------+-----------------+
+; Clock   ; Slack   ; End Point TNS   ;
++---------+---------+-----------------+
+; CLK_50M ; -12.408 ; -532.999        ;
++---------+---------+-----------------+
 
 
 +------------------------------------+
@@ -121,7 +121,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------+-------+------------------+
 ; Clock   ; Slack ; End Point TNS    ;
 +---------+-------+------------------+
-; CLK_50M ; 0.359 ; 0.000            ;
+; CLK_50M ; 0.358 ; 0.000            ;
 +---------+-------+------------------+
 
 
@@ -137,112 +137,112 @@ No paths to report.
 No paths to report.
 
 
-+------------------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Minimum Pulse Width                                                                                          ;
-+--------+--------------+----------------+-------+------------+---------+------------+-----------------------------------------------+
-; Slack  ; Actual Width ; Required Width ; CCPP  ; Type       ; Clock   ; Clock Edge ; Target                                        ;
-+--------+--------------+----------------+-------+------------+---------+------------+-----------------------------------------------+
-; -3.000 ; 1.000        ; 4.000          ; 0.000 ; Port Rate  ; CLK_50M ; Rise       ; CLK_50M                                       ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|hsync               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|temp_color[2]       ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|vsync               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[0]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[10]           ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[1]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[2]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[3]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[4]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[5]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[6]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[7]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[8]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[9]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[0]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[1]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[2]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[3]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[4]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[5]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[6]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[7]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[8]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[9]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array_0[0][2]             ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array_0[1][2]             ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array_0[2][2]             ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array_0[3][2]             ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array_0[4][2]             ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array_0[5][2]             ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array_0[6][2]             ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array_0[7][2]             ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[0]                ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[10]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[11]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[12]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[13]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[14]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[15]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[16]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[17]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[18]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[19]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[1]                ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[20]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[21]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[22]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[23]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[24]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[25]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[26]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[27]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[28]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[29]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[2]                ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[30]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[31]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[3]                ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[4]                ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[5]                ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[6]                ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[7]                ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[8]                ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[9]                ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|current_block_pos[2]      ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|current_block_pos[3]      ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|current_block_pos[4]      ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|game_over                 ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Keyboard:U6|down_key_press                    ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Keyboard:U6|left_key_press                    ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Keyboard:U6|right_key_press                   ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Keyboard_Ctrl:keyboard_ctrl|play_key_press    ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Keyboard_Ctrl:keyboard_ctrl|restart_key_press ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; State_Ctrl:state_ctrl|game_state[0]           ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; State_Ctrl:state_ctrl|game_state[1]           ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; State_Ctrl:state_ctrl|led[0]                  ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; State_Ctrl:state_ctrl|led[1]                  ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; State_Ctrl:state_ctrl|led[2]                  ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|key_f0                             ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|num[0]                             ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|num[1]                             ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|num[2]                             ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|num[3]                             ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|ps2_byte_r[0]                      ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|ps2_byte_r[1]                      ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|ps2_byte_r[2]                      ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|ps2_byte_r[3]                      ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|ps2_byte_r[4]                      ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|ps2_byte_r[5]                      ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|ps2_byte_r[6]                      ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|ps2_byte_r[7]                      ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|ps2_state_r                        ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|ps2k_clk_r0                        ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|ps2k_clk_r1                        ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|ps2k_clk_r2                        ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|temp_data[0]                       ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|temp_data[1]                       ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|temp_data[2]                       ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|temp_data[3]                       ;
-+--------+--------------+----------------+-------+------------+---------+------------+-----------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width                                                                                    ;
++--------+--------------+----------------+-------+------------+---------+------------+-----------------------------------------+
+; Slack  ; Actual Width ; Required Width ; CCPP  ; Type       ; Clock   ; Clock Edge ; Target                                  ;
++--------+--------------+----------------+-------+------------+---------+------------+-----------------------------------------+
+; -3.000 ; 1.000        ; 4.000          ; 0.000 ; Port Rate  ; CLK_50M ; Rise       ; CLK_50M                                 ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|hsync         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|temp_color[1] ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|temp_color[2] ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|vsync         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[0]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[10]     ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[1]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[3]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[4]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[5]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[6]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[7]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[8]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[9]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[0]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[1]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[3]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[4]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[5]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[6]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[7]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[8]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[9]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[0][0][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[0][1][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[0][2][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[0][3][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[0][4][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[0][5][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[0][6][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[0][7][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[1][0][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[1][1][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[1][2][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[1][3][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[1][4][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[1][5][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[1][6][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[1][7][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[2][0][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[2][1][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[2][2][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[2][3][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[2][4][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[2][5][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[2][6][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[2][7][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[3][0][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[3][1][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[3][2][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[3][3][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[3][4][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[3][5][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[3][6][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[3][7][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|block_pos[0]        ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|block_pos[1]        ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|block_pos[2]        ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|block_pos[3]        ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|block_pos[4]        ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[0]          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[10]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[11]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[12]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[13]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[14]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[15]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[16]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[17]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[18]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[19]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[1]          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[20]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[21]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[22]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[23]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[24]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[25]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[26]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[27]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[28]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[29]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[2]          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[30]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[31]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[3]          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[4]          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[5]          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[6]          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[7]          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[8]          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[9]          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|game_over           ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Key:key|clk_cnt[0]                      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Key:key|clk_cnt[10]                     ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Key:key|clk_cnt[11]                     ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Key:key|clk_cnt[12]                     ;
++--------+--------------+----------------+-------+------------+---------+------------+-----------------------------------------+
 
 
 +-----------------------------------------------------------------------+
@@ -250,9 +250,9 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; RSTn      ; CLK_50M    ; 5.023 ; 5.756 ; Rise       ; CLK_50M         ;
-; ps2k_clk  ; CLK_50M    ; 1.719 ; 2.137 ; Rise       ; CLK_50M         ;
-; ps2k_data ; CLK_50M    ; 1.964 ; 2.458 ; Rise       ; CLK_50M         ;
+; RSTn      ; CLK_50M    ; 4.376 ; 4.886 ; Rise       ; CLK_50M         ;
+; ps2k_clk  ; CLK_50M    ; 1.498 ; 1.884 ; Rise       ; CLK_50M         ;
+; ps2k_data ; CLK_50M    ; 1.988 ; 2.428 ; Rise       ; CLK_50M         ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -261,26 +261,27 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; RSTn      ; CLK_50M    ; -3.318 ; -3.833 ; Rise       ; CLK_50M         ;
-; ps2k_clk  ; CLK_50M    ; -1.355 ; -1.761 ; Rise       ; CLK_50M         ;
-; ps2k_data ; CLK_50M    ; -1.232 ; -1.645 ; Rise       ; CLK_50M         ;
+; RSTn      ; CLK_50M    ; -2.421 ; -2.906 ; Rise       ; CLK_50M         ;
+; ps2k_clk  ; CLK_50M    ; -1.132 ; -1.497 ; Rise       ; CLK_50M         ;
+; ps2k_data ; CLK_50M    ; -1.278 ; -1.663 ; Rise       ; CLK_50M         ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
-+---------------------------------------------------------------------------+
-; Clock to Output Times                                                     ;
-+---------------+------------+-------+-------+------------+-----------------+
-; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+---------------+------------+-------+-------+------------+-----------------+
-; color_out[*]  ; CLK_50M    ; 9.504 ; 9.698 ; Rise       ; CLK_50M         ;
-;  color_out[2] ; CLK_50M    ; 9.504 ; 9.698 ; Rise       ; CLK_50M         ;
-; hsync         ; CLK_50M    ; 5.532 ; 5.499 ; Rise       ; CLK_50M         ;
-; led_out[*]    ; CLK_50M    ; 8.713 ; 8.934 ; Rise       ; CLK_50M         ;
-;  led_out[0]   ; CLK_50M    ; 8.713 ; 8.934 ; Rise       ; CLK_50M         ;
-;  led_out[1]   ; CLK_50M    ; 7.373 ; 7.537 ; Rise       ; CLK_50M         ;
-;  led_out[2]   ; CLK_50M    ; 7.204 ; 7.162 ; Rise       ; CLK_50M         ;
-; vsync         ; CLK_50M    ; 5.633 ; 5.610 ; Rise       ; CLK_50M         ;
-+---------------+------------+-------+-------+------------+-----------------+
++-----------------------------------------------------------------------------+
+; Clock to Output Times                                                       ;
++---------------+------------+--------+--------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------+------------+--------+--------+------------+-----------------+
+; color_out[*]  ; CLK_50M    ; 10.008 ; 10.216 ; Rise       ; CLK_50M         ;
+;  color_out[1] ; CLK_50M    ; 10.008 ; 10.216 ; Rise       ; CLK_50M         ;
+;  color_out[2] ; CLK_50M    ; 9.956  ; 10.182 ; Rise       ; CLK_50M         ;
+; hsync         ; CLK_50M    ; 5.692  ; 5.649  ; Rise       ; CLK_50M         ;
+; led_out[*]    ; CLK_50M    ; 7.944  ; 8.200  ; Rise       ; CLK_50M         ;
+;  led_out[0]   ; CLK_50M    ; 7.944  ; 8.200  ; Rise       ; CLK_50M         ;
+;  led_out[1]   ; CLK_50M    ; 6.656  ; 6.800  ; Rise       ; CLK_50M         ;
+;  led_out[2]   ; CLK_50M    ; 6.469  ; 6.367  ; Rise       ; CLK_50M         ;
+; vsync         ; CLK_50M    ; 5.388  ; 5.373  ; Rise       ; CLK_50M         ;
++---------------+------------+--------+--------+------------+-----------------+
 
 
 +---------------------------------------------------------------------------+
@@ -288,34 +289,35 @@ No paths to report.
 +---------------+------------+-------+-------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +---------------+------------+-------+-------+------------+-----------------+
-; color_out[*]  ; CLK_50M    ; 6.147 ; 6.195 ; Rise       ; CLK_50M         ;
-;  color_out[2] ; CLK_50M    ; 6.147 ; 6.195 ; Rise       ; CLK_50M         ;
-; hsync         ; CLK_50M    ; 5.421 ; 5.390 ; Rise       ; CLK_50M         ;
-; led_out[*]    ; CLK_50M    ; 7.026 ; 6.985 ; Rise       ; CLK_50M         ;
-;  led_out[0]   ; CLK_50M    ; 8.523 ; 8.739 ; Rise       ; CLK_50M         ;
-;  led_out[1]   ; CLK_50M    ; 7.188 ; 7.346 ; Rise       ; CLK_50M         ;
-;  led_out[2]   ; CLK_50M    ; 7.026 ; 6.985 ; Rise       ; CLK_50M         ;
-; vsync         ; CLK_50M    ; 5.518 ; 5.496 ; Rise       ; CLK_50M         ;
+; color_out[*]  ; CLK_50M    ; 6.527 ; 6.589 ; Rise       ; CLK_50M         ;
+;  color_out[1] ; CLK_50M    ; 6.773 ; 6.830 ; Rise       ; CLK_50M         ;
+;  color_out[2] ; CLK_50M    ; 6.527 ; 6.589 ; Rise       ; CLK_50M         ;
+; hsync         ; CLK_50M    ; 5.574 ; 5.532 ; Rise       ; CLK_50M         ;
+; led_out[*]    ; CLK_50M    ; 6.320 ; 6.222 ; Rise       ; CLK_50M         ;
+;  led_out[0]   ; CLK_50M    ; 7.785 ; 8.034 ; Rise       ; CLK_50M         ;
+;  led_out[1]   ; CLK_50M    ; 6.500 ; 6.638 ; Rise       ; CLK_50M         ;
+;  led_out[2]   ; CLK_50M    ; 6.320 ; 6.222 ; Rise       ; CLK_50M         ;
+; vsync         ; CLK_50M    ; 5.283 ; 5.269 ; Rise       ; CLK_50M         ;
 +---------------+------------+-------+-------+------------+-----------------+
 
 
-+--------------------------------------------------+
-; Slow 1200mV 0C Model Fmax Summary                ;
-+------------+-----------------+------------+------+
-; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
-+------------+-----------------+------------+------+
-; 103.75 MHz ; 103.75 MHz      ; CLK_50M    ;      ;
-+------------+-----------------+------------+------+
++-------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary               ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 83.35 MHz ; 83.35 MHz       ; CLK_50M    ;      ;
++-----------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
 +------------------------------------+
 ; Slow 1200mV 0C Model Setup Summary ;
-+---------+--------+-----------------+
-; Clock   ; Slack  ; End Point TNS   ;
-+---------+--------+-----------------+
-; CLK_50M ; -8.639 ; -175.989        ;
-+---------+--------+-----------------+
++---------+---------+----------------+
+; Clock   ; Slack   ; End Point TNS  ;
++---------+---------+----------------+
+; CLK_50M ; -10.998 ; -459.747       ;
++---------+---------+----------------+
 
 
 +-----------------------------------+
@@ -339,112 +341,112 @@ No paths to report.
 No paths to report.
 
 
-+------------------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Minimum Pulse Width                                                                                           ;
-+--------+--------------+----------------+-------+------------+---------+------------+-----------------------------------------------+
-; Slack  ; Actual Width ; Required Width ; CCPP  ; Type       ; Clock   ; Clock Edge ; Target                                        ;
-+--------+--------------+----------------+-------+------------+---------+------------+-----------------------------------------------+
-; -3.000 ; 1.000        ; 4.000          ; 0.000 ; Port Rate  ; CLK_50M ; Rise       ; CLK_50M                                       ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|hsync               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|temp_color[2]       ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|vsync               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[0]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[10]           ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[1]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[2]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[3]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[4]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[5]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[6]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[7]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[8]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[9]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[0]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[1]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[2]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[3]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[4]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[5]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[6]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[7]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[8]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[9]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array_0[0][2]             ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array_0[1][2]             ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array_0[2][2]             ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array_0[3][2]             ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array_0[4][2]             ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array_0[5][2]             ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array_0[6][2]             ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array_0[7][2]             ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[0]                ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[10]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[11]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[12]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[13]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[14]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[15]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[16]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[17]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[18]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[19]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[1]                ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[20]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[21]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[22]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[23]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[24]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[25]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[26]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[27]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[28]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[29]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[2]                ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[30]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[31]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[3]                ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[4]                ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[5]                ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[6]                ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[7]                ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[8]                ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[9]                ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|current_block_pos[2]      ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|current_block_pos[3]      ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|current_block_pos[4]      ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|game_over                 ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Keyboard:U6|down_key_press                    ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Keyboard:U6|left_key_press                    ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Keyboard:U6|right_key_press                   ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Keyboard_Ctrl:keyboard_ctrl|play_key_press    ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Keyboard_Ctrl:keyboard_ctrl|restart_key_press ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; State_Ctrl:state_ctrl|game_state[0]           ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; State_Ctrl:state_ctrl|game_state[1]           ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; State_Ctrl:state_ctrl|led[0]                  ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; State_Ctrl:state_ctrl|led[1]                  ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; State_Ctrl:state_ctrl|led[2]                  ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|key_f0                             ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|num[0]                             ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|num[1]                             ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|num[2]                             ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|num[3]                             ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|ps2_byte_r[0]                      ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|ps2_byte_r[1]                      ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|ps2_byte_r[2]                      ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|ps2_byte_r[3]                      ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|ps2_byte_r[4]                      ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|ps2_byte_r[5]                      ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|ps2_byte_r[6]                      ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|ps2_byte_r[7]                      ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|ps2_state_r                        ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|ps2k_clk_r0                        ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|ps2k_clk_r1                        ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|ps2k_clk_r2                        ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|temp_data[0]                       ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|temp_data[1]                       ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|temp_data[2]                       ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|temp_data[3]                       ;
-+--------+--------------+----------------+-------+------------+---------+------------+-----------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width                                                                                     ;
++--------+--------------+----------------+-------+------------+---------+------------+-----------------------------------------+
+; Slack  ; Actual Width ; Required Width ; CCPP  ; Type       ; Clock   ; Clock Edge ; Target                                  ;
++--------+--------------+----------------+-------+------------+---------+------------+-----------------------------------------+
+; -3.000 ; 1.000        ; 4.000          ; 0.000 ; Port Rate  ; CLK_50M ; Rise       ; CLK_50M                                 ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|hsync         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|temp_color[1] ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|temp_color[2] ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|vsync         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[0]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[10]     ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[1]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[3]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[4]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[5]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[6]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[7]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[8]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[9]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[0]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[1]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[3]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[4]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[5]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[6]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[7]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[8]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[9]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[0][0][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[0][1][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[0][2][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[0][3][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[0][4][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[0][5][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[0][6][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[0][7][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[1][0][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[1][1][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[1][2][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[1][3][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[1][4][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[1][5][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[1][6][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[1][7][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[2][0][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[2][1][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[2][2][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[2][3][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[2][4][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[2][5][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[2][6][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[2][7][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[3][0][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[3][1][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[3][2][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[3][3][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[3][4][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[3][5][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[3][6][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[3][7][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|block_pos[0]        ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|block_pos[1]        ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|block_pos[2]        ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|block_pos[3]        ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|block_pos[4]        ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[0]          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[10]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[11]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[12]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[13]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[14]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[15]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[16]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[17]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[18]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[19]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[1]          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[20]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[21]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[22]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[23]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[24]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[25]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[26]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[27]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[28]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[29]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[2]          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[30]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[31]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[3]          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[4]          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[5]          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[6]          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[7]          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[8]          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[9]          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|game_over           ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Key:key|clk_cnt[0]                      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Key:key|clk_cnt[10]                     ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Key:key|clk_cnt[11]                     ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Key:key|clk_cnt[12]                     ;
++--------+--------------+----------------+-------+------------+---------+------------+-----------------------------------------+
 
 
 +-----------------------------------------------------------------------+
@@ -452,9 +454,9 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; RSTn      ; CLK_50M    ; 4.492 ; 4.999 ; Rise       ; CLK_50M         ;
-; ps2k_clk  ; CLK_50M    ; 1.460 ; 1.797 ; Rise       ; CLK_50M         ;
-; ps2k_data ; CLK_50M    ; 1.684 ; 2.085 ; Rise       ; CLK_50M         ;
+; RSTn      ; CLK_50M    ; 3.916 ; 4.271 ; Rise       ; CLK_50M         ;
+; ps2k_clk  ; CLK_50M    ; 1.274 ; 1.577 ; Rise       ; CLK_50M         ;
+; ps2k_data ; CLK_50M    ; 1.716 ; 2.046 ; Rise       ; CLK_50M         ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -463,9 +465,9 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; RSTn      ; CLK_50M    ; -2.948 ; -3.323 ; Rise       ; CLK_50M         ;
-; ps2k_clk  ; CLK_50M    ; -1.140 ; -1.467 ; Rise       ; CLK_50M         ;
-; ps2k_data ; CLK_50M    ; -1.031 ; -1.362 ; Rise       ; CLK_50M         ;
+; RSTn      ; CLK_50M    ; -2.128 ; -2.493 ; Rise       ; CLK_50M         ;
+; ps2k_clk  ; CLK_50M    ; -0.950 ; -1.240 ; Rise       ; CLK_50M         ;
+; ps2k_data ; CLK_50M    ; -1.075 ; -1.386 ; Rise       ; CLK_50M         ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -474,14 +476,15 @@ No paths to report.
 +---------------+------------+-------+-------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +---------------+------------+-------+-------+------------+-----------------+
-; color_out[*]  ; CLK_50M    ; 8.815 ; 8.962 ; Rise       ; CLK_50M         ;
-;  color_out[2] ; CLK_50M    ; 8.815 ; 8.962 ; Rise       ; CLK_50M         ;
-; hsync         ; CLK_50M    ; 5.246 ; 5.237 ; Rise       ; CLK_50M         ;
-; led_out[*]    ; CLK_50M    ; 8.314 ; 8.401 ; Rise       ; CLK_50M         ;
-;  led_out[0]   ; CLK_50M    ; 8.314 ; 8.401 ; Rise       ; CLK_50M         ;
-;  led_out[1]   ; CLK_50M    ; 6.976 ; 7.014 ; Rise       ; CLK_50M         ;
-;  led_out[2]   ; CLK_50M    ; 6.741 ; 6.798 ; Rise       ; CLK_50M         ;
-; vsync         ; CLK_50M    ; 5.333 ; 5.342 ; Rise       ; CLK_50M         ;
+; color_out[*]  ; CLK_50M    ; 9.266 ; 9.438 ; Rise       ; CLK_50M         ;
+;  color_out[1] ; CLK_50M    ; 9.266 ; 9.438 ; Rise       ; CLK_50M         ;
+;  color_out[2] ; CLK_50M    ; 9.217 ; 9.399 ; Rise       ; CLK_50M         ;
+; hsync         ; CLK_50M    ; 5.379 ; 5.377 ; Rise       ; CLK_50M         ;
+; led_out[*]    ; CLK_50M    ; 7.593 ; 7.775 ; Rise       ; CLK_50M         ;
+;  led_out[0]   ; CLK_50M    ; 7.593 ; 7.775 ; Rise       ; CLK_50M         ;
+;  led_out[1]   ; CLK_50M    ; 6.312 ; 6.366 ; Rise       ; CLK_50M         ;
+;  led_out[2]   ; CLK_50M    ; 6.084 ; 6.040 ; Rise       ; CLK_50M         ;
+; vsync         ; CLK_50M    ; 5.117 ; 5.125 ; Rise       ; CLK_50M         ;
 +---------------+------------+-------+-------+------------+-----------------+
 
 
@@ -490,14 +493,15 @@ No paths to report.
 +---------------+------------+-------+-------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +---------------+------------+-------+-------+------------+-----------------+
-; color_out[*]  ; CLK_50M    ; 5.837 ; 5.853 ; Rise       ; CLK_50M         ;
-;  color_out[2] ; CLK_50M    ; 5.837 ; 5.853 ; Rise       ; CLK_50M         ;
-; hsync         ; CLK_50M    ; 5.148 ; 5.139 ; Rise       ; CLK_50M         ;
-; led_out[*]    ; CLK_50M    ; 6.582 ; 6.637 ; Rise       ; CLK_50M         ;
-;  led_out[0]   ; CLK_50M    ; 8.142 ; 8.229 ; Rise       ; CLK_50M         ;
-;  led_out[1]   ; CLK_50M    ; 6.809 ; 6.845 ; Rise       ; CLK_50M         ;
-;  led_out[2]   ; CLK_50M    ; 6.582 ; 6.637 ; Rise       ; CLK_50M         ;
-; vsync         ; CLK_50M    ; 5.232 ; 5.240 ; Rise       ; CLK_50M         ;
+; color_out[*]  ; CLK_50M    ; 6.195 ; 6.195 ; Rise       ; CLK_50M         ;
+;  color_out[1] ; CLK_50M    ; 6.410 ; 6.412 ; Rise       ; CLK_50M         ;
+;  color_out[2] ; CLK_50M    ; 6.195 ; 6.195 ; Rise       ; CLK_50M         ;
+; hsync         ; CLK_50M    ; 5.275 ; 5.274 ; Rise       ; CLK_50M         ;
+; led_out[*]    ; CLK_50M    ; 5.952 ; 5.911 ; Rise       ; CLK_50M         ;
+;  led_out[0]   ; CLK_50M    ; 7.448 ; 7.628 ; Rise       ; CLK_50M         ;
+;  led_out[1]   ; CLK_50M    ; 6.170 ; 6.222 ; Rise       ; CLK_50M         ;
+;  led_out[2]   ; CLK_50M    ; 5.952 ; 5.911 ; Rise       ; CLK_50M         ;
+; vsync         ; CLK_50M    ; 5.024 ; 5.032 ; Rise       ; CLK_50M         ;
 +---------------+------------+-------+-------+------------+-----------------+
 
 
@@ -506,7 +510,7 @@ No paths to report.
 +---------+--------+-----------------+
 ; Clock   ; Slack  ; End Point TNS   ;
 +---------+--------+-----------------+
-; CLK_50M ; -4.991 ; -75.312         ;
+; CLK_50M ; -6.452 ; -234.303        ;
 +---------+--------+-----------------+
 
 
@@ -531,112 +535,112 @@ No paths to report.
 No paths to report.
 
 
-+------------------------------------------------------------------------------------------------------------------------------------+
-; Fast 1200mV 0C Model Minimum Pulse Width                                                                                           ;
-+--------+--------------+----------------+-------+------------+---------+------------+-----------------------------------------------+
-; Slack  ; Actual Width ; Required Width ; CCPP  ; Type       ; Clock   ; Clock Edge ; Target                                        ;
-+--------+--------------+----------------+-------+------------+---------+------------+-----------------------------------------------+
-; -3.000 ; 1.000        ; 4.000          ; 0.000 ; Port Rate  ; CLK_50M ; Rise       ; CLK_50M                                       ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|hsync               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|temp_color[2]       ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|vsync               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[0]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[10]           ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[1]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[2]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[3]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[4]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[5]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[6]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[7]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[8]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[9]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[0]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[1]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[2]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[3]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[4]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[5]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[6]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[7]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[8]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[9]            ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array_0[0][2]             ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array_0[1][2]             ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array_0[2][2]             ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array_0[3][2]             ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array_0[4][2]             ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array_0[5][2]             ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array_0[6][2]             ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array_0[7][2]             ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[0]                ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[10]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[11]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[12]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[13]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[14]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[15]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[16]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[17]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[18]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[19]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[1]                ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[20]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[21]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[22]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[23]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[24]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[25]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[26]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[27]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[28]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[29]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[2]                ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[30]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[31]               ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[3]                ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[4]                ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[5]                ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[6]                ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[7]                ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[8]                ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[9]                ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|current_block_pos[2]      ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|current_block_pos[3]      ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|current_block_pos[4]      ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|game_over                 ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Keyboard:U6|down_key_press                    ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Keyboard:U6|left_key_press                    ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Keyboard:U6|right_key_press                   ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Keyboard_Ctrl:keyboard_ctrl|play_key_press    ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Keyboard_Ctrl:keyboard_ctrl|restart_key_press ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; State_Ctrl:state_ctrl|game_state[0]           ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; State_Ctrl:state_ctrl|game_state[1]           ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; State_Ctrl:state_ctrl|led[0]                  ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; State_Ctrl:state_ctrl|led[1]                  ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; State_Ctrl:state_ctrl|led[2]                  ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|key_f0                             ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|num[0]                             ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|num[1]                             ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|num[2]                             ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|num[3]                             ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|ps2_byte_r[0]                      ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|ps2_byte_r[1]                      ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|ps2_byte_r[2]                      ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|ps2_byte_r[3]                      ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|ps2_byte_r[4]                      ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|ps2_byte_r[5]                      ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|ps2_byte_r[6]                      ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|ps2_byte_r[7]                      ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|ps2_state_r                        ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|ps2k_clk_r0                        ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|ps2k_clk_r1                        ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|ps2k_clk_r2                        ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|temp_data[0]                       ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|temp_data[1]                       ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|temp_data[2]                       ;
-; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; ps2_top:U7|temp_data[3]                       ;
-+--------+--------------+----------------+-------+------------+---------+------------+-----------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width                                                                                     ;
++--------+--------------+----------------+-------+------------+---------+------------+-----------------------------------------+
+; Slack  ; Actual Width ; Required Width ; CCPP  ; Type       ; Clock   ; Clock Edge ; Target                                  ;
++--------+--------------+----------------+-------+------------+---------+------------+-----------------------------------------+
+; -3.000 ; 1.000        ; 4.000          ; 0.000 ; Port Rate  ; CLK_50M ; Rise       ; CLK_50M                                 ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|hsync         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|temp_color[1] ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|temp_color[2] ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|vsync         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[0]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[10]     ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[1]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[3]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[4]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[5]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[6]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[7]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[8]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|x_cnt[9]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[0]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[1]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[3]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[4]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[5]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[6]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[7]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[8]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Display_Ctrl:display_ctrl|y_cnt[9]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[0][0][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[0][1][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[0][2][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[0][3][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[0][4][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[0][5][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[0][6][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[0][7][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[1][0][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[1][1][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[1][2][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[1][3][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[1][4][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[1][5][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[1][6][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[1][7][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[2][0][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[2][1][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[2][2][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[2][3][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[2][4][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[2][5][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[2][6][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[2][7][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[3][0][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[3][1][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[3][2][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[3][3][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[3][4][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[3][5][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[3][6][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|array[3][7][2]      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|block_pos[0]        ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|block_pos[1]        ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|block_pos[2]        ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|block_pos[3]        ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|block_pos[4]        ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[0]          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[10]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[11]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[12]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[13]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[14]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[15]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[16]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[17]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[18]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[19]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[1]          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[20]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[21]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[22]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[23]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[24]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[25]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[26]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[27]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[28]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[29]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[2]          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[30]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[31]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[3]          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[4]          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[5]          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[6]          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[7]          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[8]          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|clk_cnt[9]          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Game_Ctrl:game_ctrl|game_over           ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Key:key|clk_cnt[0]                      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Key:key|clk_cnt[10]                     ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Key:key|clk_cnt[11]                     ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50M ; Rise       ; Key:key|clk_cnt[12]                     ;
++--------+--------------+----------------+-------+------------+---------+------------+-----------------------------------------+
 
 
 +-----------------------------------------------------------------------+
@@ -644,9 +648,9 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; RSTn      ; CLK_50M    ; 2.784 ; 3.673 ; Rise       ; CLK_50M         ;
-; ps2k_clk  ; CLK_50M    ; 0.949 ; 1.515 ; Rise       ; CLK_50M         ;
-; ps2k_data ; CLK_50M    ; 1.094 ; 1.728 ; Rise       ; CLK_50M         ;
+; RSTn      ; CLK_50M    ; 2.398 ; 3.210 ; Rise       ; CLK_50M         ;
+; ps2k_clk  ; CLK_50M    ; 0.810 ; 1.375 ; Rise       ; CLK_50M         ;
+; ps2k_data ; CLK_50M    ; 1.081 ; 1.707 ; Rise       ; CLK_50M         ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -655,9 +659,9 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; RSTn      ; CLK_50M    ; -1.857 ; -2.552 ; Rise       ; CLK_50M         ;
-; ps2k_clk  ; CLK_50M    ; -0.741 ; -1.302 ; Rise       ; CLK_50M         ;
-; ps2k_data ; CLK_50M    ; -0.688 ; -1.262 ; Rise       ; CLK_50M         ;
+; RSTn      ; CLK_50M    ; -1.325 ; -2.003 ; Rise       ; CLK_50M         ;
+; ps2k_clk  ; CLK_50M    ; -0.604 ; -1.157 ; Rise       ; CLK_50M         ;
+; ps2k_data ; CLK_50M    ; -0.687 ; -1.272 ; Rise       ; CLK_50M         ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -666,14 +670,15 @@ No paths to report.
 +---------------+------------+-------+-------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +---------------+------------+-------+-------+------------+-----------------+
-; color_out[*]  ; CLK_50M    ; 5.596 ; 5.705 ; Rise       ; CLK_50M         ;
-;  color_out[2] ; CLK_50M    ; 5.596 ; 5.705 ; Rise       ; CLK_50M         ;
-; hsync         ; CLK_50M    ; 3.373 ; 3.331 ; Rise       ; CLK_50M         ;
-; led_out[*]    ; CLK_50M    ; 5.298 ; 5.629 ; Rise       ; CLK_50M         ;
-;  led_out[0]   ; CLK_50M    ; 5.298 ; 5.629 ; Rise       ; CLK_50M         ;
-;  led_out[1]   ; CLK_50M    ; 4.434 ; 4.623 ; Rise       ; CLK_50M         ;
-;  led_out[2]   ; CLK_50M    ; 4.395 ; 4.228 ; Rise       ; CLK_50M         ;
-; vsync         ; CLK_50M    ; 3.431 ; 3.391 ; Rise       ; CLK_50M         ;
+; color_out[*]  ; CLK_50M    ; 5.879 ; 6.046 ; Rise       ; CLK_50M         ;
+;  color_out[1] ; CLK_50M    ; 5.879 ; 6.046 ; Rise       ; CLK_50M         ;
+;  color_out[2] ; CLK_50M    ; 5.876 ; 6.037 ; Rise       ; CLK_50M         ;
+; hsync         ; CLK_50M    ; 3.469 ; 3.425 ; Rise       ; CLK_50M         ;
+; led_out[*]    ; CLK_50M    ; 4.891 ; 5.187 ; Rise       ; CLK_50M         ;
+;  led_out[0]   ; CLK_50M    ; 4.891 ; 5.187 ; Rise       ; CLK_50M         ;
+;  led_out[1]   ; CLK_50M    ; 4.011 ; 4.154 ; Rise       ; CLK_50M         ;
+;  led_out[2]   ; CLK_50M    ; 3.958 ; 3.842 ; Rise       ; CLK_50M         ;
+; vsync         ; CLK_50M    ; 3.277 ; 3.255 ; Rise       ; CLK_50M         ;
 +---------------+------------+-------+-------+------------+-----------------+
 
 
@@ -682,14 +687,15 @@ No paths to report.
 +---------------+------------+-------+-------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +---------------+------------+-------+-------+------------+-----------------+
-; color_out[*]  ; CLK_50M    ; 3.683 ; 3.771 ; Rise       ; CLK_50M         ;
-;  color_out[2] ; CLK_50M    ; 3.683 ; 3.771 ; Rise       ; CLK_50M         ;
-; hsync         ; CLK_50M    ; 3.307 ; 3.268 ; Rise       ; CLK_50M         ;
-; led_out[*]    ; CLK_50M    ; 4.288 ; 4.129 ; Rise       ; CLK_50M         ;
-;  led_out[0]   ; CLK_50M    ; 5.189 ; 5.512 ; Rise       ; CLK_50M         ;
-;  led_out[1]   ; CLK_50M    ; 4.326 ; 4.507 ; Rise       ; CLK_50M         ;
-;  led_out[2]   ; CLK_50M    ; 4.288 ; 4.129 ; Rise       ; CLK_50M         ;
-; vsync         ; CLK_50M    ; 3.363 ; 3.325 ; Rise       ; CLK_50M         ;
+; color_out[*]  ; CLK_50M    ; 3.928 ; 4.027 ; Rise       ; CLK_50M         ;
+;  color_out[1] ; CLK_50M    ; 4.037 ; 4.155 ; Rise       ; CLK_50M         ;
+;  color_out[2] ; CLK_50M    ; 3.928 ; 4.027 ; Rise       ; CLK_50M         ;
+; hsync         ; CLK_50M    ; 3.399 ; 3.358 ; Rise       ; CLK_50M         ;
+; led_out[*]    ; CLK_50M    ; 3.869 ; 3.758 ; Rise       ; CLK_50M         ;
+;  led_out[0]   ; CLK_50M    ; 4.798 ; 5.087 ; Rise       ; CLK_50M         ;
+;  led_out[1]   ; CLK_50M    ; 3.920 ; 4.057 ; Rise       ; CLK_50M         ;
+;  led_out[2]   ; CLK_50M    ; 3.869 ; 3.758 ; Rise       ; CLK_50M         ;
+; vsync         ; CLK_50M    ; 3.215 ; 3.194 ; Rise       ; CLK_50M         ;
 +---------------+------------+-------+-------+------------+-----------------+
 
 
@@ -698,10 +704,10 @@ No paths to report.
 +------------------+----------+-------+----------+---------+---------------------+
 ; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -9.787   ; 0.0   ; 0.0      ; 0.0     ; -3.000              ;
-;  CLK_50M         ; -9.787   ; 0.187 ; N/A      ; N/A     ; N/A                 ;
-; Design-wide TNS  ; -208.908 ; 0.0   ; 0.0      ; 0.0     ; N/A                 ;
-;  CLK_50M         ; -208.908 ; 0.000 ; N/A      ; N/A     ; N/A                 ;
+; Worst-case Slack ; -12.408  ; 0.0   ; 0.0      ; 0.0     ; -3.000              ;
+;  CLK_50M         ; -12.408  ; 0.187 ; N/A      ; N/A     ; N/A                 ;
+; Design-wide TNS  ; -532.999 ; 0.0   ; 0.0      ; 0.0     ; N/A                 ;
+;  CLK_50M         ; -532.999 ; 0.000 ; N/A      ; N/A     ; N/A                 ;
 +------------------+----------+-------+----------+---------+---------------------+
 
 
@@ -710,9 +716,9 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; RSTn      ; CLK_50M    ; 5.023 ; 5.756 ; Rise       ; CLK_50M         ;
-; ps2k_clk  ; CLK_50M    ; 1.719 ; 2.137 ; Rise       ; CLK_50M         ;
-; ps2k_data ; CLK_50M    ; 1.964 ; 2.458 ; Rise       ; CLK_50M         ;
+; RSTn      ; CLK_50M    ; 4.376 ; 4.886 ; Rise       ; CLK_50M         ;
+; ps2k_clk  ; CLK_50M    ; 1.498 ; 1.884 ; Rise       ; CLK_50M         ;
+; ps2k_data ; CLK_50M    ; 1.988 ; 2.428 ; Rise       ; CLK_50M         ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -721,26 +727,27 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; RSTn      ; CLK_50M    ; -1.857 ; -2.552 ; Rise       ; CLK_50M         ;
-; ps2k_clk  ; CLK_50M    ; -0.741 ; -1.302 ; Rise       ; CLK_50M         ;
-; ps2k_data ; CLK_50M    ; -0.688 ; -1.262 ; Rise       ; CLK_50M         ;
+; RSTn      ; CLK_50M    ; -1.325 ; -2.003 ; Rise       ; CLK_50M         ;
+; ps2k_clk  ; CLK_50M    ; -0.604 ; -1.157 ; Rise       ; CLK_50M         ;
+; ps2k_data ; CLK_50M    ; -0.687 ; -1.272 ; Rise       ; CLK_50M         ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
-+---------------------------------------------------------------------------+
-; Clock to Output Times                                                     ;
-+---------------+------------+-------+-------+------------+-----------------+
-; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+---------------+------------+-------+-------+------------+-----------------+
-; color_out[*]  ; CLK_50M    ; 9.504 ; 9.698 ; Rise       ; CLK_50M         ;
-;  color_out[2] ; CLK_50M    ; 9.504 ; 9.698 ; Rise       ; CLK_50M         ;
-; hsync         ; CLK_50M    ; 5.532 ; 5.499 ; Rise       ; CLK_50M         ;
-; led_out[*]    ; CLK_50M    ; 8.713 ; 8.934 ; Rise       ; CLK_50M         ;
-;  led_out[0]   ; CLK_50M    ; 8.713 ; 8.934 ; Rise       ; CLK_50M         ;
-;  led_out[1]   ; CLK_50M    ; 7.373 ; 7.537 ; Rise       ; CLK_50M         ;
-;  led_out[2]   ; CLK_50M    ; 7.204 ; 7.162 ; Rise       ; CLK_50M         ;
-; vsync         ; CLK_50M    ; 5.633 ; 5.610 ; Rise       ; CLK_50M         ;
-+---------------+------------+-------+-------+------------+-----------------+
++-----------------------------------------------------------------------------+
+; Clock to Output Times                                                       ;
++---------------+------------+--------+--------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------+------------+--------+--------+------------+-----------------+
+; color_out[*]  ; CLK_50M    ; 10.008 ; 10.216 ; Rise       ; CLK_50M         ;
+;  color_out[1] ; CLK_50M    ; 10.008 ; 10.216 ; Rise       ; CLK_50M         ;
+;  color_out[2] ; CLK_50M    ; 9.956  ; 10.182 ; Rise       ; CLK_50M         ;
+; hsync         ; CLK_50M    ; 5.692  ; 5.649  ; Rise       ; CLK_50M         ;
+; led_out[*]    ; CLK_50M    ; 7.944  ; 8.200  ; Rise       ; CLK_50M         ;
+;  led_out[0]   ; CLK_50M    ; 7.944  ; 8.200  ; Rise       ; CLK_50M         ;
+;  led_out[1]   ; CLK_50M    ; 6.656  ; 6.800  ; Rise       ; CLK_50M         ;
+;  led_out[2]   ; CLK_50M    ; 6.469  ; 6.367  ; Rise       ; CLK_50M         ;
+; vsync         ; CLK_50M    ; 5.388  ; 5.373  ; Rise       ; CLK_50M         ;
++---------------+------------+--------+--------+------------+-----------------+
 
 
 +---------------------------------------------------------------------------+
@@ -748,14 +755,15 @@ No paths to report.
 +---------------+------------+-------+-------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +---------------+------------+-------+-------+------------+-----------------+
-; color_out[*]  ; CLK_50M    ; 3.683 ; 3.771 ; Rise       ; CLK_50M         ;
-;  color_out[2] ; CLK_50M    ; 3.683 ; 3.771 ; Rise       ; CLK_50M         ;
-; hsync         ; CLK_50M    ; 3.307 ; 3.268 ; Rise       ; CLK_50M         ;
-; led_out[*]    ; CLK_50M    ; 4.288 ; 4.129 ; Rise       ; CLK_50M         ;
-;  led_out[0]   ; CLK_50M    ; 5.189 ; 5.512 ; Rise       ; CLK_50M         ;
-;  led_out[1]   ; CLK_50M    ; 4.326 ; 4.507 ; Rise       ; CLK_50M         ;
-;  led_out[2]   ; CLK_50M    ; 4.288 ; 4.129 ; Rise       ; CLK_50M         ;
-; vsync         ; CLK_50M    ; 3.363 ; 3.325 ; Rise       ; CLK_50M         ;
+; color_out[*]  ; CLK_50M    ; 3.928 ; 4.027 ; Rise       ; CLK_50M         ;
+;  color_out[1] ; CLK_50M    ; 4.037 ; 4.155 ; Rise       ; CLK_50M         ;
+;  color_out[2] ; CLK_50M    ; 3.928 ; 4.027 ; Rise       ; CLK_50M         ;
+; hsync         ; CLK_50M    ; 3.399 ; 3.358 ; Rise       ; CLK_50M         ;
+; led_out[*]    ; CLK_50M    ; 3.869 ; 3.758 ; Rise       ; CLK_50M         ;
+;  led_out[0]   ; CLK_50M    ; 4.798 ; 5.087 ; Rise       ; CLK_50M         ;
+;  led_out[1]   ; CLK_50M    ; 3.920 ; 4.057 ; Rise       ; CLK_50M         ;
+;  led_out[2]   ; CLK_50M    ; 3.869 ; 3.758 ; Rise       ; CLK_50M         ;
+; vsync         ; CLK_50M    ; 3.215 ; 3.194 ; Rise       ; CLK_50M         ;
 +---------------+------------+-------+-------+------------+-----------------+
 
 
@@ -830,7 +838,7 @@ No paths to report.
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; CLK_50M    ; CLK_50M  ; 321971   ; 0        ; 0        ; 0        ;
+; CLK_50M    ; CLK_50M  ; 10482216 ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -840,7 +848,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; CLK_50M    ; CLK_50M  ; 321971   ; 0        ; 0        ; 0        ;
+; CLK_50M    ; CLK_50M  ; 10482216 ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -865,9 +873,9 @@ No dedicated SERDES Receiver circuitry present in device or used in design.
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 3     ; 3    ;
-; Unconstrained Input Port Paths  ; 112   ; 112  ;
-; Unconstrained Output Ports      ; 6     ; 6    ;
-; Unconstrained Output Port Paths ; 16    ; 16   ;
+; Unconstrained Input Port Paths  ; 175   ; 175  ;
+; Unconstrained Output Ports      ; 7     ; 7    ;
+; Unconstrained Output Port Paths ; 27    ; 27   ;
 +---------------------------------+-------+------+
 
 
@@ -877,7 +885,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design.
 Info: *******************************************************************
 Info: Running Quartus II TimeQuest Timing Analyzer
     Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
-    Info: Processing started: Thu Jun 02 20:39:24 2016
+    Info: Processing started: Thu Jun 02 23:56:16 2016
 Info: Command: quartus_sta top_greedy_snake -c top_greedy_snake
 Info: qsta_default_script.tcl version: #3
 Info: Only one processor detected - disabling parallel compilation
@@ -892,14 +900,14 @@ Critical Warning: The following clock transfers have no clock uncertainty assign
     Critical Warning: From CLK_50M (Rise) to CLK_50M (Rise) (setup and hold)
 Info: Analyzing Slow 1200mV 85C Model
 Critical Warning: Timing requirements not met
-Info: Worst-case setup slack is -9.787
+Info: Worst-case setup slack is -12.408
     Info:     Slack End Point TNS Clock 
     Info: ========= ============= =====================
-    Info:    -9.787      -208.908 CLK_50M 
-Info: Worst-case hold slack is 0.359
+    Info:   -12.408      -532.999 CLK_50M 
+Info: Worst-case hold slack is 0.358
     Info:     Slack End Point TNS Clock 
     Info: ========= ============= =====================
-    Info:     0.359         0.000 CLK_50M 
+    Info:     0.358         0.000 CLK_50M 
 Info: No recovery paths to report
 Info: No removal paths to report
 Critical Warning: Found minimum pulse width or period violations. See Report Minimum Pulse Width for details.
@@ -911,10 +919,10 @@ Info: Delay annotation completed successfully
 Critical Warning: The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
     Critical Warning: From CLK_50M (Rise) to CLK_50M (Rise) (setup and hold)
 Critical Warning: Timing requirements not met
-Info: Worst-case setup slack is -8.639
+Info: Worst-case setup slack is -10.998
     Info:     Slack End Point TNS Clock 
     Info: ========= ============= =====================
-    Info:    -8.639      -175.989 CLK_50M 
+    Info:   -10.998      -459.747 CLK_50M 
 Info: Worst-case hold slack is 0.312
     Info:     Slack End Point TNS Clock 
     Info: ========= ============= =====================
@@ -930,10 +938,10 @@ Info: Delay annotation completed successfully
 Critical Warning: The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
     Critical Warning: From CLK_50M (Rise) to CLK_50M (Rise) (setup and hold)
 Critical Warning: Timing requirements not met
-Info: Worst-case setup slack is -4.991
+Info: Worst-case setup slack is -6.452
     Info:     Slack End Point TNS Clock 
     Info: ========= ============= =====================
-    Info:    -4.991       -75.312 CLK_50M 
+    Info:    -6.452      -234.303 CLK_50M 
 Info: Worst-case hold slack is 0.187
     Info:     Slack End Point TNS Clock 
     Info: ========= ============= =====================
@@ -946,9 +954,9 @@ Info: No synchronizer chains to report.
 Info: Design is not fully constrained for setup requirements
 Info: Design is not fully constrained for hold requirements
 Info: Quartus II TimeQuest Timing Analyzer was successful. 0 errors, 13 warnings
-    Info: Peak virtual memory: 257 megabytes
-    Info: Processing ended: Thu Jun 02 20:39:30 2016
-    Info: Elapsed time: 00:00:06
+    Info: Peak virtual memory: 258 megabytes
+    Info: Processing ended: Thu Jun 02 23:56:20 2016
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:02
 
 
