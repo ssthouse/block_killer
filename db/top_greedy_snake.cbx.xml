@@ -2,5 +2,6 @@
 <LOG_ROOT>
 	<PROJECT NAME="top_greedy_snake">
 		<CBX_INST_ENTRY INSTANCE_NAME="|top_greedy_snake|Display_Ctrl:display_ctrl|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_nhm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top_greedy_snake|Display_Ctrl:display_ctrl|lpm_divide:Div1" CBX_FILE_NAME="lpm_divide_mhm.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

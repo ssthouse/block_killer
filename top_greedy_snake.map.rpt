@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top_greedy_snake
-Thu Jun 02 18:49:04 2016
+Thu Jun 02 19:05:11 2016
 Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
 
 
@@ -19,12 +19,13 @@ Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
  11. Inverted Register Statistics
  12. Multiplexer Restructuring Statistics (Restructuring Performed)
  13. Parameter Settings for Inferred Entity Instance: Display_Ctrl:display_ctrl|lpm_divide:Div0
- 14. Port Connectivity Checks: "ps2_top:U7"
- 15. Port Connectivity Checks: "Snake:U4"
- 16. Port Connectivity Checks: "Snake_Eatting_Apple:U3"
- 17. Port Connectivity Checks: "Game_Ctrl_Unit:U2"
- 18. Analysis & Synthesis Messages
- 19. Analysis & Synthesis Suppressed Messages
+ 14. Parameter Settings for Inferred Entity Instance: Display_Ctrl:display_ctrl|lpm_divide:Div1
+ 15. Port Connectivity Checks: "ps2_top:U7"
+ 16. Port Connectivity Checks: "Snake:U4"
+ 17. Port Connectivity Checks: "Snake_Eatting_Apple:U3"
+ 18. Port Connectivity Checks: "Game_Ctrl_Unit:U2"
+ 19. Analysis & Synthesis Messages
+ 20. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -50,13 +51,13 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +------------------------------------+------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jun 02 18:49:04 2016    ;
+; Analysis & Synthesis Status        ; Successful - Thu Jun 02 19:05:11 2016    ;
 ; Quartus II Version                 ; 9.0 Build 132 02/25/2009 SJ Full Version ;
 ; Revision Name                      ; top_greedy_snake                         ;
 ; Top-level Entity Name              ; top_greedy_snake                         ;
 ; Family                             ; Cyclone III                              ;
-; Total logic elements               ; 202                                      ;
-;     Total combinational functions  ; 191                                      ;
+; Total logic elements               ; 293                                      ;
+;     Total combinational functions  ; 282                                      ;
 ;     Dedicated logic registers      ; 62                                       ;
 ; Total registers                    ; 62                                       ;
 ; Total pins                         ; 12                                       ;
@@ -168,6 +169,9 @@ applicable agreement for further details.
 ; db/alt_u_div_r5f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/ssthouse/Desktop/block_killer/db/alt_u_div_r5f.tdf       ;
 ; db/add_sub_unc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/ssthouse/Desktop/block_killer/db/add_sub_unc.tdf         ;
 ; db/add_sub_vnc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/ssthouse/Desktop/block_killer/db/add_sub_vnc.tdf         ;
+; db/lpm_divide_mhm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/ssthouse/Desktop/block_killer/db/lpm_divide_mhm.tdf      ;
+; db/sign_div_unsign_nlh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/ssthouse/Desktop/block_killer/db/sign_div_unsign_nlh.tdf ;
+; db/alt_u_div_p5f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/ssthouse/Desktop/block_killer/db/alt_u_div_p5f.tdf       ;
 +----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------+
 
 
@@ -176,17 +180,17 @@ applicable agreement for further details.
 +---------------------------------------------+---------------+
 ; Resource                                    ; Usage         ;
 +---------------------------------------------+---------------+
-; Estimated Total logic elements              ; 202           ;
+; Estimated Total logic elements              ; 293           ;
 ;                                             ;               ;
-; Total combinational functions               ; 191           ;
+; Total combinational functions               ; 282           ;
 ; Logic element usage by number of LUT inputs ;               ;
-;     -- 4 input functions                    ; 78            ;
-;     -- 3 input functions                    ; 40            ;
-;     -- <=2 input functions                  ; 73            ;
+;     -- 4 input functions                    ; 96            ;
+;     -- 3 input functions                    ; 63            ;
+;     -- <=2 input functions                  ; 123           ;
 ;                                             ;               ;
 ; Logic elements by mode                      ;               ;
-;     -- normal mode                          ; 147           ;
-;     -- arithmetic mode                      ; 44            ;
+;     -- normal mode                          ; 200           ;
+;     -- arithmetic mode                      ; 82            ;
 ;                                             ;               ;
 ; Total registers                             ; 62            ;
 ;     -- Dedicated logic registers            ; 62            ;
@@ -195,8 +199,8 @@ applicable agreement for further details.
 ; I/O pins                                    ; 12            ;
 ; Maximum fan-out node                        ; CLK_50M~input ;
 ; Maximum fan-out                             ; 62            ;
-; Total fan-out                               ; 786           ;
-; Average fan-out                             ; 2.84          ;
+; Total fan-out                               ; 1018          ;
+; Average fan-out                             ; 2.77          ;
 +---------------------------------------------+---------------+
 
 
@@ -205,12 +209,16 @@ applicable agreement for further details.
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                         ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |top_greedy_snake                         ; 191 (0)           ; 62 (0)       ; 0           ; 0            ; 0       ; 0         ; 12   ; 0            ; |top_greedy_snake                                                                                                                           ; work         ;
-;    |Display_Ctrl:display_ctrl|            ; 97 (53)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|Display_Ctrl:display_ctrl                                                                                                 ; work         ;
-;       |lpm_divide:Div0|                   ; 44 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|Display_Ctrl:display_ctrl|lpm_divide:Div0                                                                                 ; work         ;
-;          |lpm_divide_nhm:auto_generated|  ; 44 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|Display_Ctrl:display_ctrl|lpm_divide:Div0|lpm_divide_nhm:auto_generated                                                   ; work         ;
-;             |sign_div_unsign_olh:divider| ; 44 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|Display_Ctrl:display_ctrl|lpm_divide:Div0|lpm_divide_nhm:auto_generated|sign_div_unsign_olh:divider                       ; work         ;
-;                |alt_u_div_r5f:divider|    ; 44 (44)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|Display_Ctrl:display_ctrl|lpm_divide:Div0|lpm_divide_nhm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_r5f:divider ; work         ;
+; |top_greedy_snake                         ; 282 (0)           ; 62 (0)       ; 0           ; 0            ; 0       ; 0         ; 12   ; 0            ; |top_greedy_snake                                                                                                                           ; work         ;
+;    |Display_Ctrl:display_ctrl|            ; 188 (66)          ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|Display_Ctrl:display_ctrl                                                                                                 ; work         ;
+;       |lpm_divide:Div0|                   ; 47 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|Display_Ctrl:display_ctrl|lpm_divide:Div0                                                                                 ; work         ;
+;          |lpm_divide_nhm:auto_generated|  ; 47 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|Display_Ctrl:display_ctrl|lpm_divide:Div0|lpm_divide_nhm:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_olh:divider| ; 47 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|Display_Ctrl:display_ctrl|lpm_divide:Div0|lpm_divide_nhm:auto_generated|sign_div_unsign_olh:divider                       ; work         ;
+;                |alt_u_div_r5f:divider|    ; 47 (47)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|Display_Ctrl:display_ctrl|lpm_divide:Div0|lpm_divide_nhm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_r5f:divider ; work         ;
+;       |lpm_divide:Div1|                   ; 75 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|Display_Ctrl:display_ctrl|lpm_divide:Div1                                                                                 ; work         ;
+;          |lpm_divide_mhm:auto_generated|  ; 75 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|Display_Ctrl:display_ctrl|lpm_divide:Div1|lpm_divide_mhm:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_nlh:divider| ; 75 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|Display_Ctrl:display_ctrl|lpm_divide:Div1|lpm_divide_mhm:auto_generated|sign_div_unsign_nlh:divider                       ; work         ;
+;                |alt_u_div_p5f:divider|    ; 75 (75)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|Display_Ctrl:display_ctrl|lpm_divide:Div1|lpm_divide_mhm:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_p5f:divider ; work         ;
 ;    |Game_Ctrl:game_ctrl|                  ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|Game_Ctrl:game_ctrl                                                                                                       ; work         ;
 ;    |Keyboard:U6|                          ; 4 (4)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|Keyboard:U6                                                                                                               ; work         ;
 ;    |Keyboard_Ctrl:keyboard_ctrl|          ; 11 (11)           ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|Keyboard_Ctrl:keyboard_ctrl                                                                                               ; work         ;
@@ -273,35 +281,37 @@ Encoding Type:  One-Hot
 ; Total registers                              ; 62    ;
 ; Number of registers using Synchronous Clear  ; 10    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 46    ;
+; Number of registers using Asynchronous Clear ; 49    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 17    ;
+; Number of registers using Clock Enable       ; 14    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------+
-; Inverted Register Statistics                     ;
-+----------------------------------------+---------+
-; Inverted Register                      ; Fan out ;
-+----------------------------------------+---------+
-; Display_Ctrl:display_ctrl|hsync        ; 3       ;
-; Display_Ctrl:display_ctrl|vsync        ; 2       ;
-; State_Ctrl:state_ctrl|led[2]           ; 2       ;
-; Total number of inverted registers = 3 ;         ;
-+----------------------------------------+---------+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; Display_Ctrl:display_ctrl|hsync         ; 3       ;
+; Display_Ctrl:display_ctrl|vsync         ; 2       ;
+; Display_Ctrl:display_ctrl|temp_color[0] ; 2       ;
+; Display_Ctrl:display_ctrl|temp_color[1] ; 2       ;
+; Display_Ctrl:display_ctrl|temp_color[2] ; 2       ;
+; State_Ctrl:state_ctrl|led[2]            ; 2       ;
+; Total number of inverted registers = 6  ;         ;
++-----------------------------------------+---------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Keyboard_Ctrl:keyboard_ctrl|play_key_press ;
-; 7:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top_greedy_snake|State_Ctrl:state_ctrl|led[1]               ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |top_greedy_snake|Display_Ctrl:display_ctrl|temp_color[2]    ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; No         ; |top_greedy_snake|Display_Ctrl:display_ctrl|vga_rgb[2]       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Keyboard:U6|up_key_press             ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top_greedy_snake|State_Ctrl:state_ctrl|game_state[1]  ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; No         ; |top_greedy_snake|Display_Ctrl:display_ctrl|vga_rgb[1] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------+
@@ -317,6 +327,29 @@ Encoding Type:  One-Hot
 ; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                          ;
 ; MAXIMIZE_SPEED         ; 5              ; Untyped                                          ;
 ; CBXI_PARAMETER         ; lpm_divide_nhm ; Untyped                                          ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                          ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                          ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                     ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                   ;
++------------------------+----------------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Display_Ctrl:display_ctrl|lpm_divide:Div1 ;
++------------------------+----------------+--------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                             ;
++------------------------+----------------+--------------------------------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                                          ;
+; LPM_WIDTHD             ; 7              ; Untyped                                          ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                          ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                          ;
+; LPM_PIPELINE           ; 0              ; Untyped                                          ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                          ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                          ;
+; CBXI_PARAMETER         ; lpm_divide_mhm ; Untyped                                          ;
 ; CARRY_CHAIN            ; MANUAL         ; Untyped                                          ;
 ; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                          ;
 ; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                       ;
@@ -373,7 +406,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
-    Info: Processing started: Thu Jun 02 18:49:01 2016
+    Info: Processing started: Thu Jun 02 19:05:07 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top_greedy_snake -c top_greedy_snake
 Info: Found 1 design units, including 1 entities, in source file SCORE_Display.v
     Info: Found entity 1: SCORE_Display
@@ -410,11 +443,11 @@ Info: Elaborating entity "State_Ctrl" for hierarchy "State_Ctrl:state_ctrl"
 Warning (10036): Verilog HDL or VHDL warning at State_Ctrl.v(23): object "clk_cnt" assigned a value but never read
 Info: Elaborating entity "Keyboard_Ctrl" for hierarchy "Keyboard_Ctrl:keyboard_ctrl"
 Info: Elaborating entity "Display_Ctrl" for hierarchy "Display_Ctrl:display_ctrl"
-Warning (10036): Verilog HDL or VHDL warning at Display_Ctrl.v(46): object "valid" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at Display_Ctrl.v(67): object "block_x" assigned a value but never read
-Warning (10230): Verilog HDL assignment warning at Display_Ctrl.v(50): truncated value with size 11 to match size of target (10)
-Warning (10230): Verilog HDL assignment warning at Display_Ctrl.v(80): truncated value with size 32 to match size of target (2)
-Warning (10230): Verilog HDL assignment warning at Display_Ctrl.v(81): truncated value with size 32 to match size of target (3)
+Warning (10036): Verilog HDL or VHDL warning at Display_Ctrl.v(47): object "valid" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Display_Ctrl.v(68): object "block_x" assigned a value but never read
+Warning (10230): Verilog HDL assignment warning at Display_Ctrl.v(51): truncated value with size 11 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at Display_Ctrl.v(87): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at Display_Ctrl.v(88): truncated value with size 32 to match size of target (3)
 Info: Elaborating entity "Game_Ctrl" for hierarchy "Game_Ctrl:game_ctrl"
 Warning (10036): Verilog HDL or VHDL warning at Game_Ctrl.v(28): object "current_block_pos" assigned a value but never read
 Warning (10240): Verilog HDL Always Construct warning at Game_Ctrl.v(37): inferring latch(es) for variable "column_0", which holds its previous value in one or more paths through the always construct
@@ -528,8 +561,9 @@ Warning: Using design file ps2_top.v, which is not specified as a design file fo
 Info: Elaborating entity "ps2_top" for hierarchy "ps2_top:U7"
 Warning (10762): Verilog HDL Case Statement warning at ps2_top.v(217): can't check case statement for completeness because the case expression has too many possible states
 Warning (10762): Verilog HDL Case Statement warning at ps2_top.v(241): can't check case statement for completeness because the case expression has too many possible states
-Info: Inferred 1 megafunctions from design logic
+Info: Inferred 2 megafunctions from design logic
     Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Display_Ctrl:display_ctrl|Div0"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Display_Ctrl:display_ctrl|Div1"
 Info: Elaborated megafunction instantiation "Display_Ctrl:display_ctrl|lpm_divide:Div0"
 Info: Instantiated megafunction "Display_Ctrl:display_ctrl|lpm_divide:Div0" with the following parameter:
     Info: Parameter "LPM_WIDTHN" = "10"
@@ -546,6 +580,18 @@ Info: Found 1 design units, including 1 entities, in source file db/add_sub_unc.
     Info: Found entity 1: add_sub_unc
 Info: Found 1 design units, including 1 entities, in source file db/add_sub_vnc.tdf
     Info: Found entity 1: add_sub_vnc
+Info: Elaborated megafunction instantiation "Display_Ctrl:display_ctrl|lpm_divide:Div1"
+Info: Instantiated megafunction "Display_Ctrl:display_ctrl|lpm_divide:Div1" with the following parameter:
+    Info: Parameter "LPM_WIDTHN" = "10"
+    Info: Parameter "LPM_WIDTHD" = "7"
+    Info: Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info: Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info: Found 1 design units, including 1 entities, in source file db/lpm_divide_mhm.tdf
+    Info: Found entity 1: lpm_divide_mhm
+Info: Found 1 design units, including 1 entities, in source file db/sign_div_unsign_nlh.tdf
+    Info: Found entity 1: sign_div_unsign_nlh
+Info: Found 1 design units, including 1 entities, in source file db/alt_u_div_p5f.tdf
+    Info: Found entity 1: alt_u_div_p5f
 Info: Registers with preset signals will power-up high
 Info: DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info: 11 registers lost all their fanouts during netlist optimizations. The first 11 are displayed below.
@@ -561,15 +607,15 @@ Info: 11 registers lost all their fanouts during netlist optimizations. The firs
     Info: Register "Snake:U4|direct_r.LEFT" lost all its fanouts during netlist optimizations.
     Info: Register "Snake:U4|direct_r.UP" lost all its fanouts during netlist optimizations.
 Info: Generated suppressed messages file C:/Users/ssthouse/Desktop/block_killer/top_greedy_snake.map.smsg
-Info: Implemented 215 device resources after synthesis - the final resource count might be different
+Info: Implemented 306 device resources after synthesis - the final resource count might be different
     Info: Implemented 4 input pins
     Info: Implemented 8 output pins
-    Info: Implemented 203 logic cells
+    Info: Implemented 294 logic cells
 Info: Quartus II Analysis & Synthesis was successful. 0 errors, 16 warnings
     Info: Peak virtual memory: 237 megabytes
-    Info: Processing ended: Thu Jun 02 18:49:04 2016
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Processing ended: Thu Jun 02 19:05:11 2016
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:03
 
 
 +------------------------------------------+

@@ -39,8 +39,8 @@ module Game_Ctrl
 		if(!RST_N)
 			begin
 				game_over <= 0;
-				column_0 <= 24'd0;
-				column_1 <= 24'd0;
+				column_0 <= 24'b111111;
+				column_1 <= 24'b111_111_111;
 				column_2 <= 24'd0;
 				column_3 <= 24'd0;
 				//todo init position is 0

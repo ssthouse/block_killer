@@ -1,3 +1,4 @@
+// ok
 module Display_Ctrl
 (
 	input CLK_50M,
@@ -74,35 +75,41 @@ module Display_Ctrl
 						(x_pos/200 == 2)? temp_color :
 						(x_pos/200 == 3)? temp_color : 3'b000;
 						
-	always@(posedge CLK_50M)
-		begin
-			//calcute block index
-			 block_x = x_pos/200;
-			 block_y = y_pos/75;
-			case(x_pos/200)
-				0:
-					begin
-						temp_block = column_0>>((7-block_y)*3);
-						temp_color = (temp_block[2:0] + 3'b001);
-					end
-				1:
-					begin 
-						
-						temp_block = column_1>>((7-block_y)*3);
-						temp_color = (temp_block[2:0] + 3'b010);
-					end
-				2:
-					begin 
-						temp_block = column_2>>((7-block_y)*3);
-						temp_color = (temp_block[2:0] + 3'b100);
-					end
-				3:
-					begin 
-						temp_block = column_3>>((7-block_y)*3);
-						temp_color = (temp_block[2:0] + 3'b110);
-					end
-			endcase
-		end
+	always@(posedge CLK_50M or negedge RST_N)
+	begin
+		if(!RST_N)
+			begin
+				temp_color <= 3'b111;
+			end
+		else
+			begin
+				//calcute block index
+				 block_x = x_pos/200;
+				 block_y = y_pos/75;
+				case(x_pos/200)
+					0:
+						begin
+							temp_block = column_0>>((7-block_y)*3);
+							temp_color = (temp_block[2:0] + 3'b001);
+						end
+					1:
+						begin 
+							temp_block = column_1>>((7-block_y)*3);
+							temp_color = (temp_block[2:0] + 3'b010);
+						end
+					2:
+						begin 
+							temp_block = column_2>>((7-block_y)*3);
+							temp_color = (temp_block[2:0] + 3'b100);
+						end
+					3:
+						begin 
+							temp_block = column_3>>((7-block_y)*3);
+							temp_color = (temp_block[2:0] + 3'b110);
+						end
+				endcase
+			end
+	end
 	
 	//0.5s clk count
 	reg [31:0] clk_count;
