@@ -1,0 +1,525 @@
+Analysis & Synthesis report for top_greedy_snake
+Thu Jun 02 17:24:00 2016
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. State Machine - |top_greedy_snake|Snake:U4|direct_r
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Port Connectivity Checks: "ps2_top:U7"
+ 14. Port Connectivity Checks: "Snake:U4"
+ 15. Port Connectivity Checks: "Snake_Eatting_Apple:U3"
+ 16. Port Connectivity Checks: "Game_Ctrl_Unit:U2"
+ 17. Analysis & Synthesis Messages
+ 18. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++------------------------------------+------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Jun 02 17:23:59 2016    ;
+; Quartus II Version                 ; 9.0 Build 132 02/25/2009 SJ Full Version ;
+; Revision Name                      ; top_greedy_snake                         ;
+; Top-level Entity Name              ; top_greedy_snake                         ;
+; Family                             ; Cyclone III                              ;
+; Total logic elements               ; 194                                      ;
+;     Total combinational functions  ; 183                                      ;
+;     Dedicated logic registers      ; 95                                       ;
+; Total registers                    ; 95                                       ;
+; Total pins                         ; 12                                       ;
+; Total virtual pins                 ; 0                                        ;
+; Total memory bits                  ; 0                                        ;
+; Embedded Multiplier 9-bit elements ; 0                                        ;
+; Total PLLs                         ; 0                                        ;
++------------------------------------+------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                            ;
++----------------------------------------------------------------+--------------------+--------------------+
+; Option                                                         ; Setting            ; Default Value      ;
++----------------------------------------------------------------+--------------------+--------------------+
+; Device                                                         ; EP3C16F484C6       ;                    ;
+; Top-level entity name                                          ; top_greedy_snake   ; top_greedy_snake   ;
+; Family name                                                    ; Cyclone III        ; Stratix II         ;
+; Use Generated Physical Constraints File                        ; Off                ;                    ;
+; Use smart compilation                                          ; Off                ; Off                ;
+; Restructure Multiplexers                                       ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                            ; Off                ; Off                ;
+; Preserve fewer node names                                      ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                      ; Off                ; Off                ;
+; Verilog Version                                                ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                   ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                       ; Auto               ; Auto               ;
+; Safe State Machine                                             ; Off                ; Off                ;
+; Extract Verilog State Machines                                 ; On                 ; On                 ;
+; Extract VHDL State Machines                                    ; On                 ; On                 ;
+; Ignore Verilog initial constructs                              ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                     ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                 ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                        ; On                 ; On                 ;
+; Parallel Synthesis                                             ; Off                ; Off                ;
+; DSP Block Balancing                                            ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                             ; On                 ; On                 ;
+; Power-Up Don't Care                                            ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                   ; Off                ; Off                ;
+; Remove Duplicate Registers                                     ; On                 ; On                 ;
+; Ignore CARRY Buffers                                           ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                         ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                          ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                      ; Off                ; Off                ;
+; Ignore LCELL Buffers                                           ; Off                ; Off                ;
+; Ignore SOFT Buffers                                            ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                 ; Off                ; Off                ;
+; Optimization Technique                                         ; Balanced           ; Balanced           ;
+; Carry Chain Length                                             ; 70                 ; 70                 ;
+; Auto Carry Chains                                              ; On                 ; On                 ;
+; Auto Open-Drain Pins                                           ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                          ; Off                ; Off                ;
+; Auto ROM Replacement                                           ; On                 ; On                 ;
+; Auto RAM Replacement                                           ; On                 ; On                 ;
+; Auto DSP Block Replacement                                     ; On                 ; On                 ;
+; Auto Shift Register Replacement                                ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                  ; On                 ; On                 ;
+; Strict RAM Replacement                                         ; Off                ; Off                ;
+; Allow Synchronous Control Signals                              ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                         ; Off                ; Off                ;
+; Auto RAM Block Balancing                                       ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                              ; Off                ; Off                ;
+; Auto Resource Sharing                                          ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                             ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                             ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                  ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing            ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives              ; Off                ; Off                ;
+; Timing-Driven Synthesis                                        ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report             ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                             ; Off                ; Off                ;
+; Synchronization Register Chain Length                          ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                              ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report       ; 100                ; 100                ;
+; Number of Inverted Registers Reported in Synthesis Report      ; 100                ; 100                ;
+; Clock MUX Protection                                           ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                    ; Off                ; Off                ;
+; Block Design Naming                                            ; Auto               ; Auto               ;
+; SDC constraint protection                                      ; Off                ; Off                ;
+; Synthesis Effort                                               ; Auto               ; Auto               ;
+; Allows Asynchronous Clear Usage For Shift Register Replacement ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                             ; Medium             ; Medium             ;
++----------------------------------------------------------------+--------------------+--------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                        ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                              ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------+
+; Game_Ctrl_Unit.v                 ; yes             ; User Verilog HDL File        ; C:/Users/ssthouse/Desktop/snakecode/Game_Ctrl_Unit.v      ;
+; Snake.v                          ; yes             ; User Verilog HDL File        ; C:/Users/ssthouse/Desktop/snakecode/Snake.v               ;
+; Snake_Eatting_Apple.v            ; yes             ; User Verilog HDL File        ; C:/Users/ssthouse/Desktop/snakecode/Snake_Eatting_Apple.v ;
+; top_greedy_snake.v               ; yes             ; User Verilog HDL File        ; C:/Users/ssthouse/Desktop/snakecode/top_greedy_snake.v    ;
+; Keyboard.v                       ; yes             ; User Verilog HDL File        ; C:/Users/ssthouse/Desktop/snakecode/Keyboard.v            ;
+; State_Ctrl.v                     ; yes             ; User Verilog HDL File        ; C:/Users/ssthouse/Desktop/snakecode/State_Ctrl.v          ;
+; Keyboard_Ctrl.v                  ; yes             ; User Verilog HDL File        ; C:/Users/ssthouse/Desktop/snakecode/Keyboard_Ctrl.v       ;
+; Display_Ctrl.v                   ; yes             ; User Verilog HDL File        ; C:/Users/ssthouse/Desktop/snakecode/Display_Ctrl.v        ;
+; Game_Ctrl.v                      ; yes             ; User Verilog HDL File        ; C:/Users/ssthouse/Desktop/snakecode/Game_Ctrl.v           ;
+; ps2_top.v                        ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/ssthouse/Desktop/snakecode/ps2_top.v             ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------+
+
+
++----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary              ;
++---------------------------------------------+------------+
+; Resource                                    ; Usage      ;
++---------------------------------------------+------------+
+; Estimated Total logic elements              ; 194        ;
+;                                             ;            ;
+; Total combinational functions               ; 183        ;
+; Logic element usage by number of LUT inputs ;            ;
+;     -- 4 input functions                    ; 72         ;
+;     -- 3 input functions                    ; 12         ;
+;     -- <=2 input functions                  ; 99         ;
+;                                             ;            ;
+; Logic elements by mode                      ;            ;
+;     -- normal mode                          ; 115        ;
+;     -- arithmetic mode                      ; 68         ;
+;                                             ;            ;
+; Total registers                             ; 95         ;
+;     -- Dedicated logic registers            ; 95         ;
+;     -- I/O registers                        ; 0          ;
+;                                             ;            ;
+; I/O pins                                    ; 12         ;
+; Maximum fan-out node                        ; RSTn~input ;
+; Maximum fan-out                             ; 86         ;
+; Total fan-out                               ; 831        ;
+; Average fan-out                             ; 2.75       ;
++---------------------------------------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                         ;
++----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------+--------------+
+; Compilation Hierarchy Node       ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                           ; Library Name ;
++----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------+--------------+
+; |top_greedy_snake                ; 183 (0)           ; 95 (0)       ; 0           ; 0            ; 0       ; 0         ; 12   ; 0            ; |top_greedy_snake                             ; work         ;
+;    |Display_Ctrl:display_ctrl|   ; 131 (131)         ; 59 (59)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|Display_Ctrl:display_ctrl   ; work         ;
+;    |Game_Ctrl:game_ctrl|         ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|Game_Ctrl:game_ctrl         ; work         ;
+;    |Keyboard:U6|                 ; 8 (8)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|Keyboard:U6                 ; work         ;
+;    |Keyboard_Ctrl:keyboard_ctrl| ; 6 (6)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|Keyboard_Ctrl:keyboard_ctrl ; work         ;
+;    |State_Ctrl:state_ctrl|       ; 8 (8)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|State_Ctrl:state_ctrl       ; work         ;
+;    |ps2_top:U7|                  ; 28 (28)           ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|ps2_top:U7                  ; work         ;
++----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------+
+; State Machine - |top_greedy_snake|Snake:U4|direct_r                           ;
++----------------+-------------+---------------+---------------+----------------+
+; Name           ; direct_r.UP ; direct_r.LEFT ; direct_r.DOWN ; direct_r.RIGHT ;
++----------------+-------------+---------------+---------------+----------------+
+; direct_r.RIGHT ; 0           ; 0             ; 0             ; 0              ;
+; direct_r.DOWN  ; 0           ; 0             ; 1             ; 1              ;
+; direct_r.LEFT  ; 0           ; 1             ; 0             ; 1              ;
+; direct_r.UP    ; 1           ; 0             ; 0             ; 1              ;
++----------------+-------------+---------------+---------------+----------------+
+
+
++---------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                    ;
++---------------------------------------------+-----------------------------------------+
+; Register name                               ; Reason for Removal                      ;
++---------------------------------------------+-----------------------------------------+
+; Keyboard_Ctrl:keyboard_ctrl|left_key_press  ; Merged with Keyboard:U6|left_key_press  ;
+; Keyboard_Ctrl:keyboard_ctrl|right_key_press ; Merged with Keyboard:U6|right_key_press ;
+; Keyboard_Ctrl:keyboard_ctrl|down_key_press  ; Merged with Keyboard:U6|down_key_press  ;
+; Snake:U4|direct_r~10                        ; Lost fanout                             ;
+; Snake:U4|direct_r~11                        ; Lost fanout                             ;
+; Snake:U4|change_to_right                    ; Lost fanout                             ;
+; Snake:U4|change_to_left                     ; Lost fanout                             ;
+; Snake:U4|change_to_down                     ; Lost fanout                             ;
+; Snake:U4|change_to_up                       ; Lost fanout                             ;
+; Keyboard:U6|up_key_press                    ; Lost fanout                             ;
+; Snake:U4|direct_r.RIGHT                     ; Lost fanout                             ;
+; Snake:U4|direct_r.DOWN                      ; Lost fanout                             ;
+; Snake:U4|direct_r.LEFT                      ; Lost fanout                             ;
+; Snake:U4|direct_r.UP                        ; Lost fanout                             ;
+; Display_Ctrl:display_ctrl|temp_color[3]     ; Lost fanout                             ;
+; Total Number of Removed Registers = 15      ;                                         ;
++---------------------------------------------+-----------------------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                         ;
++-----------------------+--------------------+----------------------------------------+
+; Register name         ; Reason for Removal ; Registers Removed due to This Register ;
++-----------------------+--------------------+----------------------------------------+
+; Snake:U4|change_to_up ; Lost Fanouts       ; Keyboard:U6|up_key_press               ;
++-----------------------+--------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 95    ;
+; Number of registers using Synchronous Clear  ; 10    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 81    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 14    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; Display_Ctrl:display_ctrl|hsync        ; 3       ;
+; Display_Ctrl:display_ctrl|vsync        ; 2       ;
+; State_Ctrl:state_ctrl|led[2]           ; 2       ;
+; Total number of inverted registers = 3 ;         ;
++----------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Keyboard_Ctrl:keyboard_ctrl|play_key_press ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top_greedy_snake|State_Ctrl:state_ctrl|led[0]               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ps2_top:U7"                                                                         ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; led  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; wei  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; seg  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Snake:U4"                                                                                 ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; snake      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; cube_num_O ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Snake_Eatting_Apple:U3"                                                                ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; apple_x ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; apple_y ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Game_Ctrl_Unit:U2"                                                                     ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; restart ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
+    Info: Processing started: Thu Jun 02 17:23:57 2016
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top_greedy_snake -c top_greedy_snake
+Info: Found 1 design units, including 1 entities, in source file SCORE_Display.v
+    Info: Found entity 1: SCORE_Display
+Info: Found 1 design units, including 1 entities, in source file Game_Ctrl_Unit.v
+    Info: Found entity 1: Game_Ctrl_Unit
+Info: Found 1 design units, including 1 entities, in source file Key.v
+    Info: Found entity 1: Key
+Info: Found 1 design units, including 1 entities, in source file Seg_Display.v
+    Info: Found entity 1: Seg_Display
+Info: Found 1 design units, including 1 entities, in source file Snake.v
+    Info: Found entity 1: Snake
+Info: Found 1 design units, including 1 entities, in source file Snake_Eatting_Apple.v
+    Info: Found entity 1: Snake_Eatting_Apple
+Info: Found 1 design units, including 1 entities, in source file top_greedy_snake.v
+    Info: Found entity 1: top_greedy_snake
+Info: Found 1 design units, including 1 entities, in source file SCORE_Rom.v
+    Info: Found entity 1: SCORE_Rom
+Info: Found 1 design units, including 1 entities, in source file NUMBER_Display.v
+    Info: Found entity 1: NUMBER_Display
+Info: Found 1 design units, including 1 entities, in source file NUM_Rom.v
+    Info: Found entity 1: NUM_Rom
+Info: Found 1 design units, including 1 entities, in source file Keyboard.v
+    Info: Found entity 1: Keyboard
+Info: Found 1 design units, including 1 entities, in source file State_Ctrl.v
+    Info: Found entity 1: State_Ctrl
+Info: Found 1 design units, including 1 entities, in source file Keyboard_Ctrl.v
+    Info: Found entity 1: Keyboard_Ctrl
+Warning (10090): Verilog HDL syntax warning at Display_Ctrl.v(65): extra block comment delimiter characters /* within block comment
+Info: Found 1 design units, including 1 entities, in source file Display_Ctrl.v
+    Info: Found entity 1: Display_Ctrl
+Info: Found 1 design units, including 1 entities, in source file Game_Ctrl.v
+    Info: Found entity 1: Game_Ctrl
+Warning (10236): Verilog HDL Implicit Net warning at Display_Ctrl.v(106): created implicit net for "my_rect"
+Info: Elaborating entity "top_greedy_snake" for the top level hierarchy
+Info: Elaborating entity "State_Ctrl" for hierarchy "State_Ctrl:state_ctrl"
+Warning (10036): Verilog HDL or VHDL warning at State_Ctrl.v(23): object "clk_cnt" assigned a value but never read
+Info: Elaborating entity "Keyboard_Ctrl" for hierarchy "Keyboard_Ctrl:keyboard_ctrl"
+Info: Elaborating entity "Display_Ctrl" for hierarchy "Display_Ctrl:display_ctrl"
+Warning (10036): Verilog HDL or VHDL warning at Display_Ctrl.v(46): object "valid" assigned a value but never read
+Warning (10230): Verilog HDL assignment warning at Display_Ctrl.v(50): truncated value with size 11 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at Display_Ctrl.v(128): truncated value with size 4 to match size of target (3)
+Info: Elaborating entity "Game_Ctrl" for hierarchy "Game_Ctrl:game_ctrl"
+Warning (10036): Verilog HDL or VHDL warning at Game_Ctrl.v(28): object "current_block_pos" assigned a value but never read
+Warning (10240): Verilog HDL Always Construct warning at Game_Ctrl.v(37): inferring latch(es) for variable "column_0", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Game_Ctrl.v(37): inferring latch(es) for variable "column_1", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Game_Ctrl.v(37): inferring latch(es) for variable "column_2", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Game_Ctrl.v(37): inferring latch(es) for variable "column_3", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "column_3[0]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_3[1]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_3[2]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_3[3]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_3[4]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_3[5]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_3[6]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_3[7]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_3[8]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_3[9]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_3[10]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_3[11]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_3[12]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_3[13]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_3[14]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_3[15]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_3[16]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_3[17]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_3[18]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_3[19]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_3[20]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_3[21]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_3[22]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_3[23]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_2[0]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_2[1]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_2[2]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_2[3]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_2[4]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_2[5]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_2[6]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_2[7]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_2[8]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_2[9]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_2[10]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_2[11]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_2[12]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_2[13]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_2[14]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_2[15]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_2[16]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_2[17]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_2[18]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_2[19]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_2[20]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_2[21]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_2[22]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_2[23]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_1[0]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_1[1]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_1[2]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_1[3]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_1[4]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_1[5]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_1[6]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_1[7]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_1[8]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_1[9]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_1[10]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_1[11]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_1[12]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_1[13]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_1[14]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_1[15]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_1[16]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_1[17]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_1[18]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_1[19]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_1[20]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_1[21]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_1[22]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_1[23]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_0[0]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_0[1]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_0[2]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_0[3]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_0[4]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_0[5]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_0[6]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_0[7]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_0[8]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_0[9]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_0[10]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_0[11]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_0[12]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_0[13]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_0[14]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_0[15]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_0[16]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_0[17]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_0[18]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_0[19]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_0[20]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_0[21]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_0[22]" at Game_Ctrl.v(37)
+Info (10041): Inferred latch for "column_0[23]" at Game_Ctrl.v(37)
+Info: Elaborating entity "Game_Ctrl_Unit" for hierarchy "Game_Ctrl_Unit:U2"
+Info: Elaborating entity "Snake_Eatting_Apple" for hierarchy "Snake_Eatting_Apple:U3"
+Info: Elaborating entity "Snake" for hierarchy "Snake:U4"
+Warning (10230): Verilog HDL assignment warning at Snake.v(350): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at Snake.v(354): truncated value with size 32 to match size of target (4)
+Info: Elaborating entity "Keyboard" for hierarchy "Keyboard:U6"
+Warning: Using design file ps2_top.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info: Found entity 1: ps2_top
+Info: Elaborating entity "ps2_top" for hierarchy "ps2_top:U7"
+Warning (10762): Verilog HDL Case Statement warning at ps2_top.v(217): can't check case statement for completeness because the case expression has too many possible states
+Warning (10762): Verilog HDL Case Statement warning at ps2_top.v(241): can't check case statement for completeness because the case expression has too many possible states
+Info: Registers with preset signals will power-up high
+Info: DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info: 12 registers lost all their fanouts during netlist optimizations. The first 12 are displayed below.
+    Info: Register "Snake:U4|direct_r~10" lost all its fanouts during netlist optimizations.
+    Info: Register "Snake:U4|direct_r~11" lost all its fanouts during netlist optimizations.
+    Info: Register "Snake:U4|change_to_right" lost all its fanouts during netlist optimizations.
+    Info: Register "Snake:U4|change_to_left" lost all its fanouts during netlist optimizations.
+    Info: Register "Snake:U4|change_to_down" lost all its fanouts during netlist optimizations.
+    Info: Register "Snake:U4|change_to_up" lost all its fanouts during netlist optimizations.
+    Info: Register "Keyboard:U6|up_key_press" lost all its fanouts during netlist optimizations.
+    Info: Register "Snake:U4|direct_r.RIGHT" lost all its fanouts during netlist optimizations.
+    Info: Register "Snake:U4|direct_r.DOWN" lost all its fanouts during netlist optimizations.
+    Info: Register "Snake:U4|direct_r.LEFT" lost all its fanouts during netlist optimizations.
+    Info: Register "Snake:U4|direct_r.UP" lost all its fanouts during netlist optimizations.
+    Info: Register "Display_Ctrl:display_ctrl|temp_color[3]" lost all its fanouts during netlist optimizations.
+Info: Generated suppressed messages file C:/Users/ssthouse/Desktop/snakecode/top_greedy_snake.map.smsg
+Info: Implemented 207 device resources after synthesis - the final resource count might be different
+    Info: Implemented 4 input pins
+    Info: Implemented 8 output pins
+    Info: Implemented 195 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 16 warnings
+    Info: Peak virtual memory: 237 megabytes
+    Info: Processing ended: Thu Jun 02 17:24:00 2016
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/ssthouse/Desktop/snakecode/top_greedy_snake.map.smsg.
+
+

@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Jun 02 17:23:59 2016
+Quartus II Version : 9.0 Build 132 02/25/2009 SJ Full Version
+Revision Name : top_greedy_snake
+Top-level Entity Name : top_greedy_snake
+Family : Cyclone III
+Total logic elements : 194
+    Total combinational functions : 183
+    Dedicated logic registers : 95
+Total registers : 95
+Total pins : 12
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

@@ -1,0 +1,7 @@
+
+State Machine - |top_greedy_snake|Snake:U4|direct_r
+Name direct_r.UP direct_r.LEFT direct_r.DOWN direct_r.RIGHT 
+direct_r.RIGHT 0 0 0 0 
+direct_r.DOWN 0 0 1 1 
+direct_r.LEFT 0 1 0 1 
+direct_r.UP 1 0 0 1 
