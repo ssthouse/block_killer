@@ -1,3 +1,4 @@
+// ok
 module Display_Ctrl
 (
 	input CLK_50M,
@@ -61,71 +62,66 @@ module Display_Ctrl
 		else if(y_cnt == 10'd6) vsync <= 1'b1;
 	
 	
-	/* no data input yet
+	///* no data input yet
 	//**********************
 	//get color value
-	reg [2:0]block_x;
+	reg [1:0]block_x;
 	reg [2:0]block_y;
-	reg [47:0] temp_block;
-	always@(*)
+	reg [23:0] temp_block;
+	reg [2:0] temp_color;
+						
+	assign vga_rgb = (x_pos/200 == 0) ? temp_color :
+						(x_pos/200 == 1)? temp_color :
+						(x_pos/200 == 2)? temp_color :
+						(x_pos/200 == 3)? temp_color : 3'b000;
+						
+	always@(posedge CLK_50M)
 		begin
 			//calcute block index
-			 block_x <= x_pos/160;
-			 block_y <= y_pos/60;
-			case(block_x)
+			 block_x = x_pos/200;
+			 block_y = y_pos/75;
+			case(x_pos/200)
 				0:
 					begin
-						temp_block <= column_0>>((7-block_y)*3);
-						temp_color <= temp_block[2:0];
-						temp_color <= COLOR_RED;
+						temp_block = column_0>>((7-block_y)*3);
+						temp_color = (temp_block[2:0] + 3'b001);
 					end
 				1:
 					begin 
-						temp_block <= column_1>>((7-block_y)*3);
-						temp_color <= temp_block[2:0];
-						temp_color <= COLOR_GREEN;
+						
+						temp_block = column_1>>((7-block_y)*3);
+						temp_color = (temp_block[2:0] + 3'b010);
 					end
 				2:
 					begin 
-						temp_block <= column_2>>((7-block_y)*3);
-						temp_color <= temp_block[2:0];
-						temp_color <= COLOR_BLUE;
+						temp_block = column_2>>((7-block_y)*3);
+						temp_color = (temp_block[2:0] + 3'b100);
 					end
 				3:
 					begin 
-						temp_block <= column_3>>((7-block_y)*3);
-						temp_color <= temp_block[2:0];
-						temp_color <= COLOR_RED;
+						temp_block = column_3>>((7-block_y)*3);
+						temp_color = (temp_block[2:0] + 3'b110);
 					end
 			endcase
 		end
-	*/
 	
-	//todo test rect
-	wire my_rec;
-	assign my_rect = ((x_pos>=200)&&(x_pos<=220))&&((y_pos>=140)&&(y_pos<=460));
-	
+	//0.5s clk count
 	reg [31:0] clk_count;
-	reg [3:0] temp_color;
 	always@(posedge CLK_25M or negedge RST_N)
 	begin
 		if(!RST_N)	
 			begin
 				clk_count <= 31'd0;
-				temp_color <= 3'b000;
 			end
 		else 
 			begin 
 				if(clk_count == 31'd25_000_000)	
 					begin
 						clk_count <= 31'd0;
-						temp_color <= temp_color + 3'd1;
 					end
 				else clk_count <= clk_count + 32'd1;
 			end
 	end
-	
-	assign vga_rgb = (my_rect==1)?temp_color:3'b000;
 	
 endmodule
 

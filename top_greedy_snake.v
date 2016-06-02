@@ -26,9 +26,7 @@ module top_greedy_snake
 //****************************out code *****************************
 
 	//game signal
-	wire game_start;
 	wire game_over;
-	wire game_reset;
 	
 	//btns
 	wire left_key_down;
@@ -42,10 +40,10 @@ module top_greedy_snake
 	wire [1:0] game_state;
 	
 	//color data
-	wire [23:0] column_0 = 1;
-	wire [23:0] column_1 = 1;
-	wire [23:0] column_2 = 1;
-	wire [23:0] column_3 = 1;
+	wire [23:0] column_0;
+	wire [23:0] column_1;
+	wire [23:0] column_2;
+	wire [23:0] column_3;
 
 	State_Ctrl state_ctrl
 	(
@@ -58,7 +56,6 @@ module top_greedy_snake
 		.game_reset(restart_key_down),
 		// game signal
 		.game_state(game_state),
-		
 		//todo test
 		.led(led_out)
 	);
@@ -84,13 +81,11 @@ module top_greedy_snake
 	(
 		.CLK_50M(CLK_50M),
 		.RST_N(RSTn),
-	
 		//color data
 		.column_0(column_0),
 		.column_1(column_1),
 		.column_2(column_2),
 		.column_3(column_3),
-	
 		//vga out
 		.hsync(hsync),
 		.vsync(vsync),
