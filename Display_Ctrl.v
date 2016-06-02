@@ -79,7 +79,7 @@ module Display_Ctrl
 	begin
 		if(!RST_N)
 			begin
-				temp_color <= 3'b111;
+				temp_color <= 3'b000;
 			end
 		else
 			begin

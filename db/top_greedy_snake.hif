@@ -2333,7 +2333,7 @@ ON
 # case_sensitive
 # source_file
 Game_Ctrl.v
-d3c2bffd4cc88a49a1c6fd7fe2caca40
+60185eefd654a7c631a69ea8e6bb511
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -2369,7 +2369,7 @@ ON
 # case_sensitive
 # source_file
 Display_Ctrl.v
-d710dc18bd5210bfa72182ebea3fdfa
+d02dff1ff1cafbc651cf961552d9d7a3
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
