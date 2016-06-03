@@ -18,6 +18,21 @@ module ps2_top(clk,rst,ps2k_clk,ps2k_data,ps2_byte,ps2_state,led,wei,seg);
  integer num1,a,b;
  
  
+ 
+ reg [31:0] clk_cnt;
+ 
+ 
+ always @(posedge clk or negedge rst) begin
+	if(!rst)
+	clk_cnt <=32'b0;
+	else begin
+		if(clk_cnt == 32'd25_000_000)  clk_cnt <= 32'd0;
+		else begin
+			clk_cnt <= clk_cnt + 32'd1;
+		end
+	end
+ end
+ 
  initial begin
   num1 = 0;
   a = 0;
@@ -114,96 +129,147 @@ module ps2_top(clk,rst,ps2k_clk,ps2k_data,ps2_byte,ps2_state,led,wei,seg);
  reg key_f0;//松键标志位，1表示收到数据8f0;
  reg ps2_state_r;//键盘当前状态，1表示按下
  
- always @(posedge clk or negedge rst) begin
-  if(!rst) begin
-   key_f0 <= 1'b0;
-   ps2_state_r <= 1'b0;
-  end
-  else if(num==4'd10)//传送完一个字节
-   begin
-    if(temp_data == 8'hf0) begin
-     key_f0 <= 1'b1;
-     led <= 0;
-     end
-    else begin
-     if(!key_f0) begin//
-      ps2_state_r <= 1'b1;
-      led <= 1;
-      ps2_byte_r <= temp_data;
-     end
-     else begin
-      ps2_state_r <= 1'b0;
-      key_f0 <= 1'b0;
-     end
-    end
-   end 
+ always @(posedge clk or negedge rst)begin
+ 
+			if(!rst) begin
+			key_f0<=1'b0;
+			ps2_state_r<=1'b0;
+			end
+			else if(num==4'd10) begin  //传送完一个字节         
+				if(temp_data==8'hf0) 
+				key_f0<=1'b1;
+				else begin 
+					if(!key_f0)begin		//说明有键按下
+						ps2_state_r<=1'b1;	
+						ps2_byte_r<=temp_data;//锁存当前键值
+						end
+					else begin         //为断码
+						ps2_state_r<=1'b0;
+						key_f0<=1'b0;
+						end
+				end	
+			end
+			else begin
+				if(ps2_byte_r == 8'hf0||ps2_state_r<=1'b1)begin	
+							//说明有键按下
+						if(clk_cnt == 32'd25_000_000) begin
+						ps2_state_r<=1'b0;	
+						ps2_byte_r<=8'hf0;//锁存当前键值
+						key_f0<=1'b0;
+						end
+			//	else begin         //为断码
+				//	ps2_state_r<=1'b1;
+					//end
+				end
+			end
+		/*
+	  if(!rst) begin
+	   key_f0 <= 1'b0;
+	   ps2_state_r <= 1'b0;
+	   ps2_byte_r <= 8'd0;
+	  end
+	  else if(num==4'd10)//传送完一个字节
+		   begin
+				if(temp_data == 8'hf0) begin
+					 key_f0 <= 1'b1;
+					 led <= 0;
+					 ps2_state_r <= 1'b0;
+					 ps2_byte_r <= 8'd0;
+					   //ps2_byte_r <= temp_data;
+				 end
+				else begin
+					 if(!key_f0) begin//key_fo not = 1
+				
+						  ps2_state_r <= 1'b1;
+						  led <= 1;
+						  ps2_byte_r <= temp_data;
+						  end
+					 end
+					 else begin
+						  ps2_state_r <= 1'b0;
+						  key_f0 <= 1'b0;
+						  ps2_byte_r <= 8'd0;
+						  // ps2_byte_r <= temp_data;
+					 end
+				end
+			end 	
+		else if(key_f0==1) begin
+			ps2_state_r <= 1'b0;
+			   key_f0 <= 1'b0;
+			   ps2_byte_r <= 8'd0;
+		 end
+		 */
  end
  
  reg [7:0] ps2_asci;
- always @(ps2_byte_r) begin
-  case(ps2_byte_r)
-    8'h16   : ps2_asci <= 8'h01;
-    8'h1E   : ps2_asci <= 8'h02;
-    8'h26   : ps2_asci <= 8'h03;
-    8'h25   : ps2_asci <= 8'h04;
-    8'h2E   : ps2_asci <= 8'h05;
-    8'h36   : ps2_asci <= 8'h06;
-    8'h3D   : ps2_asci <= 8'h07;
-    8'h3E   : ps2_asci <= 8'h08;
-    8'h46   : ps2_asci <= 8'h09;
-    8'h45   : ps2_asci <= 8'h00;
-    
-   8'h15: ps2_asci <= 8'h51;//Q
-   8'h1d: ps2_asci <= 8'h57;//W
-   8'h24: ps2_asci <= 8'h45;//E
-   8'h2d: ps2_asci <= 8'h52;//R
-   8'h2c: ps2_asci <= 8'h54;//T
-   8'h35: ps2_asci <= 8'h59;//Y
-   8'h3c: ps2_asci <= 8'h55;//U
-   8'h43: ps2_asci <= 8'h49;//I
-   8'h44: ps2_asci <= 8'h4f;//O
-   8'h4d: ps2_asci <= 8'h50;//P
-   8'h1c: ps2_asci <= 8'h41;//A
-   8'h1b: ps2_asci <= 8'h53;//S
-   8'h23: ps2_asci <= 8'h44;//D
-   8'h2b: ps2_asci <= 8'h46;//F
-   8'h34: ps2_asci <= 8'h47;//G
-   8'h33: ps2_asci <= 8'h48;//H
-   8'h3b: ps2_asci <= 8'h4a;//J
-   8'h42: ps2_asci <= 8'h4b;//K
-   8'h4b: ps2_asci <= 8'h4c;//L
-   8'h1a: ps2_asci <= 8'h5a;//Z
-   8'h22: ps2_asci <= 8'h58;//X
-   8'h21: ps2_asci <= 8'h43;//C
-   8'h2a: ps2_asci <= 8'h56;//V
-   8'h32: ps2_asci <= 8'h42;//B
-   8'h31: ps2_asci <= 8'h4e;//N
-   8'h3a: ps2_asci <= 8'h4d;//M
-   
-   
-  // 8'h0E   : ps2_asci <= "~";
-    8'h4E   : ps2_asci <= "-";
-    8'h55   : ps2_asci <= "=";
-    //8'h5D   : ps2_asci <= "|";
-    
-    8'h70   : ps2_asci <= 8'h00;
-    8'h71   : ps2_asci <= ".";//".".
-    8'h69   : ps2_asci <= 8'h01;
-    8'h72   : ps2_asci <= 8'h02;
-    8'h7A   : ps2_asci <= 8'h03;
-    8'h6B   : ps2_asci <= 8'h04;
-    8'h73   : ps2_asci <= 8'h05;
-    8'h74   : ps2_asci <= 8'h06;
-    8'h6C   : ps2_asci <= 8'h07;
-    8'h75   : ps2_asci <= 8'h08;
-    8'h7D   : ps2_asci <= 8'h09;
-    8'h7C   : ps2_asci <= "*";
-    8'h7B   : ps2_asci <= "-";
-    8'h79   : ps2_asci <= "+";
-    8'h4a   : ps2_asci <= "/";
-   // default : ps2_asci <= " ";
-   default:ps2_asci <= ".";
-   endcase
+ always @(ps2_byte_r or ps2_state_r) begin
+	if(ps2_state_r ==0)
+		ps2_asci <= ".";
+	else begin
+		  case(ps2_byte_r)
+			8'h16   : ps2_asci <= 8'h01;
+			8'h1E   : ps2_asci <= 8'h02;
+			8'h26   : ps2_asci <= 8'h03;
+			8'h25   : ps2_asci <= 8'h04;
+			8'h2E   : ps2_asci <= 8'h05;
+			8'h36   : ps2_asci <= 8'h06;
+			8'h3D   : ps2_asci <= 8'h07;
+			8'h3E   : ps2_asci <= 8'h08;
+			8'h46   : ps2_asci <= 8'h09;
+			8'h45   : ps2_asci <= 8'h00;
+			
+		   8'h15: ps2_asci <= 8'h51;//Q
+		   8'h1d: ps2_asci <= 8'h57;//W
+		   8'h24: ps2_asci <= 8'h45;//E
+		   8'h2d: ps2_asci <= 8'h52;//R
+		   8'h2c: ps2_asci <= 8'h54;//T
+		   8'h35: ps2_asci <= 8'h59;//Y
+		   8'h3c: ps2_asci <= 8'h55;//U
+		   8'h43: ps2_asci <= 8'h49;//I
+		   8'h44: ps2_asci <= 8'h4f;//O
+		   8'h4d: ps2_asci <= 8'h50;//P
+		   8'h1c: ps2_asci <= 8'h41;//A
+		   8'h1b: ps2_asci <= 8'h53;//S
+		   8'h23: ps2_asci <= 8'h44;//D
+		   8'h2b: ps2_asci <= 8'h46;//F
+		   8'h34: ps2_asci <= 8'h47;//G
+		   8'h33: ps2_asci <= 8'h48;//H
+		   8'h3b: ps2_asci <= 8'h4a;//J
+		   8'h42: ps2_asci <= 8'h4b;//K
+		   8'h4b: ps2_asci <= 8'h4c;//L
+		   8'h1a: ps2_asci <= 8'h5a;//Z
+		   8'h22: ps2_asci <= 8'h58;//X
+		   8'h21: ps2_asci <= 8'h43;//C
+		   8'h2a: ps2_asci <= 8'h56;//V
+		   8'h32: ps2_asci <= 8'h42;//B
+		   8'h31: ps2_asci <= 8'h4e;//N
+		   8'h3a: ps2_asci <= 8'h4d;//M
+		   
+		   
+		  // 8'h0E   : ps2_asci <= "~";
+			8'h4E   : ps2_asci <= "-";
+			8'h55   : ps2_asci <= "=";
+			//8'h5D   : ps2_asci <= "|";
+			
+			8'h70   : ps2_asci <= 8'h00;
+			8'h71   : ps2_asci <= ".";//".".
+			8'h69   : ps2_asci <= 8'h01;
+			8'h72   : ps2_asci <= 8'h02;
+			8'h7A   : ps2_asci <= 8'h03;
+			8'h6B   : ps2_asci <= 8'h04;
+			8'h73   : ps2_asci <= 8'h05;
+			8'h74   : ps2_asci <= 8'h06;
+			8'h6C   : ps2_asci <= 8'h07;
+			8'h75   : ps2_asci <= 8'h08;
+			8'h7D   : ps2_asci <= 8'h09;
+			8'h7C   : ps2_asci <= "*";
+			8'h7B   : ps2_asci <= "-";
+			8'h79   : ps2_asci <= "+";
+			8'h4a   : ps2_asci <= "/";
+		   // default : ps2_asci <= " ";
+		   default:ps2_asci <= ".";
+		   endcase
+	end
  end
  always @(posedge clk or negedge rst) begin
   if(!rst) begin
@@ -270,4 +336,6 @@ module ps2_top(clk,rst,ps2k_clk,ps2k_data,ps2_byte,ps2_state,led,wei,seg);
  end
  assign ps2_byte = ps2_asci;
  assign ps2_state = ps2_state_r;
+ 
+ 
 endmodule

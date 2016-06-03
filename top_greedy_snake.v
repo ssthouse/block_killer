@@ -103,8 +103,8 @@ module top_greedy_snake
 		//game state
 		.game_state(game_state),
 		//key control
-		.left_key_press(left),
-		.right_key_press(right),
+		.left_key_press(left_key_down),
+		.right_key_press(right_key_down),
 		.down_key_press(down_key_down),
 		//output color data
 		.column_0(column_0),

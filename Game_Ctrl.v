@@ -73,13 +73,20 @@ module Game_Ctrl
 	//press change signal
 	reg left_press;
 	reg right_press;
+	
+	integer x,y;
 
 	always@(posedge CLK_50M or negedge RST_N)
 	begin
 		if(!RST_N)
 			begin
+				for(x=0; x<4; x=x+1)begin
+					for(y=0; y<8; y=y+1)begin
+						array[x][y] <= 3'b000;
+					end
+				end
 				game_over <= 0;
-				array[0][7] <= 3'b100;
+				array[0][0] <= 3'b100;
 				//todo init position is 0
 				block_pos <= 0;
 				//clear count
@@ -88,74 +95,82 @@ module Game_Ctrl
 		else 
 			begin
 			case(game_state)
-				STATE_START:
-					begin
+				STATE_START:begin
+					for(x=0; x<4; x=x+1)begin
+						for(y=0; y<8; y=y+1)begin
+							array[x][y] <= 3'b000;
+						end
+					end	
+					array[0][0] <= 3'b100;
+				end
+				STATE_PLAY:begin
+					//count clk to down the block
+					if(clk_cnt == 32'd25_000_000) 
+						begin
+							clk_cnt <= 0;
 							
-					end
-				STATE_PLAY:
-					begin
-						//count clk to down the block
-						if(clk_cnt == 32'd25_000_000) 
-							begin
-								clk_cnt <= 0;
-								
-								//react the keyboard input
-								if(left_key_press == 1)
-									begin
-										//if not int most left && left block is black
-										if((block_pos%4) > 0
-											&& array[block_pos%4-1][block_pos/4] == 3'b000)
-											begin
-												array[block_pos%4][block_pos/4] = 3'b000;
-												array[(block_pos-1)%4][(block_pos-1)/4] = 3'b100;
-												block_pos = block_pos - 1;
-											end
-									end
-								else if(right_key_press == 1)
-									begin
-										//if not int most left && left block is black
-										if((block_pos%4) < 3
-											&& array[block_pos%4+1][block_pos/4] == 3'b000)
-											begin
-												array[block_pos%4][block_pos/4] = 3'b000;
-												array[(block_pos+1)%4][(block_pos+1)/4] = 3'b100;
-												block_pos = block_pos + 1;
-											end
-									end
-								if(down_key_press == 1)
-									begin
-										//todo test game over signal out
-										game_over <= 1;
-									end
-								else
-									begin
-										game_over <= 0;
-									end
-
-								/*
-								//todo down one block
-								if(block_pos/4 < 7)
-									begin
-										array[block_pos%4][block_pos/4] = 3'b000;
-										block_pos = block_pos + 4;
-										array[block_pos%4][block_pos/4] = 3'b100;
-									end
-								else
-									begin
-										array[block_pos%4][block_pos/4] = 3'b000;
-										block_pos = block_pos - 28;
-										array[block_pos%4][block_pos/4] = 3'b100;
-									end
-									*/
+							//react the keyboard input
+							if(left_key_press == 1)begin
+								//if not int most left && left block is black
+								if((block_pos%4) > 0
+									&& array[block_pos%4-1][block_pos/4] == 3'b000)begin
+									array[block_pos%4][block_pos/4] = 3'b000;
+									array[(block_pos-1)%4][(block_pos-1)/4] = 3'b100;
+									block_pos = block_pos - 1;
+								end
 							end
-						else 
-							clk_cnt <= clk_cnt + 32'd1;
-							
-					end
-				STATE_OVER:
-					begin
+							else if(right_key_press == 1)begin
+								//if not int most left && left block is black
+								if((block_pos%4) < 3
+									&& array[block_pos%4+1][block_pos/4] == 3'b000)begin
+									array[block_pos%4][block_pos/4] = 3'b000;
+									array[(block_pos+1)%4][(block_pos+1)/4] = 3'b100;
+									block_pos = block_pos + 1;
+								end
+							end
+							if(down_key_press == 1)begin
+								//todo test game over signal out
+								game_over <= 1;
+							end
+							else begin
+								game_over <= 0;
+							end
+
+							///*
+							//todo down one block
+							//if not in bottom && bottom one is black-->down
+							//if in the bottom
+							if(block_pos/4 == 7)begin
+								//reset block_pos
+								block_pos <= 0;
+							end
+							//in top && bottom one is not black>>>game over
+							else if(block_pos/4 == 0 && array[block_pos%4][block_pos/4+1] != 3'b000)begin
+								array[block_pos%4][block_pos/4] <= 3'b100;
+								game_over <= 1;
+							end
+							//if not in botttom but bottom one is not black
+							else if(array[block_pos%4][block_pos/4+1] != 3'b000)begin
+								block_pos <= 0;
+							end
+							//go down
+							else begin
+								array[block_pos%4][block_pos/4] = 3'b000;
+								block_pos = block_pos + 4;
+								array[block_pos%4][block_pos/4] = 3'b100;
+							end
+						end
+					else 
+						clk_cnt <= clk_cnt + 32'd1;
 						
+				end
+				STATE_OVER:begin
+					for(x=0; x<4; x=x+1)begin
+						for(y=0; y<8; y=y+1)begin
+							array[x][y] <= 3'b111;
+						end
 					end
+				end
 			endcase
 		end
 	end
