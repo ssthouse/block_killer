@@ -121,8 +121,8 @@ module Game_Ctrl
 								//if not int most left && left block is black
 								if((block_pos%4) > 0
 									&& array[block_pos%4-1][block_pos/4] == BLACK)begin
-									array[block_pos%4][block_pos/4] = BLACK;
-									array[(block_pos-1)%4][(block_pos-1)/4] = BLUE;
+									array[block_pos%4][block_pos/4] <= BLACK;
+									array[(block_pos-1)%4][(block_pos-1)/4] <= BLUE;
 									block_pos = block_pos - 1;
 								end
 							end
@@ -130,8 +130,8 @@ module Game_Ctrl
 								//if not int most left && left block is black
 								if((block_pos%4) < 3
 									&& array[block_pos%4+1][block_pos/4] == BLACK)begin
-									array[block_pos%4][block_pos/4] = BLACK;
-									array[(block_pos+1)%4][(block_pos+1)/4] = BLUE;
+									array[block_pos%4][block_pos/4] <= BLACK;
+									array[(block_pos+1)%4][(block_pos+1)/4] <= BLUE;
 									block_pos = block_pos + 1;
 								end
 							end
@@ -149,7 +149,6 @@ module Game_Ctrl
 								block_pos = 0;
 								array[block_pos%4][block_pos/4] <= BLUE;
 								//delete line
-								
 								if(array[0][7] == array[1][7] && 
 									array[1][7] == array[2][7] &&
 									array[2][7] == array[3][7])begin
@@ -160,7 +159,6 @@ module Game_Ctrl
 										array[3][7-x] <= array[3][7-x-1];
 									end
 								end
-								
 							end
 							//in top && bottom one is not black>>>game over
 							else if(block_pos/4 == 0 && array[block_pos%4][block_pos/4+1] != BLACK)begin
@@ -173,13 +171,32 @@ module Game_Ctrl
 							end
 							//go down
 							else begin
-								array[block_pos%4][block_pos/4] = BLACK;
+								array[block_pos%4][block_pos/4] <= BLACK;
 								block_pos = block_pos + 4;
-								array[block_pos%4][block_pos/4] = BLUE;
+								array[block_pos%4][block_pos/4] <= BLUE;
 							end
+							
+							//if line complete? >>> delete
+							for(y=0; y<8; y=y+1) begin
+								if(array[0][y] == array[1][y] && 
+									array[1][y] == array[2][y] &&
+									array[2][y] == array[3][y] &&
+									array[0][y] != 3'b000) begin
+									//let block above move down
+									for(x=0; x<y; x=x+1)begin
+										array[0][y-x] <= array[0][y-x-1];
+										array[1][y-x] <= array[1][y-x-1];
+										array[2][y-x] <= array[2][y-x-1];
+										array[3][y-x] <= array[3][y-x-1];
+									end
+								end
+							end
+							
 						end
-					else 
+					else begin
 						clk_cnt <= clk_cnt + 32'd1;
+						
+					end
 				end
 				STATE_OVER:begin
 					for(x=0; x<4; x=x+1)begin
