@@ -103,8 +103,8 @@ module top_greedy_snake
 		//game state
 		.game_state(game_state),
 		//key control
-		.left_key_press(left),
-		.right_key_press(right),
+		.left_key_press(left_key_down),
+		.right_key_press(right_key_down),
 		.down_key_press(down_key_down),
 		//output color data
 		.column_0(column_0),
@@ -113,18 +113,6 @@ module top_greedy_snake
 		.column_3(column_3),
 		//game signal
 		.game_over(game_over)
-	);
-	
-	Key key//按键检测模块 延时消抖
-	(	
-		.CLK_50M(CLK_50M),
-		.RSTn(RSTn),
-
-		.left(left_key_down),
-		.right(right_key_down),
-
-		.left_key_press(left),
-		.right_key_press(right)
 	);
 	
 //****************************our code *****************************

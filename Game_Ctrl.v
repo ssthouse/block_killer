@@ -1,5 +1,6 @@
 module Game_Ctrl
 (
+	output reg [2:0]led,
 	input CLK_50M,
 	input RST_N,
 	
@@ -109,6 +110,7 @@ module Game_Ctrl
 					end	
 					array[0][0] <= BLUE;
 					game_over <= 0;
+					led <= 3'b100;
 				end
 				STATE_PLAY:begin
 					//count clk to down the block
@@ -148,17 +150,6 @@ module Game_Ctrl
 								//reset block_pos
 								block_pos = 0;
 								array[block_pos%4][block_pos/4] <= BLUE;
-								//delete line
-								/*if(array[0][7] == array[1][7] && 
-									array[1][7] == array[2][7] &&
-									array[2][7] == array[3][7])begin
-									for(x=0; x<7; x=x+1)begin
-										array[0][7-x] <= array[0][7-x-1];
-										array[1][7-x] <= array[1][7-x-1];
-										array[2][7-x] <= array[2][7-x-1];
-										array[3][7-x] <= array[3][7-x-1];
-									end
-								end*/
 							end
 							//in top && bottom one is not black>>>game over
 							else if(block_pos/4 == 0 && array[block_pos%4][block_pos/4+1] != BLACK)begin
@@ -176,12 +167,28 @@ module Game_Ctrl
 								array[block_pos%4][block_pos/4] <= BLUE;
 							end
 							
+							
+							//bottom up delete?
+							for(x=0; x<4; x=x+1)begin
+								for(y=0; y<7; y=y+1)begin
+									if(array[x][y] == array[x][y+1] && array[x][y] != BLACK
+										&&array[x][y] != WHITE )begin
+										array[x][y+1] <= array[x][y]==BLUE ? GREEN :
+													array[x][y]==GREEN ? RED :
+													array[x][y]==RED ? WHITE : BLACK;
+										array[x][y]<= BLACK;
+										//todo: delete line	
+										
+									end
+								end
+							end
+							
 							//if line complete? >>> delete
 							for(y=0; y<8; y=y+1) begin
 								if(array[0][y] == array[1][y] && 
 									array[1][y] == array[2][y] &&
 									array[2][y] == array[3][y] &&
-									array[0][y] != 3'b000 && block_pos ==0) begin
+									array[0][y] != BLACK && block_pos ==0) begin
 									//let block above move down
 									for(x=0; x<y; x=x+1)begin
 										array[0][y-x] <= array[0][y-x-1];
@@ -189,40 +196,185 @@ module Game_Ctrl
 										array[2][y-x] <= array[2][y-x-1];
 										array[3][y-x] <= array[3][y-x-1];
 									end
+									led <= 3'b111;
 								end
 							end
 							
 						end
 					else begin
 						clk_cnt <= clk_cnt + 32'd1;
-						
 					end
 				end
 				STATE_OVER:begin
-					for(x=0; x<4; x=x+1)begin
-						for(y=0; y<8; y=y+1)begin
-							array[x][y] <= WHITE;
-							//draw the fail text & score text
-						end
+					if(clk_cnt==32'd100_000_001) begin
+					end		
+					else if(clk_cnt == 3_000_000)begin		
+					        array[0][0] <= 3'b111;
+					        clk_cnt <= clk_cnt + 32'd1;
+					end    
+					else if(clk_cnt == 32'd6_000_000)begin
+					        array[0][1] <= 3'b111;
+					        clk_cnt <= clk_cnt + 32'd1;
 					end
-				end
-			endcase
+					else if(clk_cnt == 32'd9_000_000)begin
+						array[0][2] <= 3'b111;
+						clk_cnt <= clk_cnt + 32'd1;
+					end
+					else if(clk_cnt == 32'd25_000_000)begin
+						array[0][3] <= 3'b100;
+						clk_cnt <= clk_cnt + 32'd1;
+					end
+					else if(clk_cnt == 32'd12_000_000)	begin
+						array[0][4] <= 3'b010;
+						clk_cnt <= clk_cnt + 32'd1;
+					end
+					else	if(clk_cnt == 32'd15_000_000)
+					begin
+						array[0][5] <= 3'b111;
+						clk_cnt <= clk_cnt + 32'd1;
+					end
+					else	if(clk_cnt == 32'd18_000_000)
+					begin
+						array[0][6] <= 3'b111;
+						clk_cnt <= clk_cnt + 32'd1;
+					end
+					else	if(clk_cnt == 32'd21_000_000)
+					begin
+						array[0][7] <= 3'b111;
+						clk_cnt <= clk_cnt + 32'd1;
+					end 
+					else	if(clk_cnt == 32'd24_000_000)	  
+					begin			
+					        array[1][0] <= 3'b111;
+					        clk_cnt <= clk_cnt + 32'd1;
+					end
+					else	if(clk_cnt == 32'd30_000_000)
+					begin
+					        array[1][1] <= 3'b000;
+					        clk_cnt <= clk_cnt + 32'd1;
+					         end
+					        else	if(clk_cnt == 32'd33_000_000)
+					begin
+					        array[1][2] <= 3'b000;
+					        clk_cnt <= clk_cnt + 32'd1;
+					         end
+					        else	if(clk_cnt == 32'd36_000_000)
+					begin
+					        array[1][3] <= 3'b000;
+					        clk_cnt <= clk_cnt + 32'd1;
+					         end
+					        else	if(clk_cnt == 32'd39_000_000)
+					begin
+					        array[1][4] <= 3'b000;
+					        clk_cnt <= clk_cnt + 32'd1;
+					         end
+					        else	if(clk_cnt == 32'd42_000_000)
+					begin
+					        array[1][5] <= 3'b000;
+					        clk_cnt <= clk_cnt + 32'd1;
+					         end
+					        else	if(clk_cnt == 32'd45_000_000)
+					begin
+					        array[1][6] <= 3'b000;
+					        clk_cnt <= clk_cnt + 32'd1;
+					         end
+					        else	if(clk_cnt == 32'd49_000_000)
+					begin
+					        array[1][7] <= 3'b111; 
+					        clk_cnt <= clk_cnt + 32'd1;
+					         end
+					else if(clk_cnt == 32'd54_000_000)			  
+					  	begin
+					     			
+					        array[2][0] <= 3'b111;
+					        clk_cnt <= clk_cnt + 32'd1;
+					         end
+					        else	if(clk_cnt == 32'd57_000_000)
+					begin
+					        array[2][1] <= 3'b000;
+					        clk_cnt <= clk_cnt + 32'd1;
+					         end
+					        else	if(clk_cnt == 32'd60_000_000)
+					begin
+					        array[2][2] <= 3'b000;
+					        clk_cnt <= clk_cnt + 32'd1;
+					         end
+					        else	if(clk_cnt == 32'd63_000_000)
+					begin
+					        array[2][3] <= 3'b000;
+					        clk_cnt <= clk_cnt + 32'd1;
+					         end
+					        else	if(clk_cnt == 32'd66_000_000)
+					begin
+					        array[2][4] <= 3'b000;
+					        clk_cnt <= clk_cnt + 32'd1;
+					         end
+					        else	if(clk_cnt == 32'd69_000_000)
+					begin
+					        array[2][5] <= 3'b000;
+					        clk_cnt <= clk_cnt + 32'd1;
+					         end
+					        else	if(clk_cnt == 32'd72_000_000)
+					begin
+					        array[2][6] <= 3'b000;
+					        clk_cnt <= clk_cnt + 32'd1;
+					         end
+					        else	if(clk_cnt == 32'd75_000_000)
+					begin
+					        array[2][7] <= 3'b111; 
+					        clk_cnt <= clk_cnt + 32'd1;
+					         end
+				
+		                    else if(clk_cnt == 32'd78_000_000)			 
+					  
+					  	begin
+					        			
+					        array[3][0] <= 3'b111;
+					        clk_cnt <= clk_cnt + 32'd1;
+					         end
+					        else	if(clk_cnt == 32'd81_000_000)
+					begin
+					        array[3][1] <= 3'b111;
+					        clk_cnt <= clk_cnt + 32'd1;
+					         end
+					        else	if(clk_cnt == 32'd84_000_000)
+					begin
+					        array[3][2] <= 3'b111;
+					        clk_cnt <= clk_cnt + 32'd1;
+					         end
+					        else	if(clk_cnt == 32'd87_000_000)
+					begin
+					        array[3][3] <= 3'b100;
+					        clk_cnt <= clk_cnt + 32'd1;
+					         end
+					        else	if(clk_cnt == 32'd90_000_000)
+					begin
+					        array[3][4] <= 3'b010;
+					        clk_cnt <= clk_cnt + 32'd1;
+					         end
+					        else	if(clk_cnt == 32'd93_000_000)
+					begin
+					        array[3][5] <= 3'b111;
+					        clk_cnt <= clk_cnt + 32'd1;
+					         end
+					        else	if(clk_cnt == 32'd96_000_000)
+					begin
+					        array[3][6] <= 3'b111;
+					        clk_cnt <= clk_cnt + 32'd1;
+					         end
+					        else	if(clk_cnt == 32'd99_000_000)
+						begin
+					        array[3][7] <= 3'b111; 
+					        clk_cnt <= clk_cnt + 32'd1;
+					  end     
+					else  begin    
+						clk_cnt <= clk_cnt + 32'd1;
+					end
+				end//
+			endcase// state end
 		end
 	end
 
-	//keyboard detect
-	always@(posedge left_key_press or posedge right_key_press)
-	begin
-		if(left_key_press == 1)
-			left_press <= 1;
-		else if(left_key_press == 0)
-			left_press <= 0;
-			
-		if(right_key_press == 1)
-			right_press <= 1;
-		else if(right_key_press == 0)
-			right_press <= 0;
-	end
 endmodule
 
 
