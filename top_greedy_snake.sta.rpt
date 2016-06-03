@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for top_greedy_snake
-Fri Jun 03 20:18:01 2016
+Fri Jun 03 20:41:13 2016
 Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
 
 
@@ -102,7 +102,7 @@ applicable agreement for further details.
 +-----------+-----------------+------------+------+
 ; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
 +-----------+-----------------+------------+------+
-; 62.47 MHz ; 62.47 MHz       ; CLK_50M    ;      ;
+; 65.52 MHz ; 65.52 MHz       ; CLK_50M    ;      ;
 +-----------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -112,7 +112,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------+---------+-----------------+
 ; Clock   ; Slack   ; End Point TNS   ;
 +---------+---------+-----------------+
-; CLK_50M ; -15.007 ; -1773.702       ;
+; CLK_50M ; -14.263 ; -1686.501       ;
 +---------+---------+-----------------+
 
 
@@ -250,9 +250,9 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; RSTn      ; CLK_50M    ; 3.255 ; 3.745 ; Rise       ; CLK_50M         ;
-; ps2k_clk  ; CLK_50M    ; 1.393 ; 1.802 ; Rise       ; CLK_50M         ;
-; ps2k_data ; CLK_50M    ; 1.615 ; 2.022 ; Rise       ; CLK_50M         ;
+; RSTn      ; CLK_50M    ; 4.111 ; 4.597 ; Rise       ; CLK_50M         ;
+; ps2k_clk  ; CLK_50M    ; 1.605 ; 2.030 ; Rise       ; CLK_50M         ;
+; ps2k_data ; CLK_50M    ; 1.892 ; 2.376 ; Rise       ; CLK_50M         ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -261,9 +261,9 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; RSTn      ; CLK_50M    ; -1.866 ; -2.347 ; Rise       ; CLK_50M         ;
-; ps2k_clk  ; CLK_50M    ; -1.042 ; -1.440 ; Rise       ; CLK_50M         ;
-; ps2k_data ; CLK_50M    ; -1.198 ; -1.565 ; Rise       ; CLK_50M         ;
+; RSTn      ; CLK_50M    ; -1.822 ; -2.310 ; Rise       ; CLK_50M         ;
+; ps2k_clk  ; CLK_50M    ; -1.234 ; -1.638 ; Rise       ; CLK_50M         ;
+; ps2k_data ; CLK_50M    ; -1.276 ; -1.672 ; Rise       ; CLK_50M         ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -272,15 +272,16 @@ No paths to report.
 +---------------+------------+--------+--------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +---------------+------------+--------+--------+------------+-----------------+
-; color_out[*]  ; CLK_50M    ; 11.264 ; 11.394 ; Rise       ; CLK_50M         ;
-;  color_out[0] ; CLK_50M    ; 10.657 ; 10.784 ; Rise       ; CLK_50M         ;
-;  color_out[1] ; CLK_50M    ; 11.264 ; 11.394 ; Rise       ; CLK_50M         ;
-;  color_out[2] ; CLK_50M    ; 10.717 ; 10.846 ; Rise       ; CLK_50M         ;
-; hsync         ; CLK_50M    ; 6.085  ; 6.073  ; Rise       ; CLK_50M         ;
-; led_out[*]    ; CLK_50M    ; 8.434  ; 8.610  ; Rise       ; CLK_50M         ;
-;  led_out[0]   ; CLK_50M    ; 8.434  ; 8.610  ; Rise       ; CLK_50M         ;
-;  led_out[1]   ; CLK_50M    ; 6.887  ; 6.959  ; Rise       ; CLK_50M         ;
-; vsync         ; CLK_50M    ; 6.294  ; 6.222  ; Rise       ; CLK_50M         ;
+; color_out[*]  ; CLK_50M    ; 11.158 ; 11.294 ; Rise       ; CLK_50M         ;
+;  color_out[0] ; CLK_50M    ; 10.636 ; 10.781 ; Rise       ; CLK_50M         ;
+;  color_out[1] ; CLK_50M    ; 11.158 ; 11.294 ; Rise       ; CLK_50M         ;
+;  color_out[2] ; CLK_50M    ; 10.526 ; 10.652 ; Rise       ; CLK_50M         ;
+; hsync         ; CLK_50M    ; 6.216  ; 6.184  ; Rise       ; CLK_50M         ;
+; led_out[*]    ; CLK_50M    ; 8.391  ; 8.549  ; Rise       ; CLK_50M         ;
+;  led_out[0]   ; CLK_50M    ; 8.391  ; 8.549  ; Rise       ; CLK_50M         ;
+;  led_out[1]   ; CLK_50M    ; 6.918  ; 6.962  ; Rise       ; CLK_50M         ;
+;  led_out[2]   ; CLK_50M    ; 7.206  ; 7.238  ; Rise       ; CLK_50M         ;
+; vsync         ; CLK_50M    ; 5.871  ; 5.830  ; Rise       ; CLK_50M         ;
 +---------------+------------+--------+--------+------------+-----------------+
 
 
@@ -289,15 +290,16 @@ No paths to report.
 +---------------+------------+-------+-------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +---------------+------------+-------+-------+------------+-----------------+
-; color_out[*]  ; CLK_50M    ; 6.391 ; 6.446 ; Rise       ; CLK_50M         ;
-;  color_out[0] ; CLK_50M    ; 7.706 ; 7.778 ; Rise       ; CLK_50M         ;
-;  color_out[1] ; CLK_50M    ; 6.391 ; 6.446 ; Rise       ; CLK_50M         ;
-;  color_out[2] ; CLK_50M    ; 7.655 ; 7.715 ; Rise       ; CLK_50M         ;
-; hsync         ; CLK_50M    ; 5.951 ; 5.940 ; Rise       ; CLK_50M         ;
-; led_out[*]    ; CLK_50M    ; 6.722 ; 6.791 ; Rise       ; CLK_50M         ;
-;  led_out[0]   ; CLK_50M    ; 8.256 ; 8.429 ; Rise       ; CLK_50M         ;
-;  led_out[1]   ; CLK_50M    ; 6.722 ; 6.791 ; Rise       ; CLK_50M         ;
-; vsync         ; CLK_50M    ; 6.151 ; 6.082 ; Rise       ; CLK_50M         ;
+; color_out[*]  ; CLK_50M    ; 7.152 ; 7.206 ; Rise       ; CLK_50M         ;
+;  color_out[0] ; CLK_50M    ; 7.152 ; 7.206 ; Rise       ; CLK_50M         ;
+;  color_out[1] ; CLK_50M    ; 8.263 ; 8.382 ; Rise       ; CLK_50M         ;
+;  color_out[2] ; CLK_50M    ; 7.614 ; 7.713 ; Rise       ; CLK_50M         ;
+; hsync         ; CLK_50M    ; 6.076 ; 6.046 ; Rise       ; CLK_50M         ;
+; led_out[*]    ; CLK_50M    ; 6.751 ; 6.793 ; Rise       ; CLK_50M         ;
+;  led_out[0]   ; CLK_50M    ; 8.214 ; 8.369 ; Rise       ; CLK_50M         ;
+;  led_out[1]   ; CLK_50M    ; 6.751 ; 6.793 ; Rise       ; CLK_50M         ;
+;  led_out[2]   ; CLK_50M    ; 7.028 ; 7.058 ; Rise       ; CLK_50M         ;
+; vsync         ; CLK_50M    ; 5.746 ; 5.707 ; Rise       ; CLK_50M         ;
 +---------------+------------+-------+-------+------------+-----------------+
 
 
@@ -306,7 +308,7 @@ No paths to report.
 +-----------+-----------------+------------+------+
 ; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
 +-----------+-----------------+------------+------+
-; 69.73 MHz ; 69.73 MHz       ; CLK_50M    ;      ;
+; 73.14 MHz ; 73.14 MHz       ; CLK_50M    ;      ;
 +-----------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -316,7 +318,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------+---------+----------------+
 ; Clock   ; Slack   ; End Point TNS  ;
 +---------+---------+----------------+
-; CLK_50M ; -13.342 ; -1568.358      ;
+; CLK_50M ; -12.673 ; -1490.224      ;
 +---------+---------+----------------+
 
 
@@ -325,7 +327,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------+-------+-----------------+
 ; Clock   ; Slack ; End Point TNS   ;
 +---------+-------+-----------------+
-; CLK_50M ; 0.312 ; 0.000           ;
+; CLK_50M ; 0.311 ; 0.000           ;
 +---------+-------+-----------------+
 
 
@@ -454,9 +456,9 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; RSTn      ; CLK_50M    ; 2.885 ; 3.259 ; Rise       ; CLK_50M         ;
-; ps2k_clk  ; CLK_50M    ; 1.164 ; 1.502 ; Rise       ; CLK_50M         ;
-; ps2k_data ; CLK_50M    ; 1.378 ; 1.696 ; Rise       ; CLK_50M         ;
+; RSTn      ; CLK_50M    ; 3.669 ; 4.027 ; Rise       ; CLK_50M         ;
+; ps2k_clk  ; CLK_50M    ; 1.359 ; 1.699 ; Rise       ; CLK_50M         ;
+; ps2k_data ; CLK_50M    ; 1.609 ; 2.005 ; Rise       ; CLK_50M         ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -465,9 +467,9 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; RSTn      ; CLK_50M    ; -1.610 ; -1.989 ; Rise       ; CLK_50M         ;
-; ps2k_clk  ; CLK_50M    ; -0.855 ; -1.184 ; Rise       ; CLK_50M         ;
-; ps2k_data ; CLK_50M    ; -0.999 ; -1.298 ; Rise       ; CLK_50M         ;
+; RSTn      ; CLK_50M    ; -1.574 ; -1.952 ; Rise       ; CLK_50M         ;
+; ps2k_clk  ; CLK_50M    ; -1.031 ; -1.357 ; Rise       ; CLK_50M         ;
+; ps2k_data ; CLK_50M    ; -1.070 ; -1.386 ; Rise       ; CLK_50M         ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -476,15 +478,16 @@ No paths to report.
 +---------------+------------+--------+--------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +---------------+------------+--------+--------+------------+-----------------+
-; color_out[*]  ; CLK_50M    ; 10.398 ; 10.488 ; Rise       ; CLK_50M         ;
-;  color_out[0] ; CLK_50M    ; 9.850  ; 9.890  ; Rise       ; CLK_50M         ;
-;  color_out[1] ; CLK_50M    ; 10.398 ; 10.488 ; Rise       ; CLK_50M         ;
-;  color_out[2] ; CLK_50M    ; 9.906  ; 9.931  ; Rise       ; CLK_50M         ;
-; hsync         ; CLK_50M    ; 5.733  ; 5.769  ; Rise       ; CLK_50M         ;
-; led_out[*]    ; CLK_50M    ; 8.065  ; 8.167  ; Rise       ; CLK_50M         ;
-;  led_out[0]   ; CLK_50M    ; 8.065  ; 8.167  ; Rise       ; CLK_50M         ;
-;  led_out[1]   ; CLK_50M    ; 6.547  ; 6.549  ; Rise       ; CLK_50M         ;
-; vsync         ; CLK_50M    ; 5.914  ; 5.906  ; Rise       ; CLK_50M         ;
+; color_out[*]  ; CLK_50M    ; 10.331 ; 10.440 ; Rise       ; CLK_50M         ;
+;  color_out[0] ; CLK_50M    ; 9.850  ; 9.952  ; Rise       ; CLK_50M         ;
+;  color_out[1] ; CLK_50M    ; 10.331 ; 10.440 ; Rise       ; CLK_50M         ;
+;  color_out[2] ; CLK_50M    ; 9.750  ; 9.849  ; Rise       ; CLK_50M         ;
+; hsync         ; CLK_50M    ; 5.871  ; 5.875  ; Rise       ; CLK_50M         ;
+; led_out[*]    ; CLK_50M    ; 8.025  ; 8.093  ; Rise       ; CLK_50M         ;
+;  led_out[0]   ; CLK_50M    ; 8.025  ; 8.093  ; Rise       ; CLK_50M         ;
+;  led_out[1]   ; CLK_50M    ; 6.574  ; 6.541  ; Rise       ; CLK_50M         ;
+;  led_out[2]   ; CLK_50M    ; 6.839  ; 6.790  ; Rise       ; CLK_50M         ;
+; vsync         ; CLK_50M    ; 5.544  ; 5.546  ; Rise       ; CLK_50M         ;
 +---------------+------------+--------+--------+------------+-----------------+
 
 
@@ -493,15 +496,16 @@ No paths to report.
 +---------------+------------+-------+-------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +---------------+------------+-------+-------+------------+-----------------+
-; color_out[*]  ; CLK_50M    ; 6.056 ; 6.071 ; Rise       ; CLK_50M         ;
-;  color_out[0] ; CLK_50M    ; 7.291 ; 7.250 ; Rise       ; CLK_50M         ;
-;  color_out[1] ; CLK_50M    ; 6.056 ; 6.071 ; Rise       ; CLK_50M         ;
-;  color_out[2] ; CLK_50M    ; 7.235 ; 7.179 ; Rise       ; CLK_50M         ;
-; hsync         ; CLK_50M    ; 5.615 ; 5.649 ; Rise       ; CLK_50M         ;
-; led_out[*]    ; CLK_50M    ; 6.396 ; 6.398 ; Rise       ; CLK_50M         ;
-;  led_out[0]   ; CLK_50M    ; 7.902 ; 8.004 ; Rise       ; CLK_50M         ;
-;  led_out[1]   ; CLK_50M    ; 6.396 ; 6.398 ; Rise       ; CLK_50M         ;
-; vsync         ; CLK_50M    ; 5.789 ; 5.781 ; Rise       ; CLK_50M         ;
+; color_out[*]  ; CLK_50M    ; 6.782 ; 6.746 ; Rise       ; CLK_50M         ;
+;  color_out[0] ; CLK_50M    ; 6.782 ; 6.746 ; Rise       ; CLK_50M         ;
+;  color_out[1] ; CLK_50M    ; 7.795 ; 7.812 ; Rise       ; CLK_50M         ;
+;  color_out[2] ; CLK_50M    ; 7.198 ; 7.199 ; Rise       ; CLK_50M         ;
+; hsync         ; CLK_50M    ; 5.746 ; 5.751 ; Rise       ; CLK_50M         ;
+; led_out[*]    ; CLK_50M    ; 6.423 ; 6.391 ; Rise       ; CLK_50M         ;
+;  led_out[0]   ; CLK_50M    ; 7.864 ; 7.934 ; Rise       ; CLK_50M         ;
+;  led_out[1]   ; CLK_50M    ; 6.423 ; 6.391 ; Rise       ; CLK_50M         ;
+;  led_out[2]   ; CLK_50M    ; 6.677 ; 6.630 ; Rise       ; CLK_50M         ;
+; vsync         ; CLK_50M    ; 5.434 ; 5.436 ; Rise       ; CLK_50M         ;
 +---------------+------------+-------+-------+------------+-----------------+
 
 
@@ -510,7 +514,7 @@ No paths to report.
 +---------+--------+-----------------+
 ; Clock   ; Slack  ; End Point TNS   ;
 +---------+--------+-----------------+
-; CLK_50M ; -8.060 ; -918.878        ;
+; CLK_50M ; -7.590 ; -858.027        ;
 +---------+--------+-----------------+
 
 
@@ -648,9 +652,9 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; RSTn      ; CLK_50M    ; 1.808 ; 2.470 ; Rise       ; CLK_50M         ;
-; ps2k_clk  ; CLK_50M    ; 0.750 ; 1.298 ; Rise       ; CLK_50M         ;
-; ps2k_data ; CLK_50M    ; 0.884 ; 1.467 ; Rise       ; CLK_50M         ;
+; RSTn      ; CLK_50M    ; 2.291 ; 3.038 ; Rise       ; CLK_50M         ;
+; ps2k_clk  ; CLK_50M    ; 0.885 ; 1.472 ; Rise       ; CLK_50M         ;
+; ps2k_data ; CLK_50M    ; 1.042 ; 1.675 ; Rise       ; CLK_50M         ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -659,9 +663,9 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; RSTn      ; CLK_50M    ; -1.027 ; -1.680 ; Rise       ; CLK_50M         ;
-; ps2k_clk  ; CLK_50M    ; -0.551 ; -1.093 ; Rise       ; CLK_50M         ;
-; ps2k_data ; CLK_50M    ; -0.642 ; -1.197 ; Rise       ; CLK_50M         ;
+; RSTn      ; CLK_50M    ; -1.013 ; -1.660 ; Rise       ; CLK_50M         ;
+; ps2k_clk  ; CLK_50M    ; -0.674 ; -1.248 ; Rise       ; CLK_50M         ;
+; ps2k_data ; CLK_50M    ; -0.692 ; -1.278 ; Rise       ; CLK_50M         ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -670,15 +674,16 @@ No paths to report.
 +---------------+------------+-------+-------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +---------------+------------+-------+-------+------------+-----------------+
-; color_out[*]  ; CLK_50M    ; 6.589 ; 6.809 ; Rise       ; CLK_50M         ;
-;  color_out[0] ; CLK_50M    ; 6.271 ; 6.407 ; Rise       ; CLK_50M         ;
-;  color_out[1] ; CLK_50M    ; 6.589 ; 6.809 ; Rise       ; CLK_50M         ;
-;  color_out[2] ; CLK_50M    ; 6.291 ; 6.437 ; Rise       ; CLK_50M         ;
-; hsync         ; CLK_50M    ; 3.710 ; 3.632 ; Rise       ; CLK_50M         ;
-; led_out[*]    ; CLK_50M    ; 5.134 ; 5.434 ; Rise       ; CLK_50M         ;
-;  led_out[0]   ; CLK_50M    ; 5.134 ; 5.434 ; Rise       ; CLK_50M         ;
-;  led_out[1]   ; CLK_50M    ; 4.124 ; 4.267 ; Rise       ; CLK_50M         ;
-; vsync         ; CLK_50M    ; 3.838 ; 3.767 ; Rise       ; CLK_50M         ;
+; color_out[*]  ; CLK_50M    ; 6.620 ; 6.759 ; Rise       ; CLK_50M         ;
+;  color_out[0] ; CLK_50M    ; 6.273 ; 6.381 ; Rise       ; CLK_50M         ;
+;  color_out[1] ; CLK_50M    ; 6.620 ; 6.759 ; Rise       ; CLK_50M         ;
+;  color_out[2] ; CLK_50M    ; 6.231 ; 6.330 ; Rise       ; CLK_50M         ;
+; hsync         ; CLK_50M    ; 3.803 ; 3.719 ; Rise       ; CLK_50M         ;
+; led_out[*]    ; CLK_50M    ; 5.141 ; 5.445 ; Rise       ; CLK_50M         ;
+;  led_out[0]   ; CLK_50M    ; 5.141 ; 5.445 ; Rise       ; CLK_50M         ;
+;  led_out[1]   ; CLK_50M    ; 4.171 ; 4.315 ; Rise       ; CLK_50M         ;
+;  led_out[2]   ; CLK_50M    ; 4.295 ; 4.463 ; Rise       ; CLK_50M         ;
+; vsync         ; CLK_50M    ; 3.582 ; 3.529 ; Rise       ; CLK_50M         ;
 +---------------+------------+-------+-------+------------+-----------------+
 
 
@@ -687,15 +692,16 @@ No paths to report.
 +---------------+------------+-------+-------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +---------------+------------+-------+-------+------------+-----------------+
-; color_out[*]  ; CLK_50M    ; 3.818 ; 3.938 ; Rise       ; CLK_50M         ;
-;  color_out[0] ; CLK_50M    ; 4.584 ; 4.762 ; Rise       ; CLK_50M         ;
-;  color_out[1] ; CLK_50M    ; 3.818 ; 3.938 ; Rise       ; CLK_50M         ;
-;  color_out[2] ; CLK_50M    ; 4.532 ; 4.711 ; Rise       ; CLK_50M         ;
-; hsync         ; CLK_50M    ; 3.631 ; 3.557 ; Rise       ; CLK_50M         ;
-; led_out[*]    ; CLK_50M    ; 4.028 ; 4.165 ; Rise       ; CLK_50M         ;
-;  led_out[0]   ; CLK_50M    ; 5.031 ; 5.324 ; Rise       ; CLK_50M         ;
-;  led_out[1]   ; CLK_50M    ; 4.028 ; 4.165 ; Rise       ; CLK_50M         ;
-; vsync         ; CLK_50M    ; 3.753 ; 3.685 ; Rise       ; CLK_50M         ;
+; color_out[*]  ; CLK_50M    ; 4.240 ; 4.393 ; Rise       ; CLK_50M         ;
+;  color_out[0] ; CLK_50M    ; 4.240 ; 4.393 ; Rise       ; CLK_50M         ;
+;  color_out[1] ; CLK_50M    ; 4.931 ; 5.162 ; Rise       ; CLK_50M         ;
+;  color_out[2] ; CLK_50M    ; 4.524 ; 4.709 ; Rise       ; CLK_50M         ;
+; hsync         ; CLK_50M    ; 3.720 ; 3.640 ; Rise       ; CLK_50M         ;
+; led_out[*]    ; CLK_50M    ; 4.074 ; 4.212 ; Rise       ; CLK_50M         ;
+;  led_out[0]   ; CLK_50M    ; 5.038 ; 5.335 ; Rise       ; CLK_50M         ;
+;  led_out[1]   ; CLK_50M    ; 4.074 ; 4.212 ; Rise       ; CLK_50M         ;
+;  led_out[2]   ; CLK_50M    ; 4.193 ; 4.354 ; Rise       ; CLK_50M         ;
+; vsync         ; CLK_50M    ; 3.508 ; 3.458 ; Rise       ; CLK_50M         ;
 +---------------+------------+-------+-------+------------+-----------------+
 
 
@@ -704,10 +710,10 @@ No paths to report.
 +------------------+-----------+-------+----------+---------+---------------------+
 ; Clock            ; Setup     ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+-----------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -15.007   ; 0.0   ; 0.0      ; 0.0     ; -3.000              ;
-;  CLK_50M         ; -15.007   ; 0.187 ; N/A      ; N/A     ; N/A                 ;
-; Design-wide TNS  ; -1773.702 ; 0.0   ; 0.0      ; 0.0     ; N/A                 ;
-;  CLK_50M         ; -1773.702 ; 0.000 ; N/A      ; N/A     ; N/A                 ;
+; Worst-case Slack ; -14.263   ; 0.0   ; 0.0      ; 0.0     ; -3.000              ;
+;  CLK_50M         ; -14.263   ; 0.187 ; N/A      ; N/A     ; N/A                 ;
+; Design-wide TNS  ; -1686.501 ; 0.0   ; 0.0      ; 0.0     ; N/A                 ;
+;  CLK_50M         ; -1686.501 ; 0.000 ; N/A      ; N/A     ; N/A                 ;
 +------------------+-----------+-------+----------+---------+---------------------+
 
 
@@ -716,9 +722,9 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; RSTn      ; CLK_50M    ; 3.255 ; 3.745 ; Rise       ; CLK_50M         ;
-; ps2k_clk  ; CLK_50M    ; 1.393 ; 1.802 ; Rise       ; CLK_50M         ;
-; ps2k_data ; CLK_50M    ; 1.615 ; 2.022 ; Rise       ; CLK_50M         ;
+; RSTn      ; CLK_50M    ; 4.111 ; 4.597 ; Rise       ; CLK_50M         ;
+; ps2k_clk  ; CLK_50M    ; 1.605 ; 2.030 ; Rise       ; CLK_50M         ;
+; ps2k_data ; CLK_50M    ; 1.892 ; 2.376 ; Rise       ; CLK_50M         ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -727,9 +733,9 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; RSTn      ; CLK_50M    ; -1.027 ; -1.680 ; Rise       ; CLK_50M         ;
-; ps2k_clk  ; CLK_50M    ; -0.551 ; -1.093 ; Rise       ; CLK_50M         ;
-; ps2k_data ; CLK_50M    ; -0.642 ; -1.197 ; Rise       ; CLK_50M         ;
+; RSTn      ; CLK_50M    ; -1.013 ; -1.660 ; Rise       ; CLK_50M         ;
+; ps2k_clk  ; CLK_50M    ; -0.674 ; -1.248 ; Rise       ; CLK_50M         ;
+; ps2k_data ; CLK_50M    ; -0.692 ; -1.278 ; Rise       ; CLK_50M         ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -738,15 +744,16 @@ No paths to report.
 +---------------+------------+--------+--------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +---------------+------------+--------+--------+------------+-----------------+
-; color_out[*]  ; CLK_50M    ; 11.264 ; 11.394 ; Rise       ; CLK_50M         ;
-;  color_out[0] ; CLK_50M    ; 10.657 ; 10.784 ; Rise       ; CLK_50M         ;
-;  color_out[1] ; CLK_50M    ; 11.264 ; 11.394 ; Rise       ; CLK_50M         ;
-;  color_out[2] ; CLK_50M    ; 10.717 ; 10.846 ; Rise       ; CLK_50M         ;
-; hsync         ; CLK_50M    ; 6.085  ; 6.073  ; Rise       ; CLK_50M         ;
-; led_out[*]    ; CLK_50M    ; 8.434  ; 8.610  ; Rise       ; CLK_50M         ;
-;  led_out[0]   ; CLK_50M    ; 8.434  ; 8.610  ; Rise       ; CLK_50M         ;
-;  led_out[1]   ; CLK_50M    ; 6.887  ; 6.959  ; Rise       ; CLK_50M         ;
-; vsync         ; CLK_50M    ; 6.294  ; 6.222  ; Rise       ; CLK_50M         ;
+; color_out[*]  ; CLK_50M    ; 11.158 ; 11.294 ; Rise       ; CLK_50M         ;
+;  color_out[0] ; CLK_50M    ; 10.636 ; 10.781 ; Rise       ; CLK_50M         ;
+;  color_out[1] ; CLK_50M    ; 11.158 ; 11.294 ; Rise       ; CLK_50M         ;
+;  color_out[2] ; CLK_50M    ; 10.526 ; 10.652 ; Rise       ; CLK_50M         ;
+; hsync         ; CLK_50M    ; 6.216  ; 6.184  ; Rise       ; CLK_50M         ;
+; led_out[*]    ; CLK_50M    ; 8.391  ; 8.549  ; Rise       ; CLK_50M         ;
+;  led_out[0]   ; CLK_50M    ; 8.391  ; 8.549  ; Rise       ; CLK_50M         ;
+;  led_out[1]   ; CLK_50M    ; 6.918  ; 6.962  ; Rise       ; CLK_50M         ;
+;  led_out[2]   ; CLK_50M    ; 7.206  ; 7.238  ; Rise       ; CLK_50M         ;
+; vsync         ; CLK_50M    ; 5.871  ; 5.830  ; Rise       ; CLK_50M         ;
 +---------------+------------+--------+--------+------------+-----------------+
 
 
@@ -755,15 +762,16 @@ No paths to report.
 +---------------+------------+-------+-------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +---------------+------------+-------+-------+------------+-----------------+
-; color_out[*]  ; CLK_50M    ; 3.818 ; 3.938 ; Rise       ; CLK_50M         ;
-;  color_out[0] ; CLK_50M    ; 4.584 ; 4.762 ; Rise       ; CLK_50M         ;
-;  color_out[1] ; CLK_50M    ; 3.818 ; 3.938 ; Rise       ; CLK_50M         ;
-;  color_out[2] ; CLK_50M    ; 4.532 ; 4.711 ; Rise       ; CLK_50M         ;
-; hsync         ; CLK_50M    ; 3.631 ; 3.557 ; Rise       ; CLK_50M         ;
-; led_out[*]    ; CLK_50M    ; 4.028 ; 4.165 ; Rise       ; CLK_50M         ;
-;  led_out[0]   ; CLK_50M    ; 5.031 ; 5.324 ; Rise       ; CLK_50M         ;
-;  led_out[1]   ; CLK_50M    ; 4.028 ; 4.165 ; Rise       ; CLK_50M         ;
-; vsync         ; CLK_50M    ; 3.753 ; 3.685 ; Rise       ; CLK_50M         ;
+; color_out[*]  ; CLK_50M    ; 4.240 ; 4.393 ; Rise       ; CLK_50M         ;
+;  color_out[0] ; CLK_50M    ; 4.240 ; 4.393 ; Rise       ; CLK_50M         ;
+;  color_out[1] ; CLK_50M    ; 4.931 ; 5.162 ; Rise       ; CLK_50M         ;
+;  color_out[2] ; CLK_50M    ; 4.524 ; 4.709 ; Rise       ; CLK_50M         ;
+; hsync         ; CLK_50M    ; 3.720 ; 3.640 ; Rise       ; CLK_50M         ;
+; led_out[*]    ; CLK_50M    ; 4.074 ; 4.212 ; Rise       ; CLK_50M         ;
+;  led_out[0]   ; CLK_50M    ; 5.038 ; 5.335 ; Rise       ; CLK_50M         ;
+;  led_out[1]   ; CLK_50M    ; 4.074 ; 4.212 ; Rise       ; CLK_50M         ;
+;  led_out[2]   ; CLK_50M    ; 4.193 ; 4.354 ; Rise       ; CLK_50M         ;
+; vsync         ; CLK_50M    ; 3.508 ; 3.458 ; Rise       ; CLK_50M         ;
 +---------------+------------+-------+-------+------------+-----------------+
 
 
@@ -838,7 +846,7 @@ No paths to report.
 +------------+----------+-----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths  ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+-----------+----------+----------+----------+
-; CLK_50M    ; CLK_50M  ; 114907041 ; 0        ; 0        ; 0        ;
+; CLK_50M    ; CLK_50M  ; 109613460 ; 0        ; 0        ; 0        ;
 +------------+----------+-----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -848,7 +856,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+-----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths  ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+-----------+----------+----------+----------+
-; CLK_50M    ; CLK_50M  ; 114907041 ; 0        ; 0        ; 0        ;
+; CLK_50M    ; CLK_50M  ; 109613460 ; 0        ; 0        ; 0        ;
 +------------+----------+-----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -873,9 +881,9 @@ No dedicated SERDES Receiver circuitry present in device or used in design.
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 3     ; 3    ;
-; Unconstrained Input Port Paths  ; 230   ; 230  ;
-; Unconstrained Output Ports      ; 7     ; 7    ;
-; Unconstrained Output Port Paths ; 37    ; 37   ;
+; Unconstrained Input Port Paths  ; 264   ; 264  ;
+; Unconstrained Output Ports      ; 8     ; 8    ;
+; Unconstrained Output Port Paths ; 38    ; 38   ;
 +---------------------------------+-------+------+
 
 
@@ -885,7 +893,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design.
 Info: *******************************************************************
 Info: Running Quartus II TimeQuest Timing Analyzer
     Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
-    Info: Processing started: Fri Jun 03 20:17:55 2016
+    Info: Processing started: Fri Jun 03 20:41:08 2016
 Info: Command: quartus_sta top_greedy_snake -c top_greedy_snake
 Info: qsta_default_script.tcl version: #3
 Info: Only one processor detected - disabling parallel compilation
@@ -900,10 +908,10 @@ Critical Warning: The following clock transfers have no clock uncertainty assign
     Critical Warning: From CLK_50M (Rise) to CLK_50M (Rise) (setup and hold)
 Info: Analyzing Slow 1200mV 85C Model
 Critical Warning: Timing requirements not met
-Info: Worst-case setup slack is -15.007
+Info: Worst-case setup slack is -14.263
     Info:     Slack End Point TNS Clock 
     Info: ========= ============= =====================
-    Info:   -15.007     -1773.702 CLK_50M 
+    Info:   -14.263     -1686.501 CLK_50M 
 Info: Worst-case hold slack is 0.358
     Info:     Slack End Point TNS Clock 
     Info: ========= ============= =====================
@@ -919,14 +927,14 @@ Info: Delay annotation completed successfully
 Critical Warning: The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
     Critical Warning: From CLK_50M (Rise) to CLK_50M (Rise) (setup and hold)
 Critical Warning: Timing requirements not met
-Info: Worst-case setup slack is -13.342
+Info: Worst-case setup slack is -12.673
     Info:     Slack End Point TNS Clock 
     Info: ========= ============= =====================
-    Info:   -13.342     -1568.358 CLK_50M 
-Info: Worst-case hold slack is 0.312
+    Info:   -12.673     -1490.224 CLK_50M 
+Info: Worst-case hold slack is 0.311
     Info:     Slack End Point TNS Clock 
     Info: ========= ============= =====================
-    Info:     0.312         0.000 CLK_50M 
+    Info:     0.311         0.000 CLK_50M 
 Info: No recovery paths to report
 Info: No removal paths to report
 Critical Warning: Found minimum pulse width or period violations. See Report Minimum Pulse Width for details.
@@ -938,10 +946,10 @@ Info: Delay annotation completed successfully
 Critical Warning: The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
     Critical Warning: From CLK_50M (Rise) to CLK_50M (Rise) (setup and hold)
 Critical Warning: Timing requirements not met
-Info: Worst-case setup slack is -8.060
+Info: Worst-case setup slack is -7.590
     Info:     Slack End Point TNS Clock 
     Info: ========= ============= =====================
-    Info:    -8.060      -918.878 CLK_50M 
+    Info:    -7.590      -858.027 CLK_50M 
 Info: Worst-case hold slack is 0.187
     Info:     Slack End Point TNS Clock 
     Info: ========= ============= =====================
@@ -954,9 +962,9 @@ Info: No synchronizer chains to report.
 Info: Design is not fully constrained for setup requirements
 Info: Design is not fully constrained for hold requirements
 Info: Quartus II TimeQuest Timing Analyzer was successful. 0 errors, 13 warnings
-    Info: Peak virtual memory: 267 megabytes
-    Info: Processing ended: Fri Jun 03 20:18:01 2016
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Peak virtual memory: 263 megabytes
+    Info: Processing ended: Fri Jun 03 20:41:13 2016
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:04
 
 

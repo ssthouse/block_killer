@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top_greedy_snake
-Fri Jun 03 20:17:35 2016
+Fri Jun 03 20:40:52 2016
 Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
 
 
@@ -52,15 +52,15 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +------------------------------------+------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Jun 03 20:17:35 2016    ;
+; Analysis & Synthesis Status        ; Successful - Fri Jun 03 20:40:52 2016    ;
 ; Quartus II Version                 ; 9.0 Build 132 02/25/2009 SJ Full Version ;
 ; Revision Name                      ; top_greedy_snake                         ;
 ; Top-level Entity Name              ; top_greedy_snake                         ;
 ; Family                             ; Cyclone III                              ;
-; Total logic elements               ; 1,785                                    ;
-;     Total combinational functions  ; 1,782                                    ;
-;     Dedicated logic registers      ; 221                                      ;
-; Total registers                    ; 221                                      ;
+; Total logic elements               ; 1,860                                    ;
+;     Total combinational functions  ; 1,857                                    ;
+;     Dedicated logic registers      ; 255                                      ;
+; Total registers                    ; 255                                      ;
 ; Total pins                         ; 12                                       ;
 ; Total virtual pins                 ; 0                                        ;
 ; Total memory bits                  ; 0                                        ;
@@ -181,27 +181,27 @@ applicable agreement for further details.
 +---------------------------------------------+---------------+
 ; Resource                                    ; Usage         ;
 +---------------------------------------------+---------------+
-; Estimated Total logic elements              ; 1,785         ;
+; Estimated Total logic elements              ; 1,860         ;
 ;                                             ;               ;
-; Total combinational functions               ; 1782          ;
+; Total combinational functions               ; 1857          ;
 ; Logic element usage by number of LUT inputs ;               ;
-;     -- 4 input functions                    ; 1221          ;
-;     -- 3 input functions                    ; 297           ;
-;     -- <=2 input functions                  ; 264           ;
+;     -- 4 input functions                    ; 1211          ;
+;     -- 3 input functions                    ; 327           ;
+;     -- <=2 input functions                  ; 319           ;
 ;                                             ;               ;
 ; Logic elements by mode                      ;               ;
-;     -- normal mode                          ; 1638          ;
-;     -- arithmetic mode                      ; 144           ;
+;     -- normal mode                          ; 1682          ;
+;     -- arithmetic mode                      ; 175           ;
 ;                                             ;               ;
-; Total registers                             ; 221           ;
-;     -- Dedicated logic registers            ; 221           ;
+; Total registers                             ; 255           ;
+;     -- Dedicated logic registers            ; 255           ;
 ;     -- I/O registers                        ; 0             ;
 ;                                             ;               ;
 ; I/O pins                                    ; 12            ;
 ; Maximum fan-out node                        ; CLK_50M~input ;
-; Maximum fan-out                             ; 221           ;
-; Total fan-out                               ; 7154          ;
-; Average fan-out                             ; 3.53          ;
+; Maximum fan-out                             ; 255           ;
+; Total fan-out                               ; 7438          ;
+; Average fan-out                             ; 3.48          ;
 +---------------------------------------------+---------------+
 
 
@@ -210,7 +210,7 @@ applicable agreement for further details.
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                         ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |top_greedy_snake                         ; 1782 (0)          ; 221 (0)      ; 0           ; 0            ; 0       ; 0         ; 12   ; 0            ; |top_greedy_snake                                                                                                                           ; work         ;
+; |top_greedy_snake                         ; 1857 (0)          ; 255 (0)      ; 0           ; 0            ; 0       ; 0         ; 12   ; 0            ; |top_greedy_snake                                                                                                                           ; work         ;
 ;    |Display_Ctrl:display_ctrl|            ; 350 (228)         ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|Display_Ctrl:display_ctrl                                                                                                 ; work         ;
 ;       |lpm_divide:Div0|                   ; 47 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|Display_Ctrl:display_ctrl|lpm_divide:Div0                                                                                 ; work         ;
 ;          |lpm_divide_nhm:auto_generated|  ; 47 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|Display_Ctrl:display_ctrl|lpm_divide:Div0|lpm_divide_nhm:auto_generated                                                   ; work         ;
@@ -220,7 +220,7 @@ applicable agreement for further details.
 ;          |lpm_divide_mhm:auto_generated|  ; 75 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|Display_Ctrl:display_ctrl|lpm_divide:Div1|lpm_divide_mhm:auto_generated                                                   ; work         ;
 ;             |sign_div_unsign_nlh:divider| ; 75 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|Display_Ctrl:display_ctrl|lpm_divide:Div1|lpm_divide_mhm:auto_generated|sign_div_unsign_nlh:divider                       ; work         ;
 ;                |alt_u_div_p5f:divider|    ; 75 (75)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|Display_Ctrl:display_ctrl|lpm_divide:Div1|lpm_divide_mhm:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_p5f:divider ; work         ;
-;    |Game_Ctrl:game_ctrl|                  ; 1319 (1319)       ; 131 (131)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|Game_Ctrl:game_ctrl                                                                                                       ; work         ;
+;    |Game_Ctrl:game_ctrl|                  ; 1394 (1394)       ; 165 (165)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|Game_Ctrl:game_ctrl                                                                                                       ; work         ;
 ;    |Keyboard:U6|                          ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|Keyboard:U6                                                                                                               ; work         ;
 ;    |Keyboard_Ctrl:keyboard_ctrl|          ; 12 (12)           ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|Keyboard_Ctrl:keyboard_ctrl                                                                                               ; work         ;
 ;    |State_Ctrl:state_ctrl|                ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|State_Ctrl:state_ctrl                                                                                                     ; work         ;
@@ -247,11 +247,9 @@ Encoding Type:  One-Hot
 +----------------------------------------+------------------------------------------------+
 ; Register name                          ; Reason for Removal                             ;
 +----------------------------------------+------------------------------------------------+
-; Game_Ctrl:game_ctrl|led[1]             ; Merged with Game_Ctrl:game_ctrl|led[0]         ;
 ; Game_Ctrl:game_ctrl|array[2][0][1]     ; Merged with Game_Ctrl:game_ctrl|array[2][0][2] ;
 ; Game_Ctrl:game_ctrl|array[1][0][1]     ; Merged with Game_Ctrl:game_ctrl|array[1][0][2] ;
 ; Game_Ctrl:game_ctrl|array[0][0][1]     ; Merged with Game_Ctrl:game_ctrl|array[0][0][2] ;
-; Game_Ctrl:game_ctrl|led[2]             ; Stuck at VCC due to stuck port data_in         ;
 ; Game_Ctrl:game_ctrl|array[3][0][2]     ; Merged with Game_Ctrl:game_ctrl|array[3][0][1] ;
 ; Snake:U4|direct_r~10                   ; Lost fanout                                    ;
 ; Snake:U4|direct_r~11                   ; Lost fanout                                    ;
@@ -267,7 +265,7 @@ Encoding Type:  One-Hot
 ; Snake:U4|direct_r.DOWN                 ; Lost fanout                                    ;
 ; Snake:U4|direct_r.LEFT                 ; Lost fanout                                    ;
 ; Snake:U4|direct_r.UP                   ; Lost fanout                                    ;
-; Total Number of Removed Registers = 20 ;                                                ;
+; Total Number of Removed Registers = 18 ;                                                ;
 +----------------------------------------+------------------------------------------------+
 
 
@@ -287,12 +285,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 221   ;
+; Total registers                              ; 255   ;
 ; Number of registers using Synchronous Clear  ; 12    ;
-; Number of registers using Synchronous Load   ; 29    ;
+; Number of registers using Synchronous Load   ; 34    ;
 ; Number of registers using Asynchronous Clear ; 212   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 128   ;
+; Number of registers using Clock Enable       ; 174   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -314,17 +312,17 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
-; 6:1                ; 32 bits   ; 128 LEs       ; 32 LEs               ; 96 LEs                 ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|clk_cnt[28]      ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |top_greedy_snake|ps2_top:U7|ps2_byte_r[1]             ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|led[2]           ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|block_pos[4]     ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |top_greedy_snake|ps2_top:U7|ps2_byte_r[2]             ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top_greedy_snake|State_Ctrl:state_ctrl|game_state[0]  ;
-; 13:1               ; 2 bits    ; 16 LEs        ; 2 LEs                ; 14 LEs                 ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|led[0]           ;
-; 40:1               ; 2 bits    ; 52 LEs        ; 4 LEs                ; 48 LEs                 ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[3][0][2]   ;
+; 40:1               ; 2 bits    ; 52 LEs        ; 4 LEs                ; 48 LEs                 ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[3][0][1]   ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|block_pos~34     ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|block_pos~32     ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; No         ; |top_greedy_snake|Display_Ctrl:display_ctrl|vga_rgb[1] ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|block_pos~31     ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; No         ; |top_greedy_snake|Display_Ctrl:display_ctrl|vga_rgb[0] ;
 ; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|block_pos~19     ;
 ; 16:1               ; 6 bits    ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|Mux17            ;
-; 32:1               ; 3 bits    ; 63 LEs        ; 63 LEs               ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|Mux32            ;
+; 32:1               ; 3 bits    ; 63 LEs        ; 63 LEs               ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|Mux30            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
 
 
@@ -429,7 +427,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
-    Info: Processing started: Fri Jun 03 20:17:17 2016
+    Info: Processing started: Fri Jun 03 20:40:34 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top_greedy_snake -c top_greedy_snake
 Info: Found 1 design units, including 1 entities, in source file SCORE_Display.v
     Info: Found entity 1: SCORE_Display
@@ -472,9 +470,9 @@ Warning (10230): Verilog HDL assignment warning at Display_Ctrl.v(51): truncated
 Warning (10230): Verilog HDL assignment warning at Display_Ctrl.v(87): truncated value with size 32 to match size of target (2)
 Warning (10230): Verilog HDL assignment warning at Display_Ctrl.v(88): truncated value with size 32 to match size of target (3)
 Info: Elaborating entity "Game_Ctrl" for hierarchy "Game_Ctrl:game_ctrl"
-Warning (10230): Verilog HDL assignment warning at Game_Ctrl.v(128): truncated value with size 32 to match size of target (5)
-Warning (10230): Verilog HDL assignment warning at Game_Ctrl.v(137): truncated value with size 32 to match size of target (5)
-Warning (10230): Verilog HDL assignment warning at Game_Ctrl.v(166): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at Game_Ctrl.v(131): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at Game_Ctrl.v(140): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at Game_Ctrl.v(169): truncated value with size 32 to match size of target (5)
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "array" into its bus
 Info: Elaborating entity "Game_Ctrl_Unit" for hierarchy "Game_Ctrl_Unit:U2"
 Info: Elaborating entity "Snake_Eatting_Apple" for hierarchy "Snake_Eatting_Apple:U3"
@@ -521,8 +519,6 @@ Info: Found 1 design units, including 1 entities, in source file db/alt_u_div_p5
     Info: Found entity 1: alt_u_div_p5f
 Info: Registers with preset signals will power-up high
 Info: DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
-Warning: Output pins are stuck at VCC or GND
-    Warning (13410): Pin "led_out[2]" is stuck at VCC
 Info: 14 registers lost all their fanouts during netlist optimizations. The first 14 are displayed below.
     Info: Register "Snake:U4|direct_r~10" lost all its fanouts during netlist optimizations.
     Info: Register "Snake:U4|direct_r~11" lost all its fanouts during netlist optimizations.
@@ -539,13 +535,13 @@ Info: 14 registers lost all their fanouts during netlist optimizations. The firs
     Info: Register "Snake:U4|direct_r.LEFT" lost all its fanouts during netlist optimizations.
     Info: Register "Snake:U4|direct_r.UP" lost all its fanouts during netlist optimizations.
 Info: Generated suppressed messages file C:/Users/ssthouse/Desktop/block_killer/top_greedy_snake.map.smsg
-Info: Implemented 1799 device resources after synthesis - the final resource count might be different
+Info: Implemented 1872 device resources after synthesis - the final resource count might be different
     Info: Implemented 4 input pins
     Info: Implemented 8 output pins
-    Info: Implemented 1787 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 17 warnings
-    Info: Peak virtual memory: 242 megabytes
-    Info: Processing ended: Fri Jun 03 20:17:35 2016
+    Info: Implemented 1860 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 15 warnings
+    Info: Peak virtual memory: 239 megabytes
+    Info: Processing ended: Fri Jun 03 20:40:52 2016
     Info: Elapsed time: 00:00:18
     Info: Total CPU time (on all processors): 00:00:17
 
