@@ -21,6 +21,12 @@ module Game_Ctrl
 	output reg game_over
 );
 
+	localparam BLUE = 3'b001;
+	localparam GREEN = 3'b010;
+	localparam RED = 3'b100;
+	localparam WHITE = 3'b111;
+	localparam BLACK = 3'b000;
+
 	//todo test user two side array
 	reg [2:0] array[3:0][7:0];
 
@@ -82,11 +88,11 @@ module Game_Ctrl
 			begin
 				for(x=0; x<4; x=x+1)begin
 					for(y=0; y<8; y=y+1)begin
-						array[x][y] <= 3'b000;
+						array[x][y] <= BLACK;
 					end
 				end
 				game_over <= 0;
-				array[0][0] <= 3'b100;
+				array[0][0] <= BLUE;
 				//todo init position is 0
 				block_pos <= 0;
 				//clear count
@@ -98,10 +104,11 @@ module Game_Ctrl
 				STATE_START:begin
 					for(x=0; x<4; x=x+1)begin
 						for(y=0; y<8; y=y+1)begin
-							array[x][y] <= 3'b000;
+							array[x][y] <= BLACK;
 						end
 					end	
-					array[0][0] <= 3'b100;
+					array[0][0] <= BLUE;
+					game_over <= 0;
 				end
 				STATE_PLAY:begin
 					//count clk to down the block
@@ -113,18 +120,18 @@ module Game_Ctrl
 							if(left_key_press == 1)begin
 								//if not int most left && left block is black
 								if((block_pos%4) > 0
-									&& array[block_pos%4-1][block_pos/4] == 3'b000)begin
-									array[block_pos%4][block_pos/4] = 3'b000;
-									array[(block_pos-1)%4][(block_pos-1)/4] = 3'b100;
+									&& array[block_pos%4-1][block_pos/4] == BLACK)begin
+									array[block_pos%4][block_pos/4] = BLACK;
+									array[(block_pos-1)%4][(block_pos-1)/4] = BLUE;
 									block_pos = block_pos - 1;
 								end
 							end
 							else if(right_key_press == 1)begin
 								//if not int most left && left block is black
 								if((block_pos%4) < 3
-									&& array[block_pos%4+1][block_pos/4] == 3'b000)begin
-									array[block_pos%4][block_pos/4] = 3'b000;
-									array[(block_pos+1)%4][(block_pos+1)/4] = 3'b100;
+									&& array[block_pos%4+1][block_pos/4] == BLACK)begin
+									array[block_pos%4][block_pos/4] = BLACK;
+									array[(block_pos+1)%4][(block_pos+1)/4] = BLUE;
 									block_pos = block_pos + 1;
 								end
 							end
@@ -135,39 +142,63 @@ module Game_Ctrl
 							else begin
 								game_over <= 0;
 							end
-
-							///*
+							
 							//todo down one block
-							//if not in bottom && bottom one is black-->down
-							//if in the bottom
 							if(block_pos/4 == 7)begin
 								//reset block_pos
-								block_pos <= 0;
+								block_pos = 0;
+								array[block_pos%4][block_pos/4] <= BLUE;
+								//delete line
+								if(array[0][7] == array[1][7] && 
+									array[1][7] == array[2][7] &&
+									array[2][7] == array[3][7])begin
+									for(x=0; x<7; x=x+1)begin
+										array[0][7-x] <= array[0][7-x-1];
+										array[1][7-x] <= array[1][7-x-1];
+										array[2][7-x] <= array[2][7-x-1];
+										array[3][7-x] <= array[3][7-x-1];
+									end
+								end
 							end
 							//in top && bottom one is not black>>>game over
-							else if(block_pos/4 == 0 && array[block_pos%4][block_pos/4+1] != 3'b000)begin
-								array[block_pos%4][block_pos/4] <= 3'b100;
+							else if(block_pos/4 == 0 && array[block_pos%4][block_pos/4+1] != BLACK)begin
+								array[block_pos%4][block_pos/4] <= BLUE;
 								game_over <= 1;
 							end
 							//if not in botttom but bottom one is not black
-							else if(array[block_pos%4][block_pos/4+1] != 3'b000)begin
-								block_pos <= 0;
+							else if(array[block_pos%4][block_pos/4+1] != BLACK)begin
+								block_pos = 0;
 							end
 							//go down
 							else begin
-								array[block_pos%4][block_pos/4] = 3'b000;
+								array[block_pos%4][block_pos/4] = BLACK;
 								block_pos = block_pos + 4;
-								array[block_pos%4][block_pos/4] = 3'b100;
+								array[block_pos%4][block_pos/4] = BLUE;
 							end
 						end
-					else 
+					else begin
 						clk_cnt <= clk_cnt + 32'd1;
-						
+						//if line complete? >>> delete
+						for(y=0; y<8; y=y+1) begin
+							if(array[0][y] == array[1][y] && 
+								array[1][y] == array[2][y] &&
+								array[2][y] == array[3][y]) begin
+								//let block above move down
+								for(x=0; x<y; x=x+1)begin
+									array[0][7-x] <= array[0][7-x-1];
+									array[1][7-x] <= array[1][7-x-1];
+									array[2][7-x] <= array[2][7-x-1];
+									array[3][7-x] <= array[3][7-x-1];
+								end
+							end
+						end
+					end
 				end
 				STATE_OVER:begin
 					for(x=0; x<4; x=x+1)begin
 						for(y=0; y<8; y=y+1)begin
-							array[x][y] <= 3'b111;
+							array[x][y] <= WHITE;
+							//draw the fail text & score text
 						end
 					end
 				end
