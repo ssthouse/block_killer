@@ -1,6 +1,7 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="top_greedy_snake">
+		<CBX_INST_ENTRY INSTANCE_NAME="|top_greedy_snake|Display_Ctrl:display_ctrl|SCORE_Display:SCORE_Display_1|SCORE_Rom:SCORE_Rom_Display|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_d691.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|top_greedy_snake|Display_Ctrl:display_ctrl|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_nhm.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|top_greedy_snake|Display_Ctrl:display_ctrl|lpm_divide:Div1" CBX_FILE_NAME="lpm_divide_mhm.tdf"/>
 	</PROJECT>

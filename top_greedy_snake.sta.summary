@@ -3,75 +3,75 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'CLK_50M'
-Slack : -59.808
-TNS   : -6160.729
+Slack : -60.761
+TNS   : -6230.877
 
 Type  : Slow 1200mV 85C Model Setup 'RSTn'
-Slack : -0.415
-TNS   : -0.535
+Slack : 0.069
+TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'RSTn'
-Slack : -0.156
-TNS   : -0.156
+Slack : -0.135
+TNS   : -0.264
 
 Type  : Slow 1200mV 85C Model Hold 'CLK_50M'
-Slack : 0.358
+Slack : 0.359
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Recovery 'CLK_50M'
-Slack : -1.278
-TNS   : -272.758
+Slack : -1.254
+TNS   : -267.191
 
 Type  : Slow 1200mV 85C Model Removal 'CLK_50M'
-Slack : 1.193
+Slack : 1.155
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'CLK_50M'
-Slack : -53.846
-TNS   : -5532.897
+Slack : -54.571
+TNS   : -5581.196
 
 Type  : Slow 1200mV 0C Model Setup 'RSTn'
-Slack : -0.221
-TNS   : -0.221
+Slack : 0.211
+TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'RSTn'
-Slack : -0.153
-TNS   : -0.153
+Slack : -0.131
+TNS   : -0.256
 
 Type  : Slow 1200mV 0C Model Hold 'CLK_50M'
 Slack : 0.312
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Recovery 'CLK_50M'
-Slack : -1.093
-TNS   : -232.760
+Slack : -1.073
+TNS   : -228.313
 
 Type  : Slow 1200mV 0C Model Removal 'CLK_50M'
-Slack : 1.104
+Slack : 1.072
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'CLK_50M'
-Slack : -34.503
-TNS   : -3497.286
+Slack : -35.097
+TNS   : -3524.359
 
 Type  : Fast 1200mV 0C Model Setup 'RSTn'
-Slack : 0.151
+Slack : 0.434
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'RSTn'
-Slack : -0.089
-TNS   : -0.089
+Slack : -0.085
+TNS   : -0.166
 
 Type  : Fast 1200mV 0C Model Hold 'CLK_50M'
 Slack : 0.187
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Recovery 'CLK_50M'
-Slack : -0.848
-TNS   : -180.837
+Slack : -0.838
+TNS   : -178.685
 
 Type  : Fast 1200mV 0C Model Removal 'CLK_50M'
-Slack : 0.635
+Slack : 0.620
 TNS   : 0.000
 
 ------------------------------------------------------------

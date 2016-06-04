@@ -20,7 +20,7 @@ module Game_Ctrl
 	output wire [23:0]column_3,
 	
 	//score
-	output reg score,
+	output reg [11:0]score,
 	//game signal
 	output reg game_over
 );
@@ -100,6 +100,7 @@ module Game_Ctrl
 					end
 				end
 				game_over <= 0;
+				score <= 0;
 				array[0][0] <= BLUE;
 				//todo init position is 0
 				block_pos <= random_num%4;
@@ -116,6 +117,7 @@ module Game_Ctrl
 						end
 					end
 					game_over <= 0;
+					score <= 0;
 					array[0][0] <= BLUE;
 					//todo init position is 0
 					block_pos <= random_num%4;
@@ -159,22 +161,24 @@ module Game_Ctrl
 							game_over <= 0;
 						end
 						
-						//todo down one block
+						//>>>block down
 						if(block_pos/4 == 7)begin
 							block_pos = random_num%4;
 							array[block_pos%4][block_pos/4] = random_num<18 ? BLUE :
 																random_num<28? GREEN:RED;
 						end
-						//in top && bottom one is not black>>>game over
+						
+						//>>>game over
 						else if(block_pos/4 == 0 && array[block_pos%4][block_pos/4+1] != BLACK)begin
 							array[block_pos%4][block_pos/4] = BLUE;
 							game_over <= 1;
 						end
-						//if not in botttom but bottom one is not black
+						
+						//can't go down
 						else if(array[block_pos%4][block_pos/4+1] != BLACK)begin
-									block_pos = random_num%4;
-									array[block_pos%4][block_pos/4] = random_num<18 ? BLUE :
-																random_num<28? GREEN:RED;
+								block_pos = random_num%4;
+								array[block_pos%4][block_pos/4] = random_num<18 ? BLUE :
+															random_num<28? GREEN:RED;
 						end
 						//go down
 						else begin
@@ -183,7 +187,7 @@ module Game_Ctrl
 							block_pos = block_pos + 4;
 						end
 						
-						//bottom up delete?
+						//up down delete?
 						for(x=0; x<4; x=x+1)begin
 							for(y=0; y<7; y=y+1)begin
 								if(array[x][y] == array[x][y+1] && array[x][y] != BLACK
@@ -192,13 +196,13 @@ module Game_Ctrl
 												array[x][y]==GREEN ? RED :
 												array[x][y]==RED ? WHITE : BLACK;
 									array[x][y]= BLACK;
-									//todo: delete line	
-									
+									//add score
+									score = score + 1;	
 								end
 							end
 						end
 						
-						//if line complete? >>> delete
+						//line delete
 						for(y=0; y<8; y=y+1) begin
 							if(array[0][y] == array[1][y] && 
 								array[1][y] == array[2][y] &&
@@ -215,6 +219,8 @@ module Game_Ctrl
 									array[3][y-x] = array[3][y-x-1];
 								end
 								array[block_pos%4][block_pos/4] = temp_color;
+								//add score
+								score = score + 8;
 							end
 						end	
 					end

@@ -33,7 +33,7 @@ begin
 				begin
 					Addr_Res <= (iVGA_X - STRING_START_X) + (iVGA_Y - STRING_START_Y) * STRING_WDITH;
 					if(Pixel_Out) 
-						oRGB <= 3'b101;
+						oRGB <= 3'b100;
 					else 
 						oRGB <= 3'b000;
 				end

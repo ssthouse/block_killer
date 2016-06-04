@@ -84,7 +84,7 @@ module top_greedy_snake
 	);
 
 	//score
-	wire [7:0] score;
+	wire [11:0] score;
 
 	Display_Ctrl display_ctrl
 	(

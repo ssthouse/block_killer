@@ -87,3 +87,4 @@ set_location_assignment PIN_J2 -to led_out[1]
 set_location_assignment PIN_J1 -to led_out[2]
 set_global_assignment -name VERILOG_FILE Display_Ctrl.v
 set_global_assignment -name VERILOG_FILE Game_Ctrl.v
+set_global_assignment -name VERILOG_FILE VGA_Control.v

@@ -19,6 +19,8 @@ module Game_Ctrl
 	output wire [23:0]column_2,
 	output wire [23:0]column_3,
 	
+	//score
+	output reg score,
 	//game signal
 	output reg game_over
 );

@@ -47,7 +47,8 @@ module VGA_Control
 			clk_25M <= ~clk_25M;  //°´25MÅäÖÃVGA¿ØÖÆÄ£¿é
 		end
 		
-		
+	
+	/*	
 	always@(posedge clk_25M or negedge RSTn)
 		begin	
 			if(!RSTn)
@@ -116,10 +117,10 @@ module VGA_Control
 			end
 		end
 		
-//		*/
+		*/
 
 
-/*
+///*
 always@(*)
 begin
 	lox <= x_pos[3:0] ;
@@ -161,7 +162,7 @@ begin
 	&&y_pos >= iDisplay_S_T_Y_Res && y_pos <= iDisplay_S_T_Y_Res + 47)
 		color_out <= {oRGB_Score_Units[11],oRGB_Score_Units[7],oRGB_Score_Units[3]};
 end
-*/
+//*/
 
 /****************'SCORE' display***********************/
 wire CLK_25M_RES;

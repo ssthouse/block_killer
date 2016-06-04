@@ -25,11 +25,19 @@ module Display_Ctrl
 	localparam STATE_OVER = 2'b10;
 
 	//color constant
-	localparam COLOR_RED = 3'b100;
-	localparam COLOR_GREEN = 3'b010;
-	localparam COLOR_BLUE = 3'b001;
-
-
+	localparam BLUE = 3'b001;
+	localparam GREEN = 3'b010;
+	localparam RED = 3'b100;
+	localparam WHITE = 3'b111;
+	localparam BLACK = 3'b000;
+	
+	//color : score test && score number
+	wire[2:0] score_txt_color;
+	wire[2:0] score_num_color;
+	//reg [2:0] score_txt_color_r;
+	//reg [2:0] score_num_color_r;
+	//assign score_txt_color = score_txt_color_r;
+	//assign score_num_color = score_num_color_r;
 	//*************************divide to 25m
 	reg CLK_25M;
 	always@(posedge CLK_50M)
@@ -81,12 +89,14 @@ module Display_Ctrl
 	assign vga_rgb = (x_pos/200 == 0) ? temp_color :
 						(x_pos/200 == 1)? temp_color :
 						(x_pos/200 == 2)? temp_color :
-						(x_pos/200 == 3)? temp_color : 3'b000;
+						(x_pos/200 == 3)? temp_color : BLACK;
 						
 	always@(posedge CLK_50M or negedge RST_N)
 	begin
 		if(!RST_N)begin
-			temp_color <= 3'b000;
+			temp_color <= BLACK;
+			iDisplay_S_T_X <= 100;
+			iDisplay_S_T_Y <= 100;
 		end
 		else begin
 			//game state 
@@ -120,14 +130,20 @@ module Display_Ctrl
 								temp_color = temp_block[2:0];
 							end
 					endcase
+				end
 				STATE_OVER: begin
-				
+					if(x_pos < 119 && y_pos < 48)begin
+						temp_color <= score_txt_color;
+					end 
+					else begin
+						temp_color <= BLACK;
+					end
 				end
 			endcase
 		end
 	end
 	
-	//0.5s clk count
+	//0.5s clk count***************************************
 	reg [31:0] clk_count;
 	always@(posedge CLK_25M or negedge RST_N)
 	begin
@@ -145,6 +161,21 @@ module Display_Ctrl
 			end
 	end
 	
+	
+	
+	//**************show score string**************
+	reg [9:0] iDisplay_S_T_X;
+	reg [9:0] iDisplay_S_T_Y;
+	SCORE_Display SCORE_Display_1
+	(
+		.iVGA_CLK(CLK_50M),
+		.iRST_n(RST_N),
+		.iVGA_X(x_pos),
+		.iVGA_Y(y_pos),
+		.STRING_START_X(iDisplay_SCORE_X),
+		.STRING_START_Y(iDisplay_SCORE_Y),
+		.oRGB(score_txt_color)	
+	);
 endmodule
 
 
