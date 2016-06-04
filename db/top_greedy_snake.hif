@@ -19,10 +19,190 @@ VHSM_ON
 -- Start VHDL Libraries --
 -- End VHDL Libraries --
 # entity
-Game_Ctrl_Unit
+top_greedy_snake
+# storage
+db|top_greedy_snake.(0).cnf
+db|top_greedy_snake.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+top_greedy_snake.v
+e1a1e0416e5e3a9347dc773fd6b69db
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+State_Ctrl
 # storage
 db|top_greedy_snake.(1).cnf
 db|top_greedy_snake.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+State_Ctrl.v
+a22f5a27b5d37544ea3f39afe058d973
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+State_Ctrl:state_ctrl
+}
+# macro_sequence
+
+# end
+# entity
+Keyboard_Ctrl
+# storage
+db|top_greedy_snake.(2).cnf
+db|top_greedy_snake.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+Keyboard_Ctrl.v
+6489d42d74e8e2edf9f791953f79526b
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+Keyboard_Ctrl:keyboard_ctrl
+}
+# macro_sequence
+
+# end
+# entity
+Display_Ctrl
+# storage
+db|top_greedy_snake.(3).cnf
+db|top_greedy_snake.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+Display_Ctrl.v
+e179a015d6af8fed642c79e2d945eefa
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+Display_Ctrl:display_ctrl
+}
+# macro_sequence
+
+# end
+# entity
+Game_Ctrl
+# storage
+db|top_greedy_snake.(4).cnf
+db|top_greedy_snake.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+Game_Ctrl.v
+e2257c5c7ba7f37bd84f8d9f56e0699e
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+Game_Ctrl:game_ctrl
+}
+# macro_sequence
+
+# end
+# entity
+Game_Ctrl_Unit
+# storage
+db|top_greedy_snake.(5).cnf
+db|top_greedy_snake.(5).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -57,8 +237,8 @@ Game_Ctrl_Unit:U2
 # entity
 Snake_Eatting_Apple
 # storage
-db|top_greedy_snake.(2).cnf
-db|top_greedy_snake.(2).cnf
+db|top_greedy_snake.(6).cnf
+db|top_greedy_snake.(6).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -93,8 +273,8 @@ Snake_Eatting_Apple:U3
 # entity
 Snake
 # storage
-db|top_greedy_snake.(3).cnf
-db|top_greedy_snake.(3).cnf
+db|top_greedy_snake.(7).cnf
+db|top_greedy_snake.(7).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -127,381 +307,10 @@ Snake:U4
 
 # end
 # entity
-SCORE_Display
-# storage
-db|top_greedy_snake.(5).cnf
-db|top_greedy_snake.(5).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-SCORE_Display.v
-5d953cd75c342fa7f86c53e2bab757
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# user_parameter {
-STRING_WDITH
-120
-PARAMETER_SIGNED_DEC
-DEF
-STRING_HEIGHT
-48
-PARAMETER_SIGNED_DEC
-DEF
-}
-# macro_sequence
-
-# end
-# entity
-SCORE_Rom
-# storage
-db|top_greedy_snake.(6).cnf
-db|top_greedy_snake.(6).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-SCORE_Rom.v
-a8206dd6fcae89fed2bf18e2fe285f16
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# macro_sequence
-
-# end
-# entity
-altsyncram_d691
-# storage
-db|top_greedy_snake.(11).cnf
-db|top_greedy_snake.(11).cnf
-# case_insensitive
-# source_file
-db|altsyncram_d691.tdf
-1d56a2d9e81745bc23faf5eefb5401b
-7
-# used_port {
-q_a0
--1
-3
-clock0
--1
-3
-address_a9
--1
-3
-address_a8
--1
-3
-address_a7
--1
-3
-address_a6
--1
-3
-address_a5
--1
-3
-address_a4
--1
-3
-address_a3
--1
-3
-address_a2
--1
-3
-address_a12
--1
-3
-address_a11
--1
-3
-address_a10
--1
-3
-address_a1
--1
-3
-address_a0
--1
-3
-}
-# memory_file {
-SCORE.mif
-acb225fcf117e2c6a860397a2581df33
-}
-# macro_sequence
-
-# end
-# entity
-NUMBER_Display
-# storage
-db|top_greedy_snake.(18).cnf
-db|top_greedy_snake.(18).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-NUMBER_Display.v
-9ded929b12a5d730613bb9605262e8d
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# user_parameter {
-STRING_WIDTH
-240
-PARAMETER_SIGNED_DEC
-DEF
-CHAR_WIDTH
-24
-PARAMETER_SIGNED_DEC
-DEF
-STRING_HEIGHT
-48
-PARAMETER_SIGNED_DEC
-DEF
-}
-# macro_sequence
-
-# end
-# entity
-NUM_Rom
-# storage
-db|top_greedy_snake.(19).cnf
-db|top_greedy_snake.(19).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-NUM_Rom.v
-5f6212f8d8ef9b281f1ce64cd1bdda9
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# macro_sequence
-
-# end
-# entity
-altsyncram_2b91
-# storage
-db|top_greedy_snake.(21).cnf
-db|top_greedy_snake.(21).cnf
-# case_insensitive
-# source_file
-db|altsyncram_2b91.tdf
-6c3ec1e065661f6299935921fb8ed1ea
-7
-# used_port {
-q_a0
--1
-3
-clock0
--1
-3
-address_a9
--1
-3
-address_a8
--1
-3
-address_a7
--1
-3
-address_a6
--1
-3
-address_a5
--1
-3
-address_a4
--1
-3
-address_a3
--1
-3
-address_a2
--1
-3
-address_a13
--1
-3
-address_a12
--1
-3
-address_a11
--1
-3
-address_a10
--1
-3
-address_a1
--1
-3
-address_a0
--1
-3
-}
-# memory_file {
-NUMBER.mif
-d8b06ff625f8274c6ed3856a8863fa83
-}
-# macro_sequence
-
-# end
-# entity
-decode_37a
-# storage
-db|top_greedy_snake.(22).cnf
-db|top_greedy_snake.(22).cnf
-# case_insensitive
-# source_file
-db|decode_37a.tdf
-45b7f1ec6b9a3fe411b8a38e8bb83ad
-7
-# used_port {
-eq1
--1
-3
-eq0
--1
-3
-data0
--1
-3
-}
-# macro_sequence
-
-# end
-# entity
-mux_jlb
-# storage
-db|top_greedy_snake.(23).cnf
-db|top_greedy_snake.(23).cnf
-# case_insensitive
-# source_file
-db|mux_jlb.tdf
-3e90af1861b6d87e2cb2277ef5d6f1c
-7
-# used_port {
-sel0
--1
-3
-result0
--1
-3
-data1
--1
-3
-data0
--1
-3
-}
-# macro_sequence
-
-# end
-# entity
-Seg_Display
-# storage
-db|top_greedy_snake.(26).cnf
-db|top_greedy_snake.(26).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-Seg_Display.v
-8871a1631a9898f198d6d91d432ded86
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# macro_sequence
-
-# end
-# entity
 Keyboard
 # storage
-db|top_greedy_snake.(24).cnf
-db|top_greedy_snake.(24).cnf
+db|top_greedy_snake.(8).cnf
+db|top_greedy_snake.(8).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -534,51 +343,18 @@ Keyboard:U6
 
 # end
 # entity
-VGA_Control
+ps2_top
 # storage
-db|top_greedy_snake.(29).cnf
-db|top_greedy_snake.(29).cnf
+db|top_greedy_snake.(9).cnf
+db|top_greedy_snake.(9).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
 }
 # case_sensitive
 # source_file
-VGA_Control.v
-d8b931b7ada58febee65ecb67c81b923
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# macro_sequence
-
-# end
-# entity
-State_Ctrl
-# storage
-db|top_greedy_snake.(4).cnf
-db|top_greedy_snake.(4).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-State_Ctrl.v
-a22f5a27b5d37544ea3f39afe058d973
+ps2_top.v
+6c7eb6df50bb2443c7868ca1d89a8477
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -597,7 +373,7 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 250
 }
 # hierarchies {
-State_Ctrl:state_ctrl
+ps2_top:U7
 }
 # macro_sequence
 
@@ -605,11 +381,11 @@ State_Ctrl:state_ctrl
 # entity
 lpm_divide
 # storage
-db|top_greedy_snake.(27).cnf
-db|top_greedy_snake.(27).cnf
+db|top_greedy_snake.(10).cnf
+db|top_greedy_snake.(10).cnf
 # case_insensitive
 # source_file
-..|..|..|..|altera|90|quartus|libraries|megafunctions|lpm_divide.tdf
+c:|altera|90|quartus|libraries|megafunctions|lpm_divide.tdf
 bab4b3ca888e5f792f433438428ff446
 7
 # user_parameter {
@@ -671,6 +447,27 @@ IGNORE_CASCADE
 USR
 }
 # used_port {
+quotient9
+-1
+3
+quotient8
+-1
+3
+quotient7
+-1
+3
+quotient6
+-1
+3
+quotient5
+-1
+3
+quotient4
+-1
+3
+quotient3
+-1
+3
 quotient2
 -1
 3
@@ -710,13 +507,10 @@ numer1
 numer0
 -1
 3
-denom6
+denom5
 -1
 1
 denom4
--1
-1
-denom3
 -1
 1
 denom2
@@ -731,17 +525,20 @@ denom0
 denom7
 -1
 2
-denom5
+denom6
+-1
+2
+denom3
 -1
 2
 }
 # include_file {
-..|..|..|..|altera|90|quartus|libraries|megafunctions|sign_div_unsign.inc
-c1e17922387cb5d0c88d7fb673544bb4
-..|..|..|..|altera|90|quartus|libraries|megafunctions|aglobal90.inc
-99832fdf63412df51d7531202d74e75
-..|..|..|..|altera|90|quartus|libraries|megafunctions|abs_divider.inc
+c:|altera|90|quartus|libraries|megafunctions|abs_divider.inc
 cdfefd53e136b3a8e541899b82db37d
+c:|altera|90|quartus|libraries|megafunctions|sign_div_unsign.inc
+c1e17922387cb5d0c88d7fb673544bb4
+c:|altera|90|quartus|libraries|megafunctions|aglobal90.inc
+99832fdf63412df51d7531202d74e75
 }
 # macro_sequence
 
@@ -749,8 +546,8 @@ cdfefd53e136b3a8e541899b82db37d
 # entity
 lpm_divide_nhm
 # storage
-db|top_greedy_snake.(30).cnf
-db|top_greedy_snake.(30).cnf
+db|top_greedy_snake.(11).cnf
+db|top_greedy_snake.(11).cnf
 # case_insensitive
 # source_file
 db|lpm_divide_nhm.tdf
@@ -848,8 +645,8 @@ denom0
 # entity
 sign_div_unsign_olh
 # storage
-db|top_greedy_snake.(31).cnf
-db|top_greedy_snake.(31).cnf
+db|top_greedy_snake.(12).cnf
+db|top_greedy_snake.(12).cnf
 # case_insensitive
 # source_file
 db|sign_div_unsign_olh.tdf
@@ -971,8 +768,8 @@ denominator0
 # entity
 alt_u_div_r5f
 # storage
-db|top_greedy_snake.(32).cnf
-db|top_greedy_snake.(32).cnf
+db|top_greedy_snake.(13).cnf
+db|top_greedy_snake.(13).cnf
 # case_insensitive
 # source_file
 db|alt_u_div_r5f.tdf
@@ -1094,8 +891,8 @@ denominator0
 # entity
 add_sub_unc
 # storage
-db|top_greedy_snake.(33).cnf
-db|top_greedy_snake.(33).cnf
+db|top_greedy_snake.(14).cnf
+db|top_greedy_snake.(14).cnf
 # case_insensitive
 # source_file
 db|add_sub_unc.tdf
@@ -1121,8 +918,8 @@ cout
 # entity
 add_sub_vnc
 # storage
-db|top_greedy_snake.(34).cnf
-db|top_greedy_snake.(34).cnf
+db|top_greedy_snake.(15).cnf
+db|top_greedy_snake.(15).cnf
 # case_insensitive
 # source_file
 db|add_sub_vnc.tdf
@@ -1157,599 +954,11 @@ cout
 # entity
 lpm_divide
 # storage
-db|top_greedy_snake.(35).cnf
-db|top_greedy_snake.(35).cnf
+db|top_greedy_snake.(16).cnf
+db|top_greedy_snake.(16).cnf
 # case_insensitive
 # source_file
-..|..|..|..|altera|90|quartus|libraries|megafunctions|lpm_divide.tdf
-bab4b3ca888e5f792f433438428ff446
-7
-# user_parameter {
-LPM_WIDTHN
-10
-PARAMETER_UNKNOWN
-USR
-LPM_WIDTHD
-8
-PARAMETER_UNKNOWN
-USR
-LPM_NREPRESENTATION
-UNSIGNED
-PARAMETER_UNKNOWN
-USR
-LPM_DREPRESENTATION
-UNSIGNED
-PARAMETER_UNKNOWN
-USR
-LPM_PIPELINE
-0
-PARAMETER_UNKNOWN
-DEF
-LPM_REMAINDERPOSITIVE
-TRUE
-PARAMETER_UNKNOWN
-DEF
-MAXIMIZE_SPEED
-5
-PARAMETER_UNKNOWN
-DEF
-CBXI_PARAMETER
-lpm_divide_nhm
-PARAMETER_UNKNOWN
-USR
-CARRY_CHAIN
-MANUAL
-PARAMETER_UNKNOWN
-USR
-OPTIMIZE_FOR_SPEED
-5
-PARAMETER_UNKNOWN
-USR
-AUTO_CARRY_CHAINS
-ON
-AUTO_CARRY
-USR
-IGNORE_CARRY_BUFFERS
-OFF
-IGNORE_CARRY
-USR
-AUTO_CASCADE_CHAINS
-ON
-AUTO_CASCADE
-USR
-IGNORE_CASCADE_BUFFERS
-OFF
-IGNORE_CASCADE
-USR
-}
-# used_port {
-quotient2
--1
-3
-quotient1
--1
-3
-quotient0
--1
-3
-numer9
--1
-3
-numer8
--1
-3
-numer7
--1
-3
-numer6
--1
-3
-numer5
--1
-3
-numer4
--1
-3
-numer3
--1
-3
-numer2
--1
-3
-numer1
--1
-3
-numer0
--1
-3
-denom5
--1
-1
-denom4
--1
-1
-denom2
--1
-1
-denom1
--1
-1
-denom0
--1
-1
-denom7
--1
-2
-denom6
--1
-2
-denom3
--1
-2
-}
-# include_file {
-..|..|..|..|altera|90|quartus|libraries|megafunctions|abs_divider.inc
-cdfefd53e136b3a8e541899b82db37d
-..|..|..|..|altera|90|quartus|libraries|megafunctions|sign_div_unsign.inc
-c1e17922387cb5d0c88d7fb673544bb4
-..|..|..|..|altera|90|quartus|libraries|megafunctions|aglobal90.inc
-99832fdf63412df51d7531202d74e75
-}
-# macro_sequence
-
-# end
-# entity
-lpm_divide
-# storage
-db|top_greedy_snake.(36).cnf
-db|top_greedy_snake.(36).cnf
-# case_insensitive
-# source_file
-..|..|..|..|altera|90|quartus|libraries|megafunctions|lpm_divide.tdf
-bab4b3ca888e5f792f433438428ff446
-7
-# user_parameter {
-LPM_WIDTHN
-10
-PARAMETER_UNKNOWN
-USR
-LPM_WIDTHD
-8
-PARAMETER_UNKNOWN
-USR
-LPM_NREPRESENTATION
-UNSIGNED
-PARAMETER_UNKNOWN
-USR
-LPM_DREPRESENTATION
-UNSIGNED
-PARAMETER_UNKNOWN
-USR
-LPM_PIPELINE
-0
-PARAMETER_UNKNOWN
-DEF
-LPM_REMAINDERPOSITIVE
-TRUE
-PARAMETER_UNKNOWN
-DEF
-MAXIMIZE_SPEED
-5
-PARAMETER_UNKNOWN
-DEF
-CBXI_PARAMETER
-lpm_divide_nhm
-PARAMETER_UNKNOWN
-USR
-CARRY_CHAIN
-MANUAL
-PARAMETER_UNKNOWN
-USR
-OPTIMIZE_FOR_SPEED
-5
-PARAMETER_UNKNOWN
-USR
-AUTO_CARRY_CHAINS
-ON
-AUTO_CARRY
-USR
-IGNORE_CARRY_BUFFERS
-OFF
-IGNORE_CARRY
-USR
-AUTO_CASCADE_CHAINS
-ON
-AUTO_CASCADE
-USR
-IGNORE_CASCADE_BUFFERS
-OFF
-IGNORE_CASCADE
-USR
-}
-# used_port {
-quotient1
--1
-3
-quotient0
--1
-3
-numer9
--1
-3
-numer8
--1
-3
-numer7
--1
-3
-numer6
--1
-3
-numer5
--1
-3
-numer4
--1
-3
-numer3
--1
-3
-numer2
--1
-3
-numer1
--1
-3
-numer0
--1
-3
-denom5
--1
-1
-denom4
--1
-1
-denom2
--1
-1
-denom1
--1
-1
-denom0
--1
-1
-denom7
--1
-2
-denom6
--1
-2
-denom3
--1
-2
-}
-# include_file {
-..|..|..|..|altera|90|quartus|libraries|megafunctions|abs_divider.inc
-cdfefd53e136b3a8e541899b82db37d
-..|..|..|..|altera|90|quartus|libraries|megafunctions|sign_div_unsign.inc
-c1e17922387cb5d0c88d7fb673544bb4
-..|..|..|..|altera|90|quartus|libraries|megafunctions|aglobal90.inc
-99832fdf63412df51d7531202d74e75
-}
-# macro_sequence
-
-# end
-# entity
-lpm_divide
-# storage
-db|top_greedy_snake.(37).cnf
-db|top_greedy_snake.(37).cnf
-# case_insensitive
-# source_file
-..|..|..|..|altera|90|quartus|libraries|megafunctions|lpm_divide.tdf
-bab4b3ca888e5f792f433438428ff446
-7
-# user_parameter {
-LPM_WIDTHN
-10
-PARAMETER_UNKNOWN
-USR
-LPM_WIDTHD
-8
-PARAMETER_UNKNOWN
-USR
-LPM_NREPRESENTATION
-UNSIGNED
-PARAMETER_UNKNOWN
-USR
-LPM_DREPRESENTATION
-UNSIGNED
-PARAMETER_UNKNOWN
-USR
-LPM_PIPELINE
-0
-PARAMETER_UNKNOWN
-DEF
-LPM_REMAINDERPOSITIVE
-TRUE
-PARAMETER_UNKNOWN
-DEF
-MAXIMIZE_SPEED
-5
-PARAMETER_UNKNOWN
-DEF
-CBXI_PARAMETER
-lpm_divide_nhm
-PARAMETER_UNKNOWN
-USR
-CARRY_CHAIN
-MANUAL
-PARAMETER_UNKNOWN
-USR
-OPTIMIZE_FOR_SPEED
-5
-PARAMETER_UNKNOWN
-USR
-AUTO_CARRY_CHAINS
-ON
-AUTO_CARRY
-USR
-IGNORE_CARRY_BUFFERS
-OFF
-IGNORE_CARRY
-USR
-AUTO_CASCADE_CHAINS
-ON
-AUTO_CASCADE
-USR
-IGNORE_CASCADE_BUFFERS
-OFF
-IGNORE_CASCADE
-USR
-}
-# used_port {
-quotient0
--1
-3
-numer9
--1
-3
-numer8
--1
-3
-numer7
--1
-3
-numer6
--1
-3
-numer5
--1
-3
-numer4
--1
-3
-numer3
--1
-3
-numer2
--1
-3
-numer1
--1
-3
-numer0
--1
-3
-denom5
--1
-1
-denom4
--1
-1
-denom2
--1
-1
-denom1
--1
-1
-denom0
--1
-1
-denom7
--1
-2
-denom6
--1
-2
-denom3
--1
-2
-}
-# include_file {
-..|..|..|..|altera|90|quartus|libraries|megafunctions|abs_divider.inc
-cdfefd53e136b3a8e541899b82db37d
-..|..|..|..|altera|90|quartus|libraries|megafunctions|sign_div_unsign.inc
-c1e17922387cb5d0c88d7fb673544bb4
-..|..|..|..|altera|90|quartus|libraries|megafunctions|aglobal90.inc
-99832fdf63412df51d7531202d74e75
-}
-# macro_sequence
-
-# end
-# entity
-lpm_divide
-# storage
-db|top_greedy_snake.(38).cnf
-db|top_greedy_snake.(38).cnf
-# case_insensitive
-# source_file
-..|..|..|..|altera|90|quartus|libraries|megafunctions|lpm_divide.tdf
-bab4b3ca888e5f792f433438428ff446
-7
-# user_parameter {
-LPM_WIDTHN
-10
-PARAMETER_UNKNOWN
-USR
-LPM_WIDTHD
-8
-PARAMETER_UNKNOWN
-USR
-LPM_NREPRESENTATION
-UNSIGNED
-PARAMETER_UNKNOWN
-USR
-LPM_DREPRESENTATION
-UNSIGNED
-PARAMETER_UNKNOWN
-USR
-LPM_PIPELINE
-0
-PARAMETER_UNKNOWN
-DEF
-LPM_REMAINDERPOSITIVE
-TRUE
-PARAMETER_UNKNOWN
-DEF
-MAXIMIZE_SPEED
-5
-PARAMETER_UNKNOWN
-DEF
-CBXI_PARAMETER
-lpm_divide_nhm
-PARAMETER_UNKNOWN
-USR
-CARRY_CHAIN
-MANUAL
-PARAMETER_UNKNOWN
-USR
-OPTIMIZE_FOR_SPEED
-5
-PARAMETER_UNKNOWN
-USR
-AUTO_CARRY_CHAINS
-ON
-AUTO_CARRY
-USR
-IGNORE_CARRY_BUFFERS
-OFF
-IGNORE_CARRY
-USR
-AUTO_CASCADE_CHAINS
-ON
-AUTO_CASCADE
-USR
-IGNORE_CASCADE_BUFFERS
-OFF
-IGNORE_CASCADE
-USR
-}
-# used_port {
-quotient9
--1
-3
-quotient8
--1
-3
-quotient7
--1
-3
-quotient6
--1
-3
-quotient5
--1
-3
-quotient4
--1
-3
-quotient3
--1
-3
-quotient2
--1
-3
-quotient1
--1
-3
-quotient0
--1
-3
-numer9
--1
-3
-numer8
--1
-3
-numer7
--1
-3
-numer6
--1
-3
-numer5
--1
-3
-numer4
--1
-3
-numer3
--1
-3
-numer2
--1
-3
-numer1
--1
-3
-numer0
--1
-3
-denom5
--1
-1
-denom4
--1
-1
-denom2
--1
-1
-denom1
--1
-1
-denom0
--1
-1
-denom7
--1
-2
-denom6
--1
-2
-denom3
--1
-2
-}
-# include_file {
-..|..|..|..|altera|90|quartus|libraries|megafunctions|abs_divider.inc
-cdfefd53e136b3a8e541899b82db37d
-..|..|..|..|altera|90|quartus|libraries|megafunctions|sign_div_unsign.inc
-c1e17922387cb5d0c88d7fb673544bb4
-..|..|..|..|altera|90|quartus|libraries|megafunctions|aglobal90.inc
-99832fdf63412df51d7531202d74e75
-}
-# macro_sequence
-
-# end
-# entity
-lpm_divide
-# storage
-db|top_greedy_snake.(39).cnf
-db|top_greedy_snake.(39).cnf
-# case_insensitive
-# source_file
-..|..|..|..|altera|90|quartus|libraries|megafunctions|lpm_divide.tdf
+c:|altera|90|quartus|libraries|megafunctions|lpm_divide.tdf
 bab4b3ca888e5f792f433438428ff446
 7
 # user_parameter {
@@ -1873,11 +1082,11 @@ denom0
 2
 }
 # include_file {
-..|..|..|..|altera|90|quartus|libraries|megafunctions|abs_divider.inc
+c:|altera|90|quartus|libraries|megafunctions|abs_divider.inc
 cdfefd53e136b3a8e541899b82db37d
-..|..|..|..|altera|90|quartus|libraries|megafunctions|sign_div_unsign.inc
+c:|altera|90|quartus|libraries|megafunctions|sign_div_unsign.inc
 c1e17922387cb5d0c88d7fb673544bb4
-..|..|..|..|altera|90|quartus|libraries|megafunctions|aglobal90.inc
+c:|altera|90|quartus|libraries|megafunctions|aglobal90.inc
 99832fdf63412df51d7531202d74e75
 }
 # macro_sequence
@@ -1886,8 +1095,8 @@ c1e17922387cb5d0c88d7fb673544bb4
 # entity
 lpm_divide_mhm
 # storage
-db|top_greedy_snake.(40).cnf
-db|top_greedy_snake.(40).cnf
+db|top_greedy_snake.(17).cnf
+db|top_greedy_snake.(17).cnf
 # case_insensitive
 # source_file
 db|lpm_divide_mhm.tdf
@@ -1982,8 +1191,8 @@ denom0
 # entity
 sign_div_unsign_nlh
 # storage
-db|top_greedy_snake.(41).cnf
-db|top_greedy_snake.(41).cnf
+db|top_greedy_snake.(18).cnf
+db|top_greedy_snake.(18).cnf
 # case_insensitive
 # source_file
 db|sign_div_unsign_nlh.tdf
@@ -2099,8 +1308,8 @@ denominator0
 # entity
 alt_u_div_p5f
 # storage
-db|top_greedy_snake.(42).cnf
-db|top_greedy_snake.(42).cnf
+db|top_greedy_snake.(19).cnf
+db|top_greedy_snake.(19).cnf
 # case_insensitive
 # source_file
 db|alt_u_div_p5f.tdf
@@ -2209,219 +1418,6 @@ denominator1
 denominator0
 -1
 3
-}
-# macro_sequence
-
-# end
-# entity
-Display_Ctrl
-# storage
-db|top_greedy_snake.(7).cnf
-db|top_greedy_snake.(7).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-Display_Ctrl.v
-d02dff1ff1cafbc651cf961552d9d7a3
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-Display_Ctrl:display_ctrl
-}
-# macro_sequence
-
-# end
-# entity
-Keyboard_Ctrl
-# storage
-db|top_greedy_snake.(28).cnf
-db|top_greedy_snake.(28).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-Keyboard_Ctrl.v
-6489d42d74e8e2edf9f791953f79526b
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-Keyboard_Ctrl:keyboard_ctrl
-}
-# macro_sequence
-
-# end
-# entity
-Key
-# storage
-db|top_greedy_snake.(43).cnf
-db|top_greedy_snake.(43).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-Key.v
-b171cf95479babab6a6ef9d347fc831e
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# macro_sequence
-
-# end
-# entity
-top_greedy_snake
-# storage
-db|top_greedy_snake.(0).cnf
-db|top_greedy_snake.(0).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-top_greedy_snake.v
-1764ab749fb5c03791d73cf268f2ea9
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-|
-}
-# macro_sequence
-
-# end
-# entity
-ps2_top
-# storage
-db|top_greedy_snake.(25).cnf
-db|top_greedy_snake.(25).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-ps2_top.v
-6c7eb6df50bb2443c7868ca1d89a8477
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-ps2_top:U7
-}
-# macro_sequence
-
-# end
-# entity
-Game_Ctrl
-# storage
-db|top_greedy_snake.(20).cnf
-db|top_greedy_snake.(20).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-Game_Ctrl.v
-7231f9dcfe276e9487b9f5aa66683
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-Game_Ctrl:game_ctrl
 }
 # macro_sequence
 

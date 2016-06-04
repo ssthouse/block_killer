@@ -3,6 +3,9 @@ module Display_Ctrl
 (
 	input CLK_50M,
 	input RST_N,
+	//game state & score num
+	input [1:0]game_state,
+	input [7:0] score,
 	
 	//screen data : four column   (color 3bit)XXX_XXX(index in column)
 	input [23:0]column_0,
@@ -15,6 +18,11 @@ module Display_Ctrl
 	output reg vsync,
 	output [2:0] vga_rgb
 );
+
+	// three state of game
+	localparam STATE_START = 2'b00;
+	localparam STATE_PLAY = 2'b01;
+	localparam STATE_OVER = 2'b10;
 
 	//color constant
 	localparam COLOR_RED = 3'b100;
@@ -77,38 +85,47 @@ module Display_Ctrl
 						
 	always@(posedge CLK_50M or negedge RST_N)
 	begin
-		if(!RST_N)
-			begin
-				temp_color <= 3'b000;
-			end
-		else
-			begin
-				//calcute block index
-				 block_x = x_pos/200;
-				 block_y = y_pos/75;
-				case(x_pos/200)
-					0:
-						begin
-							temp_block = column_0>>((7-block_y)*3);
-							temp_color = temp_block[2:0];
-						end
-					1:
-						begin 
-							temp_block = column_1>>((7-block_y)*3);
-							temp_color = temp_block[2:0];
-						end
-					2:
-						begin 
-							temp_block = column_2>>((7-block_y)*3);
-							temp_color = temp_block[2:0];
-						end
-					3:
-						begin 
-							temp_block = column_3>>((7-block_y)*3);
-							temp_color = temp_block[2:0];
-						end
-				endcase
-			end
+		if(!RST_N)begin
+			temp_color <= 3'b000;
+		end
+		else begin
+			//game state 
+			case(game_state)
+				STATE_START: begin
+				
+				end
+				STATE_PLAY:begin
+					//calcute block index
+					block_x = x_pos/200;
+					block_y = y_pos/75;
+					case(x_pos/200)
+						0:
+							begin
+								temp_block = column_0>>((7-block_y)*3);
+								temp_color = temp_block[2:0];
+							end
+						1:
+							begin 
+								temp_block = column_1>>((7-block_y)*3);
+								temp_color = temp_block[2:0];
+							end
+						2:
+							begin 
+								temp_block = column_2>>((7-block_y)*3);
+								temp_color = temp_block[2:0];
+							end
+						3:
+							begin 
+								temp_block = column_3>>((7-block_y)*3);
+								temp_color = temp_block[2:0];
+							end
+					endcase
+				end
+				STATE_OVER: begin
+				
+				end
+			endcase
+		end
 	end
 	
 	//0.5s clk count

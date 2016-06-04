@@ -1,12 +1,12 @@
-Fitter Status : Successful - Sat Jun 04 11:06:55 2016
+Fitter Status : Successful - Sat Jun 04 18:59:01 2016
 Quartus II Version : 9.0 Build 132 02/25/2009 SJ Full Version
 Revision Name : top_greedy_snake
 Top-level Entity Name : top_greedy_snake
 Family : Cyclone III
 Device : EP3C16F484C6
 Timing Models : Final
-Total logic elements : 2,935 / 15,408 ( 19 % )
-    Total combinational functions : 2,934 / 15,408 ( 19 % )
+Total logic elements : 2,939 / 15,408 ( 19 % )
+    Total combinational functions : 2,935 / 15,408 ( 19 % )
     Dedicated logic registers : 229 / 15,408 ( 1 % )
 Total registers : 229
 Total pins : 12 / 347 ( 3 % )

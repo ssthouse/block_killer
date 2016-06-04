@@ -162,6 +162,16 @@ RST_N => x_cnt[3].ACLR
 RST_N => x_cnt[2].ACLR
 RST_N => x_cnt[1].ACLR
 RST_N => x_cnt[0].ACLR
+game_state[0] => Decoder0.IN1
+game_state[1] => Decoder0.IN0
+score[0] => ~NO_FANOUT~
+score[1] => ~NO_FANOUT~
+score[2] => ~NO_FANOUT~
+score[3] => ~NO_FANOUT~
+score[4] => ~NO_FANOUT~
+score[5] => ~NO_FANOUT~
+score[6] => ~NO_FANOUT~
+score[7] => ~NO_FANOUT~
 column_0[0] => ShiftRight0.IN29
 column_0[1] => ShiftRight0.IN28
 column_0[2] => ShiftRight0.IN27
@@ -1123,6 +1133,7 @@ column_3[20] <= array[3][1][2].DB_MAX_OUTPUT_PORT_TYPE
 column_3[21] <= array[3][0][0].DB_MAX_OUTPUT_PORT_TYPE
 column_3[22] <= array[3][0][1].DB_MAX_OUTPUT_PORT_TYPE
 column_3[23] <= array[3][0][2].DB_MAX_OUTPUT_PORT_TYPE
+score <= <GND>
 game_over <= game_over~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 

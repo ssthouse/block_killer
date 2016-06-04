@@ -51,6 +51,7 @@ module top_greedy_snake
 
 	//todo: test
 	wire [2:0] temp_led;
+	
 	State_Ctrl state_ctrl
 	(
 		//clk ret_n
@@ -82,11 +83,16 @@ module top_greedy_snake
 		.restart_key_press(restart_key_down)
 	);
 
+	//score
+	wire [7:0] score;
 
 	Display_Ctrl display_ctrl
 	(
 		.CLK_50M(CLK_50M),
 		.RST_N(RSTn),
+		//state & score
+		.game_state(game_state),
+		.score(score),
 		//color data
 		.column_0(column_0),
 		.column_1(column_1),
@@ -116,7 +122,8 @@ module top_greedy_snake
 		.column_2(column_2),
 		.column_3(column_3),
 		//game signal
-		.game_over(game_over)
+		.game_over(game_over),
+		.score(score)
 	);
 	
 //****************************our code *****************************

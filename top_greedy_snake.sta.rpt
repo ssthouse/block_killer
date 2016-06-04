@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for top_greedy_snake
-Sat Jun 04 11:07:09 2016
+Sat Jun 04 18:59:15 2016
 Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
 
 
@@ -8,53 +8,54 @@ Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
 ---------------------
   1. Legal Notice
   2. TimeQuest Timing Analyzer Summary
-  3. Clocks
-  4. Slow 1200mV 85C Model Fmax Summary
-  5. Slow 1200mV 85C Model Setup Summary
-  6. Slow 1200mV 85C Model Hold Summary
-  7. Slow 1200mV 85C Model Recovery Summary
-  8. Slow 1200mV 85C Model Removal Summary
-  9. Slow 1200mV 85C Model Minimum Pulse Width
- 10. Setup Times
- 11. Hold Times
- 12. Clock to Output Times
- 13. Minimum Clock to Output Times
- 14. Slow 1200mV 0C Model Fmax Summary
- 15. Slow 1200mV 0C Model Setup Summary
- 16. Slow 1200mV 0C Model Hold Summary
- 17. Slow 1200mV 0C Model Recovery Summary
- 18. Slow 1200mV 0C Model Removal Summary
- 19. Slow 1200mV 0C Model Minimum Pulse Width
- 20. Setup Times
- 21. Hold Times
- 22. Clock to Output Times
- 23. Minimum Clock to Output Times
- 24. Fast 1200mV 0C Model Setup Summary
- 25. Fast 1200mV 0C Model Hold Summary
- 26. Fast 1200mV 0C Model Recovery Summary
- 27. Fast 1200mV 0C Model Removal Summary
- 28. Fast 1200mV 0C Model Minimum Pulse Width
- 29. Setup Times
- 30. Hold Times
- 31. Clock to Output Times
- 32. Minimum Clock to Output Times
- 33. Multicorner Timing Analysis Summary
- 34. Setup Times
- 35. Hold Times
- 36. Clock to Output Times
- 37. Minimum Clock to Output Times
- 38. Board Trace Model Assignments
- 39. Input Transition Times
- 40. Slow Corner Signal Integrity Metrics
- 41. Fast Corner Signal Integrity Metrics
- 42. Setup Transfers
- 43. Hold Transfers
- 44. Recovery Transfers
- 45. Removal Transfers
- 46. Report TCCS
- 47. Report RSKM
- 48. Unconstrained Paths
- 49. TimeQuest Timing Analyzer Messages
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Slow 1200mV 85C Model Setup Summary
+  7. Slow 1200mV 85C Model Hold Summary
+  8. Slow 1200mV 85C Model Recovery Summary
+  9. Slow 1200mV 85C Model Removal Summary
+ 10. Slow 1200mV 85C Model Minimum Pulse Width
+ 11. Setup Times
+ 12. Hold Times
+ 13. Clock to Output Times
+ 14. Minimum Clock to Output Times
+ 15. Slow 1200mV 0C Model Fmax Summary
+ 16. Slow 1200mV 0C Model Setup Summary
+ 17. Slow 1200mV 0C Model Hold Summary
+ 18. Slow 1200mV 0C Model Recovery Summary
+ 19. Slow 1200mV 0C Model Removal Summary
+ 20. Slow 1200mV 0C Model Minimum Pulse Width
+ 21. Setup Times
+ 22. Hold Times
+ 23. Clock to Output Times
+ 24. Minimum Clock to Output Times
+ 25. Fast 1200mV 0C Model Setup Summary
+ 26. Fast 1200mV 0C Model Hold Summary
+ 27. Fast 1200mV 0C Model Recovery Summary
+ 28. Fast 1200mV 0C Model Removal Summary
+ 29. Fast 1200mV 0C Model Minimum Pulse Width
+ 30. Setup Times
+ 31. Hold Times
+ 32. Clock to Output Times
+ 33. Minimum Clock to Output Times
+ 34. Multicorner Timing Analysis Summary
+ 35. Setup Times
+ 36. Hold Times
+ 37. Clock to Output Times
+ 38. Minimum Clock to Output Times
+ 39. Board Trace Model Assignments
+ 40. Input Transition Times
+ 41. Slow Corner Signal Integrity Metrics
+ 42. Fast Corner Signal Integrity Metrics
+ 43. Setup Transfers
+ 44. Hold Transfers
+ 45. Recovery Transfers
+ 46. Removal Transfers
+ 47. Report TCCS
+ 48. Report RSKM
+ 49. Unconstrained Paths
+ 50. TimeQuest Timing Analyzer Messages
 
 
 
@@ -90,6 +91,23 @@ applicable agreement for further details.
 +--------------------+--------------------------------------------------+
 
 
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2 processors           ; < 0.1%      ;
++----------------------------+-------------+
+
+
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Clocks                                                                                                                                                                              ;
 +------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------+
@@ -105,7 +123,7 @@ applicable agreement for further details.
 +-----------+-----------------+------------+------+
 ; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
 +-----------+-----------------+------------+------+
-; 16.34 MHz ; 16.34 MHz       ; CLK_50M    ;      ;
+; 16.45 MHz ; 16.45 MHz       ; CLK_50M    ;      ;
 +-----------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -115,8 +133,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------+---------+-----------------+
 ; Clock   ; Slack   ; End Point TNS   ;
 +---------+---------+-----------------+
-; CLK_50M ; -60.218 ; -6187.984       ;
-; RSTn    ; 0.108   ; 0.000           ;
+; CLK_50M ; -59.808 ; -6160.729       ;
+; RSTn    ; -0.415  ; -0.535          ;
 +---------+---------+-----------------+
 
 
@@ -125,7 +143,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------+--------+-----------------+
 ; Clock   ; Slack  ; End Point TNS   ;
 +---------+--------+-----------------+
-; RSTn    ; -0.109 ; -0.215          ;
+; RSTn    ; -0.156 ; -0.156          ;
 ; CLK_50M ; 0.358  ; 0.000           ;
 +---------+--------+-----------------+
 
@@ -135,7 +153,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------+--------+---------------------+
 ; Clock   ; Slack  ; End Point TNS       ;
 +---------+--------+---------------------+
-; CLK_50M ; -1.250 ; -265.360            ;
+; CLK_50M ; -1.278 ; -272.758            ;
 +---------+--------+---------------------+
 
 
@@ -144,7 +162,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------+-------+---------------------+
 ; Clock   ; Slack ; End Point TNS       ;
 +---------+-------+---------------------+
-; CLK_50M ; 1.155 ; 0.000               ;
+; CLK_50M ; 1.193 ; 0.000               ;
 +---------+-------+---------------------+
 
 
@@ -261,9 +279,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; RSTn      ; CLK_50M    ; 57.407 ; 57.646 ; Rise       ; CLK_50M         ;
-; ps2k_clk  ; CLK_50M    ; 1.690  ; 2.115  ; Rise       ; CLK_50M         ;
-; ps2k_data ; CLK_50M    ; 1.867  ; 2.355  ; Rise       ; CLK_50M         ;
+; RSTn      ; CLK_50M    ; 57.396 ; 57.604 ; Rise       ; CLK_50M         ;
+; ps2k_clk  ; CLK_50M    ; 1.482  ; 1.904  ; Rise       ; CLK_50M         ;
+; ps2k_data ; CLK_50M    ; 1.814  ; 2.294  ; Rise       ; CLK_50M         ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -272,9 +290,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; RSTn      ; CLK_50M    ; -1.062 ; -1.318 ; Rise       ; CLK_50M         ;
-; ps2k_clk  ; CLK_50M    ; -1.327 ; -1.739 ; Rise       ; CLK_50M         ;
-; ps2k_data ; CLK_50M    ; -1.435 ; -1.884 ; Rise       ; CLK_50M         ;
+; RSTn      ; CLK_50M    ; -1.023 ; -1.256 ; Rise       ; CLK_50M         ;
+; ps2k_clk  ; CLK_50M    ; -1.129 ; -1.539 ; Rise       ; CLK_50M         ;
+; ps2k_data ; CLK_50M    ; -1.240 ; -1.648 ; Rise       ; CLK_50M         ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -283,12 +301,12 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------+------------+--------+--------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +---------------+------------+--------+--------+------------+-----------------+
-; color_out[*]  ; CLK_50M    ; 12.597 ; 12.740 ; Rise       ; CLK_50M         ;
-;  color_out[0] ; CLK_50M    ; 12.342 ; 12.506 ; Rise       ; CLK_50M         ;
-;  color_out[1] ; CLK_50M    ; 12.463 ; 12.614 ; Rise       ; CLK_50M         ;
-;  color_out[2] ; CLK_50M    ; 12.597 ; 12.740 ; Rise       ; CLK_50M         ;
-; hsync         ; CLK_50M    ; 6.621  ; 6.600  ; Rise       ; CLK_50M         ;
-; vsync         ; CLK_50M    ; 5.856  ; 5.843  ; Rise       ; CLK_50M         ;
+; color_out[*]  ; CLK_50M    ; 13.098 ; 13.232 ; Rise       ; CLK_50M         ;
+;  color_out[0] ; CLK_50M    ; 13.098 ; 13.232 ; Rise       ; CLK_50M         ;
+;  color_out[1] ; CLK_50M    ; 12.103 ; 12.342 ; Rise       ; CLK_50M         ;
+;  color_out[2] ; CLK_50M    ; 12.719 ; 12.958 ; Rise       ; CLK_50M         ;
+; hsync         ; CLK_50M    ; 5.681  ; 5.651  ; Rise       ; CLK_50M         ;
+; vsync         ; CLK_50M    ; 6.469  ; 6.432  ; Rise       ; CLK_50M         ;
 +---------------+------------+--------+--------+------------+-----------------+
 
 
@@ -297,12 +315,12 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------+------------+-------+-------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +---------------+------------+-------+-------+------------+-----------------+
-; color_out[*]  ; CLK_50M    ; 6.853 ; 6.894 ; Rise       ; CLK_50M         ;
-;  color_out[0] ; CLK_50M    ; 6.956 ; 7.005 ; Rise       ; CLK_50M         ;
-;  color_out[1] ; CLK_50M    ; 6.853 ; 6.894 ; Rise       ; CLK_50M         ;
-;  color_out[2] ; CLK_50M    ; 7.195 ; 7.238 ; Rise       ; CLK_50M         ;
-; hsync         ; CLK_50M    ; 6.466 ; 6.446 ; Rise       ; CLK_50M         ;
-; vsync         ; CLK_50M    ; 5.732 ; 5.720 ; Rise       ; CLK_50M         ;
+; color_out[*]  ; CLK_50M    ; 7.077 ; 7.144 ; Rise       ; CLK_50M         ;
+;  color_out[0] ; CLK_50M    ; 8.010 ; 7.987 ; Rise       ; CLK_50M         ;
+;  color_out[1] ; CLK_50M    ; 7.077 ; 7.144 ; Rise       ; CLK_50M         ;
+;  color_out[2] ; CLK_50M    ; 7.670 ; 7.752 ; Rise       ; CLK_50M         ;
+; hsync         ; CLK_50M    ; 5.564 ; 5.536 ; Rise       ; CLK_50M         ;
+; vsync         ; CLK_50M    ; 6.320 ; 6.284 ; Rise       ; CLK_50M         ;
 +---------------+------------+-------+-------+------------+-----------------+
 
 
@@ -311,7 +329,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------+-----------------+------------+------+
 ; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
 +-----------+-----------------+------------+------+
-; 18.11 MHz ; 18.11 MHz       ; CLK_50M    ;      ;
+; 18.23 MHz ; 18.23 MHz       ; CLK_50M    ;      ;
 +-----------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -321,8 +339,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------+---------+----------------+
 ; Clock   ; Slack   ; End Point TNS  ;
 +---------+---------+----------------+
-; CLK_50M ; -54.228 ; -5558.136      ;
-; RSTn    ; 0.245   ; 0.000          ;
+; CLK_50M ; -53.846 ; -5532.897      ;
+; RSTn    ; -0.221  ; -0.221         ;
 +---------+---------+----------------+
 
 
@@ -331,7 +349,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------+--------+----------------+
 ; Clock   ; Slack  ; End Point TNS  ;
 +---------+--------+----------------+
-; RSTn    ; -0.113 ; -0.218         ;
+; RSTn    ; -0.153 ; -0.153         ;
 ; CLK_50M ; 0.312  ; 0.000          ;
 +---------+--------+----------------+
 
@@ -341,7 +359,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------+--------+--------------------+
 ; Clock   ; Slack  ; End Point TNS      ;
 +---------+--------+--------------------+
-; CLK_50M ; -1.066 ; -226.550           ;
+; CLK_50M ; -1.093 ; -232.760           ;
 +---------+--------+--------------------+
 
 
@@ -350,7 +368,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------+-------+--------------------+
 ; Clock   ; Slack ; End Point TNS      ;
 +---------+-------+--------------------+
-; CLK_50M ; 1.068 ; 0.000              ;
+; CLK_50M ; 1.104 ; 0.000              ;
 +---------+-------+--------------------+
 
 
@@ -467,9 +485,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; RSTn      ; CLK_50M    ; 51.841 ; 51.989 ; Rise       ; CLK_50M         ;
-; ps2k_clk  ; CLK_50M    ; 1.435  ; 1.780  ; Rise       ; CLK_50M         ;
-; ps2k_data ; CLK_50M    ; 1.595  ; 1.980  ; Rise       ; CLK_50M         ;
+; RSTn      ; CLK_50M    ; 51.811 ; 51.953 ; Rise       ; CLK_50M         ;
+; ps2k_clk  ; CLK_50M    ; 1.247  ; 1.608  ; Rise       ; CLK_50M         ;
+; ps2k_data ; CLK_50M    ; 1.551  ; 1.933  ; Rise       ; CLK_50M         ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -478,9 +496,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; RSTn      ; CLK_50M    ; -1.015 ; -1.202 ; Rise       ; CLK_50M         ;
-; ps2k_clk  ; CLK_50M    ; -1.114 ; -1.450 ; Rise       ; CLK_50M         ;
-; ps2k_data ; CLK_50M    ; -1.214 ; -1.570 ; Rise       ; CLK_50M         ;
+; RSTn      ; CLK_50M    ; -0.974 ; -1.149 ; Rise       ; CLK_50M         ;
+; ps2k_clk  ; CLK_50M    ; -0.935 ; -1.286 ; Rise       ; CLK_50M         ;
+; ps2k_data ; CLK_50M    ; -1.036 ; -1.366 ; Rise       ; CLK_50M         ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -489,12 +507,12 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------+------------+--------+--------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +---------------+------------+--------+--------+------------+-----------------+
-; color_out[*]  ; CLK_50M    ; 11.631 ; 11.675 ; Rise       ; CLK_50M         ;
-;  color_out[0] ; CLK_50M    ; 11.403 ; 11.485 ; Rise       ; CLK_50M         ;
-;  color_out[1] ; CLK_50M    ; 11.512 ; 11.585 ; Rise       ; CLK_50M         ;
-;  color_out[2] ; CLK_50M    ; 11.631 ; 11.675 ; Rise       ; CLK_50M         ;
-; hsync         ; CLK_50M    ; 6.195  ; 6.254  ; Rise       ; CLK_50M         ;
-; vsync         ; CLK_50M    ; 5.534  ; 5.558  ; Rise       ; CLK_50M         ;
+; color_out[*]  ; CLK_50M    ; 12.052 ; 12.200 ; Rise       ; CLK_50M         ;
+;  color_out[0] ; CLK_50M    ; 12.052 ; 12.200 ; Rise       ; CLK_50M         ;
+;  color_out[1] ; CLK_50M    ; 11.137 ; 11.387 ; Rise       ; CLK_50M         ;
+;  color_out[2] ; CLK_50M    ; 11.704 ; 11.951 ; Rise       ; CLK_50M         ;
+; hsync         ; CLK_50M    ; 5.389  ; 5.384  ; Rise       ; CLK_50M         ;
+; vsync         ; CLK_50M    ; 6.103  ; 6.105  ; Rise       ; CLK_50M         ;
 +---------------+------------+--------+--------+------------+-----------------+
 
 
@@ -503,12 +521,12 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------+------------+-------+-------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +---------------+------------+-------+-------+------------+-----------------+
-; color_out[*]  ; CLK_50M    ; 6.487 ; 6.477 ; Rise       ; CLK_50M         ;
-;  color_out[0] ; CLK_50M    ; 6.582 ; 6.565 ; Rise       ; CLK_50M         ;
-;  color_out[1] ; CLK_50M    ; 6.487 ; 6.477 ; Rise       ; CLK_50M         ;
-;  color_out[2] ; CLK_50M    ; 6.797 ; 6.754 ; Rise       ; CLK_50M         ;
-; hsync         ; CLK_50M    ; 6.059 ; 6.116 ; Rise       ; CLK_50M         ;
-; vsync         ; CLK_50M    ; 5.423 ; 5.447 ; Rise       ; CLK_50M         ;
+; color_out[*]  ; CLK_50M    ; 6.722 ; 6.693 ; Rise       ; CLK_50M         ;
+;  color_out[0] ; CLK_50M    ; 7.573 ; 7.457 ; Rise       ; CLK_50M         ;
+;  color_out[1] ; CLK_50M    ; 6.722 ; 6.693 ; Rise       ; CLK_50M         ;
+;  color_out[2] ; CLK_50M    ; 7.271 ; 7.247 ; Rise       ; CLK_50M         ;
+; hsync         ; CLK_50M    ; 5.285 ; 5.281 ; Rise       ; CLK_50M         ;
+; vsync         ; CLK_50M    ; 5.970 ; 5.973 ; Rise       ; CLK_50M         ;
 +---------------+------------+-------+-------+------------+-----------------+
 
 
@@ -517,8 +535,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------+---------+----------------+
 ; Clock   ; Slack   ; End Point TNS  ;
 +---------+---------+----------------+
-; CLK_50M ; -34.793 ; -3523.079      ;
-; RSTn    ; 0.469   ; 0.000          ;
+; CLK_50M ; -34.503 ; -3497.286      ;
+; RSTn    ; 0.151   ; 0.000          ;
 +---------+---------+----------------+
 
 
@@ -527,7 +545,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------+--------+----------------+
 ; Clock   ; Slack  ; End Point TNS  ;
 +---------+--------+----------------+
-; RSTn    ; -0.075 ; -0.149         ;
+; RSTn    ; -0.089 ; -0.089         ;
 ; CLK_50M ; 0.187  ; 0.000          ;
 +---------+--------+----------------+
 
@@ -537,7 +555,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------+--------+--------------------+
 ; Clock   ; Slack  ; End Point TNS      ;
 +---------+--------+--------------------+
-; CLK_50M ; -0.831 ; -176.996           ;
+; CLK_50M ; -0.848 ; -180.837           ;
 +---------+--------+--------------------+
 
 
@@ -546,7 +564,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------+-------+--------------------+
 ; Clock   ; Slack ; End Point TNS      ;
 +---------+-------+--------------------+
-; CLK_50M ; 0.619 ; 0.000              ;
+; CLK_50M ; 0.635 ; 0.000              ;
 +---------+-------+--------------------+
 
 
@@ -663,9 +681,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; RSTn      ; CLK_50M    ; 33.533 ; 34.031 ; Rise       ; CLK_50M         ;
-; ps2k_clk  ; CLK_50M    ; 0.933  ; 1.500  ; Rise       ; CLK_50M         ;
-; ps2k_data ; CLK_50M    ; 1.035  ; 1.661  ; Rise       ; CLK_50M         ;
+; RSTn      ; CLK_50M    ; 33.498 ; 34.000 ; Rise       ; CLK_50M         ;
+; ps2k_clk  ; CLK_50M    ; 0.818  ; 1.380  ; Rise       ; CLK_50M         ;
+; ps2k_data ; CLK_50M    ; 0.999  ; 1.619  ; Rise       ; CLK_50M         ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -674,9 +692,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; RSTn      ; CLK_50M    ; -0.518 ; -1.041 ; Rise       ; CLK_50M         ;
-; ps2k_clk  ; CLK_50M    ; -0.726 ; -1.287 ; Rise       ; CLK_50M         ;
-; ps2k_data ; CLK_50M    ; -0.789 ; -1.396 ; Rise       ; CLK_50M         ;
+; RSTn      ; CLK_50M    ; -0.480 ; -1.008 ; Rise       ; CLK_50M         ;
+; ps2k_clk  ; CLK_50M    ; -0.615 ; -1.172 ; Rise       ; CLK_50M         ;
+; ps2k_data ; CLK_50M    ; -0.673 ; -1.254 ; Rise       ; CLK_50M         ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -685,12 +703,12 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------+------------+-------+-------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +---------------+------------+-------+-------+------------+-----------------+
-; color_out[*]  ; CLK_50M    ; 7.401 ; 7.581 ; Rise       ; CLK_50M         ;
-;  color_out[0] ; CLK_50M    ; 7.266 ; 7.445 ; Rise       ; CLK_50M         ;
-;  color_out[1] ; CLK_50M    ; 7.344 ; 7.539 ; Rise       ; CLK_50M         ;
-;  color_out[2] ; CLK_50M    ; 7.401 ; 7.581 ; Rise       ; CLK_50M         ;
-; hsync         ; CLK_50M    ; 4.039 ; 3.930 ; Rise       ; CLK_50M         ;
-; vsync         ; CLK_50M    ; 3.577 ; 3.515 ; Rise       ; CLK_50M         ;
+; color_out[*]  ; CLK_50M    ; 7.773 ; 7.838 ; Rise       ; CLK_50M         ;
+;  color_out[0] ; CLK_50M    ; 7.773 ; 7.838 ; Rise       ; CLK_50M         ;
+;  color_out[1] ; CLK_50M    ; 7.235 ; 7.289 ; Rise       ; CLK_50M         ;
+;  color_out[2] ; CLK_50M    ; 7.597 ; 7.690 ; Rise       ; CLK_50M         ;
+; hsync         ; CLK_50M    ; 3.474 ; 3.422 ; Rise       ; CLK_50M         ;
+; vsync         ; CLK_50M    ; 3.975 ; 3.857 ; Rise       ; CLK_50M         ;
 +---------------+------------+-------+-------+------------+-----------------+
 
 
@@ -699,12 +717,12 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------+------------+-------+-------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +---------------+------------+-------+-------+------------+-----------------+
-; color_out[*]  ; CLK_50M    ; 4.076 ; 4.198 ; Rise       ; CLK_50M         ;
-;  color_out[0] ; CLK_50M    ; 4.130 ; 4.261 ; Rise       ; CLK_50M         ;
-;  color_out[1] ; CLK_50M    ; 4.076 ; 4.198 ; Rise       ; CLK_50M         ;
-;  color_out[2] ; CLK_50M    ; 4.259 ; 4.397 ; Rise       ; CLK_50M         ;
-; hsync         ; CLK_50M    ; 3.947 ; 3.843 ; Rise       ; CLK_50M         ;
-; vsync         ; CLK_50M    ; 3.503 ; 3.444 ; Rise       ; CLK_50M         ;
+; color_out[*]  ; CLK_50M    ; 4.201 ; 4.366 ; Rise       ; CLK_50M         ;
+;  color_out[0] ; CLK_50M    ; 4.705 ; 4.881 ; Rise       ; CLK_50M         ;
+;  color_out[1] ; CLK_50M    ; 4.201 ; 4.366 ; Rise       ; CLK_50M         ;
+;  color_out[2] ; CLK_50M    ; 4.558 ; 4.772 ; Rise       ; CLK_50M         ;
+; hsync         ; CLK_50M    ; 3.404 ; 3.356 ; Rise       ; CLK_50M         ;
+; vsync         ; CLK_50M    ; 3.885 ; 3.772 ; Rise       ; CLK_50M         ;
 +---------------+------------+-------+-------+------------+-----------------+
 
 
@@ -713,12 +731,12 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------+-----------+--------+----------+---------+---------------------+
 ; Clock            ; Setup     ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+-----------+--------+----------+---------+---------------------+
-; Worst-case Slack ; -60.218   ; -0.113 ; -1.250   ; 0.0     ; -3.000              ;
-;  CLK_50M         ; -60.218   ; 0.187  ; -1.250   ; 0.619   ; N/A                 ;
-;  RSTn            ; 0.108     ; -0.113 ; N/A      ; N/A     ; N/A                 ;
-; Design-wide TNS  ; -6187.984 ; -0.218 ; -265.36  ; 0.0     ; N/A                 ;
-;  CLK_50M         ; -6187.984 ; 0.000  ; -265.360 ; 0.000   ; N/A                 ;
-;  RSTn            ; 0.000     ; -0.218 ; N/A      ; N/A     ; N/A                 ;
+; Worst-case Slack ; -59.808   ; -0.156 ; -1.278   ; 0.0     ; -3.000              ;
+;  CLK_50M         ; -59.808   ; 0.187  ; -1.278   ; 0.635   ; N/A                 ;
+;  RSTn            ; -0.415    ; -0.156 ; N/A      ; N/A     ; N/A                 ;
+; Design-wide TNS  ; -6161.264 ; -0.156 ; -272.758 ; 0.0     ; N/A                 ;
+;  CLK_50M         ; -6160.729 ; 0.000  ; -272.758 ; 0.000   ; N/A                 ;
+;  RSTn            ; -0.535    ; -0.156 ; N/A      ; N/A     ; N/A                 ;
 +------------------+-----------+--------+----------+---------+---------------------+
 
 
@@ -727,9 +745,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; RSTn      ; CLK_50M    ; 57.407 ; 57.646 ; Rise       ; CLK_50M         ;
-; ps2k_clk  ; CLK_50M    ; 1.690  ; 2.115  ; Rise       ; CLK_50M         ;
-; ps2k_data ; CLK_50M    ; 1.867  ; 2.355  ; Rise       ; CLK_50M         ;
+; RSTn      ; CLK_50M    ; 57.396 ; 57.604 ; Rise       ; CLK_50M         ;
+; ps2k_clk  ; CLK_50M    ; 1.482  ; 1.904  ; Rise       ; CLK_50M         ;
+; ps2k_data ; CLK_50M    ; 1.814  ; 2.294  ; Rise       ; CLK_50M         ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -738,9 +756,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; RSTn      ; CLK_50M    ; -0.518 ; -1.041 ; Rise       ; CLK_50M         ;
-; ps2k_clk  ; CLK_50M    ; -0.726 ; -1.287 ; Rise       ; CLK_50M         ;
-; ps2k_data ; CLK_50M    ; -0.789 ; -1.396 ; Rise       ; CLK_50M         ;
+; RSTn      ; CLK_50M    ; -0.480 ; -1.008 ; Rise       ; CLK_50M         ;
+; ps2k_clk  ; CLK_50M    ; -0.615 ; -1.172 ; Rise       ; CLK_50M         ;
+; ps2k_data ; CLK_50M    ; -0.673 ; -1.254 ; Rise       ; CLK_50M         ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -749,12 +767,12 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------+------------+--------+--------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +---------------+------------+--------+--------+------------+-----------------+
-; color_out[*]  ; CLK_50M    ; 12.597 ; 12.740 ; Rise       ; CLK_50M         ;
-;  color_out[0] ; CLK_50M    ; 12.342 ; 12.506 ; Rise       ; CLK_50M         ;
-;  color_out[1] ; CLK_50M    ; 12.463 ; 12.614 ; Rise       ; CLK_50M         ;
-;  color_out[2] ; CLK_50M    ; 12.597 ; 12.740 ; Rise       ; CLK_50M         ;
-; hsync         ; CLK_50M    ; 6.621  ; 6.600  ; Rise       ; CLK_50M         ;
-; vsync         ; CLK_50M    ; 5.856  ; 5.843  ; Rise       ; CLK_50M         ;
+; color_out[*]  ; CLK_50M    ; 13.098 ; 13.232 ; Rise       ; CLK_50M         ;
+;  color_out[0] ; CLK_50M    ; 13.098 ; 13.232 ; Rise       ; CLK_50M         ;
+;  color_out[1] ; CLK_50M    ; 12.103 ; 12.342 ; Rise       ; CLK_50M         ;
+;  color_out[2] ; CLK_50M    ; 12.719 ; 12.958 ; Rise       ; CLK_50M         ;
+; hsync         ; CLK_50M    ; 5.681  ; 5.651  ; Rise       ; CLK_50M         ;
+; vsync         ; CLK_50M    ; 6.469  ; 6.432  ; Rise       ; CLK_50M         ;
 +---------------+------------+--------+--------+------------+-----------------+
 
 
@@ -763,12 +781,12 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------+------------+-------+-------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +---------------+------------+-------+-------+------------+-----------------+
-; color_out[*]  ; CLK_50M    ; 4.076 ; 4.198 ; Rise       ; CLK_50M         ;
-;  color_out[0] ; CLK_50M    ; 4.130 ; 4.261 ; Rise       ; CLK_50M         ;
-;  color_out[1] ; CLK_50M    ; 4.076 ; 4.198 ; Rise       ; CLK_50M         ;
-;  color_out[2] ; CLK_50M    ; 4.259 ; 4.397 ; Rise       ; CLK_50M         ;
-; hsync         ; CLK_50M    ; 3.947 ; 3.843 ; Rise       ; CLK_50M         ;
-; vsync         ; CLK_50M    ; 3.503 ; 3.444 ; Rise       ; CLK_50M         ;
+; color_out[*]  ; CLK_50M    ; 4.201 ; 4.366 ; Rise       ; CLK_50M         ;
+;  color_out[0] ; CLK_50M    ; 4.705 ; 4.881 ; Rise       ; CLK_50M         ;
+;  color_out[1] ; CLK_50M    ; 4.201 ; 4.366 ; Rise       ; CLK_50M         ;
+;  color_out[2] ; CLK_50M    ; 4.558 ; 4.772 ; Rise       ; CLK_50M         ;
+; hsync         ; CLK_50M    ; 3.404 ; 3.356 ; Rise       ; CLK_50M         ;
+; vsync         ; CLK_50M    ; 3.885 ; 3.772 ; Rise       ; CLK_50M         ;
 +---------------+------------+-------+-------+------------+-----------------+
 
 
@@ -914,10 +932,10 @@ No dedicated SERDES Receiver circuitry present in device or used in design.
 Info: *******************************************************************
 Info: Running Quartus II TimeQuest Timing Analyzer
     Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
-    Info: Processing started: Sat Jun 04 11:07:01 2016
+    Info: Processing started: Sat Jun 04 18:59:06 2016
 Info: Command: quartus_sta top_greedy_snake -c top_greedy_snake
 Info: qsta_default_script.tcl version: #3
-Info: Only one processor detected - disabling parallel compilation
+Info: Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info: Core supply voltage is 1.2V
 Info: Low junction temperature is 0 degrees C
 Info: High junction temperature is 85 degrees C
@@ -936,24 +954,24 @@ Critical Warning: The following clock transfers have no clock uncertainty assign
     Critical Warning: From CLK_50M (Rise) to RSTn (Rise) (setup and hold)
 Info: Analyzing Slow 1200mV 85C Model
 Critical Warning: Timing requirements not met
-Info: Worst-case setup slack is -60.218
+Info: Worst-case setup slack is -59.808
     Info:     Slack End Point TNS Clock 
     Info: ========= ============= =====================
-    Info:   -60.218     -6187.984 CLK_50M 
-    Info:     0.108         0.000 RSTn 
-Info: Worst-case hold slack is -0.109
+    Info:   -59.808     -6160.729 CLK_50M 
+    Info:    -0.415        -0.535 RSTn 
+Info: Worst-case hold slack is -0.156
     Info:     Slack End Point TNS Clock 
     Info: ========= ============= =====================
-    Info:    -0.109        -0.215 RSTn 
+    Info:    -0.156        -0.156 RSTn 
     Info:     0.358         0.000 CLK_50M 
-Info: Worst-case recovery slack is -1.250
+Info: Worst-case recovery slack is -1.278
     Info:     Slack End Point TNS Clock 
     Info: ========= ============= =====================
-    Info:    -1.250      -265.360 CLK_50M 
-Info: Worst-case removal slack is 1.155
+    Info:    -1.278      -272.758 CLK_50M 
+Info: Worst-case removal slack is 1.193
     Info:     Slack End Point TNS Clock 
     Info: ========= ============= =====================
-    Info:     1.155         0.000 CLK_50M 
+    Info:     1.193         0.000 CLK_50M 
 Critical Warning: Found minimum pulse width or period violations. See Report Minimum Pulse Width for details.
 Info: The Metastability Analysis global option is set to OFF.
 Info: No synchronizer chains to report.
@@ -966,24 +984,24 @@ Critical Warning: The following clock transfers have no clock uncertainty assign
     Critical Warning: From RSTn (Fall) to CLK_50M (Rise) (setup and hold)
     Critical Warning: From CLK_50M (Rise) to RSTn (Rise) (setup and hold)
 Critical Warning: Timing requirements not met
-Info: Worst-case setup slack is -54.228
+Info: Worst-case setup slack is -53.846
     Info:     Slack End Point TNS Clock 
     Info: ========= ============= =====================
-    Info:   -54.228     -5558.136 CLK_50M 
-    Info:     0.245         0.000 RSTn 
-Info: Worst-case hold slack is -0.113
+    Info:   -53.846     -5532.897 CLK_50M 
+    Info:    -0.221        -0.221 RSTn 
+Info: Worst-case hold slack is -0.153
     Info:     Slack End Point TNS Clock 
     Info: ========= ============= =====================
-    Info:    -0.113        -0.218 RSTn 
+    Info:    -0.153        -0.153 RSTn 
     Info:     0.312         0.000 CLK_50M 
-Info: Worst-case recovery slack is -1.066
+Info: Worst-case recovery slack is -1.093
     Info:     Slack End Point TNS Clock 
     Info: ========= ============= =====================
-    Info:    -1.066      -226.550 CLK_50M 
-Info: Worst-case removal slack is 1.068
+    Info:    -1.093      -232.760 CLK_50M 
+Info: Worst-case removal slack is 1.104
     Info:     Slack End Point TNS Clock 
     Info: ========= ============= =====================
-    Info:     1.068         0.000 CLK_50M 
+    Info:     1.104         0.000 CLK_50M 
 Critical Warning: Found minimum pulse width or period violations. See Report Minimum Pulse Width for details.
 Info: The Metastability Analysis global option is set to OFF.
 Info: No synchronizer chains to report.
@@ -996,33 +1014,33 @@ Critical Warning: The following clock transfers have no clock uncertainty assign
     Critical Warning: From RSTn (Fall) to CLK_50M (Rise) (setup and hold)
     Critical Warning: From CLK_50M (Rise) to RSTn (Rise) (setup and hold)
 Critical Warning: Timing requirements not met
-Info: Worst-case setup slack is -34.793
+Info: Worst-case setup slack is -34.503
     Info:     Slack End Point TNS Clock 
     Info: ========= ============= =====================
-    Info:   -34.793     -3523.079 CLK_50M 
-    Info:     0.469         0.000 RSTn 
-Info: Worst-case hold slack is -0.075
+    Info:   -34.503     -3497.286 CLK_50M 
+    Info:     0.151         0.000 RSTn 
+Info: Worst-case hold slack is -0.089
     Info:     Slack End Point TNS Clock 
     Info: ========= ============= =====================
-    Info:    -0.075        -0.149 RSTn 
+    Info:    -0.089        -0.089 RSTn 
     Info:     0.187         0.000 CLK_50M 
-Info: Worst-case recovery slack is -0.831
+Info: Worst-case recovery slack is -0.848
     Info:     Slack End Point TNS Clock 
     Info: ========= ============= =====================
-    Info:    -0.831      -176.996 CLK_50M 
-Info: Worst-case removal slack is 0.619
+    Info:    -0.848      -180.837 CLK_50M 
+Info: Worst-case removal slack is 0.635
     Info:     Slack End Point TNS Clock 
     Info: ========= ============= =====================
-    Info:     0.619         0.000 CLK_50M 
+    Info:     0.635         0.000 CLK_50M 
 Critical Warning: Found minimum pulse width or period violations. See Report Minimum Pulse Width for details.
 Info: The Metastability Analysis global option is set to OFF.
 Info: No synchronizer chains to report.
 Info: Design is not fully constrained for setup requirements
 Info: Design is not fully constrained for hold requirements
 Info: Quartus II TimeQuest Timing Analyzer was successful. 0 errors, 25 warnings
-    Info: Peak virtual memory: 272 megabytes
-    Info: Processing ended: Sat Jun 04 11:07:09 2016
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Peak virtual memory: 288 megabytes
+    Info: Processing ended: Sat Jun 04 18:59:15 2016
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:06
 
 

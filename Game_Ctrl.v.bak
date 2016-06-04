@@ -74,6 +74,7 @@ module Game_Ctrl
 
 	//current block place 0~31: up to down & left to right
 	reg [4:0] block_pos;
+	reg [2:0] temp_color;
 	
 	// four state of game
 	localparam STATE_START = 2'b00;
@@ -202,12 +203,16 @@ module Game_Ctrl
 								array[2][y] == array[3][y] &&
 								array[0][y] != BLACK && block_pos/4==0) begin
 								//let block above move down
+								//1 hide block
+								temp_color = array[block_pos%4][block_pos/4];
+								array[block_pos%4][block_pos/4] = BLACK;
 								for(x=0; x<y; x=x+1)begin
 									array[0][y-x] = array[0][y-x-1];
 									array[1][y-x] = array[1][y-x-1];
 									array[2][y-x] = array[2][y-x-1];
 									array[3][y-x] = array[3][y-x-1];
 								end
+								array[block_pos%4][block_pos/4] = temp_color;
 							end
 						end	
 					end

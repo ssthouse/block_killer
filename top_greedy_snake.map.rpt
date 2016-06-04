@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top_greedy_snake
-Sat Jun 04 11:06:34 2016
+Sat Jun 04 18:58:41 2016
 Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
 
 
@@ -24,9 +24,10 @@ Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
  16. Port Connectivity Checks: "Snake:U4"
  17. Port Connectivity Checks: "Snake_Eatting_Apple:U3"
  18. Port Connectivity Checks: "Game_Ctrl_Unit:U2"
- 19. Port Connectivity Checks: "State_Ctrl:state_ctrl"
- 20. Analysis & Synthesis Messages
- 21. Analysis & Synthesis Suppressed Messages
+ 19. Port Connectivity Checks: "Game_Ctrl:game_ctrl"
+ 20. Port Connectivity Checks: "State_Ctrl:state_ctrl"
+ 21. Analysis & Synthesis Messages
+ 22. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -52,13 +53,13 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +------------------------------------+------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Jun 04 11:06:34 2016    ;
+; Analysis & Synthesis Status        ; Successful - Sat Jun 04 18:58:41 2016    ;
 ; Quartus II Version                 ; 9.0 Build 132 02/25/2009 SJ Full Version ;
 ; Revision Name                      ; top_greedy_snake                         ;
 ; Top-level Entity Name              ; top_greedy_snake                         ;
 ; Family                             ; Cyclone III                              ;
-; Total logic elements               ; 2,940                                    ;
-;     Total combinational functions  ; 2,934                                    ;
+; Total logic elements               ; 2,941                                    ;
+;     Total combinational functions  ; 2,935                                    ;
 ;     Dedicated logic registers      ; 229                                      ;
 ; Total registers                    ; 229                                      ;
 ; Total pins                         ; 12                                       ;
@@ -146,34 +147,34 @@ applicable agreement for further details.
 +----------------------------------------------------------------+--------------------+--------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                      ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------+
-; Game_Ctrl_Unit.v                 ; yes             ; User Verilog HDL File        ; C:/Users/ssthouse/Desktop/block_killer/Game_Ctrl_Unit.v           ;
-; Snake.v                          ; yes             ; User Verilog HDL File        ; C:/Users/ssthouse/Desktop/block_killer/Snake.v                    ;
-; Snake_Eatting_Apple.v            ; yes             ; User Verilog HDL File        ; C:/Users/ssthouse/Desktop/block_killer/Snake_Eatting_Apple.v      ;
-; top_greedy_snake.v               ; yes             ; User Verilog HDL File        ; C:/Users/ssthouse/Desktop/block_killer/top_greedy_snake.v         ;
-; Keyboard.v                       ; yes             ; User Verilog HDL File        ; C:/Users/ssthouse/Desktop/block_killer/Keyboard.v                 ;
-; State_Ctrl.v                     ; yes             ; User Verilog HDL File        ; C:/Users/ssthouse/Desktop/block_killer/State_Ctrl.v               ;
-; Keyboard_Ctrl.v                  ; yes             ; User Verilog HDL File        ; C:/Users/ssthouse/Desktop/block_killer/Keyboard_Ctrl.v            ;
-; Display_Ctrl.v                   ; yes             ; User Verilog HDL File        ; C:/Users/ssthouse/Desktop/block_killer/Display_Ctrl.v             ;
-; Game_Ctrl.v                      ; yes             ; User Verilog HDL File        ; C:/Users/ssthouse/Desktop/block_killer/Game_Ctrl.v                ;
-; ps2_top.v                        ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/ssthouse/Desktop/block_killer/ps2_top.v                  ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/altera/90/quartus/libraries/megafunctions/lpm_divide.tdf       ;
-; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/altera/90/quartus/libraries/megafunctions/abs_divider.inc      ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/altera/90/quartus/libraries/megafunctions/sign_div_unsign.inc  ;
-; aglobal90.inc                    ; yes             ; Megafunction                 ; c:/altera/90/quartus/libraries/megafunctions/aglobal90.inc        ;
-; db/lpm_divide_nhm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/ssthouse/Desktop/block_killer/db/lpm_divide_nhm.tdf      ;
-; db/sign_div_unsign_olh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/ssthouse/Desktop/block_killer/db/sign_div_unsign_olh.tdf ;
-; db/alt_u_div_r5f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/ssthouse/Desktop/block_killer/db/alt_u_div_r5f.tdf       ;
-; db/add_sub_unc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/ssthouse/Desktop/block_killer/db/add_sub_unc.tdf         ;
-; db/add_sub_vnc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/ssthouse/Desktop/block_killer/db/add_sub_vnc.tdf         ;
-; db/lpm_divide_mhm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/ssthouse/Desktop/block_killer/db/lpm_divide_mhm.tdf      ;
-; db/sign_div_unsign_nlh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/ssthouse/Desktop/block_killer/db/sign_div_unsign_nlh.tdf ;
-; db/alt_u_div_p5f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/ssthouse/Desktop/block_killer/db/alt_u_div_p5f.tdf       ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                               ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                     ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+
+; Game_Ctrl_Unit.v                 ; yes             ; User Verilog HDL File        ; //Mac/Home/Desktop/block_killer/Game_Ctrl_Unit.v                 ;
+; Snake.v                          ; yes             ; User Verilog HDL File        ; //Mac/Home/Desktop/block_killer/Snake.v                          ;
+; Snake_Eatting_Apple.v            ; yes             ; User Verilog HDL File        ; //Mac/Home/Desktop/block_killer/Snake_Eatting_Apple.v            ;
+; top_greedy_snake.v               ; yes             ; User Verilog HDL File        ; //Mac/Home/Desktop/block_killer/top_greedy_snake.v               ;
+; Keyboard.v                       ; yes             ; User Verilog HDL File        ; //Mac/Home/Desktop/block_killer/Keyboard.v                       ;
+; State_Ctrl.v                     ; yes             ; User Verilog HDL File        ; //Mac/Home/Desktop/block_killer/State_Ctrl.v                     ;
+; Keyboard_Ctrl.v                  ; yes             ; User Verilog HDL File        ; //Mac/Home/Desktop/block_killer/Keyboard_Ctrl.v                  ;
+; Display_Ctrl.v                   ; yes             ; User Verilog HDL File        ; //Mac/Home/Desktop/block_killer/Display_Ctrl.v                   ;
+; Game_Ctrl.v                      ; yes             ; User Verilog HDL File        ; //Mac/Home/Desktop/block_killer/Game_Ctrl.v                      ;
+; ps2_top.v                        ; yes             ; Auto-Found Verilog HDL File  ; //Mac/Home/Desktop/block_killer/ps2_top.v                        ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/altera/90/quartus/libraries/megafunctions/lpm_divide.tdf      ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/altera/90/quartus/libraries/megafunctions/abs_divider.inc     ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/altera/90/quartus/libraries/megafunctions/sign_div_unsign.inc ;
+; aglobal90.inc                    ; yes             ; Megafunction                 ; c:/altera/90/quartus/libraries/megafunctions/aglobal90.inc       ;
+; db/lpm_divide_nhm.tdf            ; yes             ; Auto-Generated Megafunction  ; //Mac/Home/Desktop/block_killer/db/lpm_divide_nhm.tdf            ;
+; db/sign_div_unsign_olh.tdf       ; yes             ; Auto-Generated Megafunction  ; //Mac/Home/Desktop/block_killer/db/sign_div_unsign_olh.tdf       ;
+; db/alt_u_div_r5f.tdf             ; yes             ; Auto-Generated Megafunction  ; //Mac/Home/Desktop/block_killer/db/alt_u_div_r5f.tdf             ;
+; db/add_sub_unc.tdf               ; yes             ; Auto-Generated Megafunction  ; //Mac/Home/Desktop/block_killer/db/add_sub_unc.tdf               ;
+; db/add_sub_vnc.tdf               ; yes             ; Auto-Generated Megafunction  ; //Mac/Home/Desktop/block_killer/db/add_sub_vnc.tdf               ;
+; db/lpm_divide_mhm.tdf            ; yes             ; Auto-Generated Megafunction  ; //Mac/Home/Desktop/block_killer/db/lpm_divide_mhm.tdf            ;
+; db/sign_div_unsign_nlh.tdf       ; yes             ; Auto-Generated Megafunction  ; //Mac/Home/Desktop/block_killer/db/sign_div_unsign_nlh.tdf       ;
+; db/alt_u_div_p5f.tdf             ; yes             ; Auto-Generated Megafunction  ; //Mac/Home/Desktop/block_killer/db/alt_u_div_p5f.tdf             ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------+
@@ -181,16 +182,16 @@ applicable agreement for further details.
 +---------------------------------------------+---------------+
 ; Resource                                    ; Usage         ;
 +---------------------------------------------+---------------+
-; Estimated Total logic elements              ; 2,940         ;
+; Estimated Total logic elements              ; 2,941         ;
 ;                                             ;               ;
-; Total combinational functions               ; 2934          ;
+; Total combinational functions               ; 2935          ;
 ; Logic element usage by number of LUT inputs ;               ;
 ;     -- 4 input functions                    ; 2081          ;
 ;     -- 3 input functions                    ; 461           ;
-;     -- <=2 input functions                  ; 392           ;
+;     -- <=2 input functions                  ; 393           ;
 ;                                             ;               ;
 ; Logic elements by mode                      ;               ;
-;     -- normal mode                          ; 2790          ;
+;     -- normal mode                          ; 2791          ;
 ;     -- arithmetic mode                      ; 144           ;
 ;                                             ;               ;
 ; Total registers                             ; 229           ;
@@ -200,7 +201,7 @@ applicable agreement for further details.
 ; I/O pins                                    ; 12            ;
 ; Maximum fan-out node                        ; CLK_50M~input ;
 ; Maximum fan-out                             ; 229           ;
-; Total fan-out                               ; 11617         ;
+; Total fan-out                               ; 11622         ;
 ; Average fan-out                             ; 3.65          ;
 +---------------------------------------------+---------------+
 
@@ -210,8 +211,8 @@ applicable agreement for further details.
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                         ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |top_greedy_snake                         ; 2934 (0)          ; 229 (0)      ; 0           ; 0            ; 0       ; 0         ; 12   ; 0            ; |top_greedy_snake                                                                                                                           ; work         ;
-;    |Display_Ctrl:display_ctrl|            ; 357 (235)         ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|Display_Ctrl:display_ctrl                                                                                                 ; work         ;
+; |top_greedy_snake                         ; 2935 (0)          ; 229 (0)      ; 0           ; 0            ; 0       ; 0         ; 12   ; 0            ; |top_greedy_snake                                                                                                                           ; work         ;
+;    |Display_Ctrl:display_ctrl|            ; 358 (236)         ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|Display_Ctrl:display_ctrl                                                                                                 ; work         ;
 ;       |lpm_divide:Div0|                   ; 47 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|Display_Ctrl:display_ctrl|lpm_divide:Div0                                                                                 ; work         ;
 ;          |lpm_divide_nhm:auto_generated|  ; 47 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|Display_Ctrl:display_ctrl|lpm_divide:Div0|lpm_divide_nhm:auto_generated                                                   ; work         ;
 ;             |sign_div_unsign_olh:divider| ; 47 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|Display_Ctrl:display_ctrl|lpm_divide:Div0|lpm_divide_nhm:auto_generated|sign_div_unsign_olh:divider                       ; work         ;
@@ -289,7 +290,7 @@ Encoding Type:  One-Hot
 ; Number of registers using Synchronous Load   ; 84    ;
 ; Number of registers using Asynchronous Clear ; 216   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 150   ;
+; Number of registers using Clock Enable       ; 153   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -314,21 +315,21 @@ Encoding Type:  One-Hot
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
 ; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|block_pos[2]     ;
-; 5:1                ; 32 bits   ; 96 LEs        ; 32 LEs               ; 64 LEs                 ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|clk_cnt[22]      ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |top_greedy_snake|ps2_top:U7|ps2_byte_r[4]             ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 32 LEs               ; 64 LEs                 ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|clk_cnt[20]      ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |top_greedy_snake|ps2_top:U7|ps2_byte_r[1]             ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[0][0][1]   ;
 ; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[3][0][0]   ;
 ; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[2][0][0]   ;
 ; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[1][0][1]   ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top_greedy_snake|State_Ctrl:state_ctrl|game_state[1]  ;
-; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[0][1][0]   ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[0][1][2]   ;
 ; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[3][7][2]   ;
-; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[3][6][2]   ;
-; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[3][5][0]   ;
-; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[3][4][1]   ;
-; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[3][3][2]   ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[3][6][1]   ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[3][5][2]   ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[3][4][2]   ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[3][3][1]   ;
 ; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[3][2][1]   ;
-; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[3][1][2]   ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[3][1][0]   ;
 ; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[2][7][2]   ;
 ; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[2][6][1]   ;
 ; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[2][5][0]   ;
@@ -736,6 +737,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------+--------+----------+-------------------------------------------------------------------------------------+
 
 
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Game_Ctrl:game_ctrl"                                                                                                                                                   ;
++-------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                                                                               ;
++-------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; score ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (8 bits) it drives.  The 7 most-significant bit(s) in the port expression will be connected to GND. ;
++-------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
 +----------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "State_Ctrl:state_ctrl"                                                              ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
@@ -751,7 +761,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
-    Info: Processing started: Sat Jun 04 11:05:54 2016
+    Info: Processing started: Sat Jun 04 18:57:59 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top_greedy_snake -c top_greedy_snake
 Info: Found 1 design units, including 1 entities, in source file SCORE_Display.v
     Info: Found entity 1: SCORE_Display
@@ -788,20 +798,21 @@ Info: Elaborating entity "State_Ctrl" for hierarchy "State_Ctrl:state_ctrl"
 Warning (10036): Verilog HDL or VHDL warning at State_Ctrl.v(23): object "clk_cnt" assigned a value but never read
 Info: Elaborating entity "Keyboard_Ctrl" for hierarchy "Keyboard_Ctrl:keyboard_ctrl"
 Info: Elaborating entity "Display_Ctrl" for hierarchy "Display_Ctrl:display_ctrl"
-Warning (10036): Verilog HDL or VHDL warning at Display_Ctrl.v(47): object "valid" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at Display_Ctrl.v(68): object "block_x" assigned a value but never read
-Warning (10230): Verilog HDL assignment warning at Display_Ctrl.v(51): truncated value with size 11 to match size of target (10)
-Warning (10230): Verilog HDL assignment warning at Display_Ctrl.v(87): truncated value with size 32 to match size of target (2)
-Warning (10230): Verilog HDL assignment warning at Display_Ctrl.v(88): truncated value with size 32 to match size of target (3)
+Warning (10036): Verilog HDL or VHDL warning at Display_Ctrl.v(55): object "valid" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Display_Ctrl.v(76): object "block_x" assigned a value but never read
+Warning (10230): Verilog HDL assignment warning at Display_Ctrl.v(59): truncated value with size 11 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at Display_Ctrl.v(99): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at Display_Ctrl.v(100): truncated value with size 32 to match size of target (3)
 Info: Elaborating entity "Game_Ctrl" for hierarchy "Game_Ctrl:game_ctrl"
-Warning (10230): Verilog HDL assignment warning at Game_Ctrl.v(69): truncated value with size 8 to match size of target (5)
-Warning (10230): Verilog HDL assignment warning at Game_Ctrl.v(103): truncated value with size 32 to match size of target (5)
-Warning (10230): Verilog HDL assignment warning at Game_Ctrl.v(119): truncated value with size 32 to match size of target (5)
-Warning (10230): Verilog HDL assignment warning at Game_Ctrl.v(140): truncated value with size 32 to match size of target (5)
-Warning (10230): Verilog HDL assignment warning at Game_Ctrl.v(149): truncated value with size 32 to match size of target (5)
-Warning (10230): Verilog HDL assignment warning at Game_Ctrl.v(162): truncated value with size 32 to match size of target (5)
-Warning (10230): Verilog HDL assignment warning at Game_Ctrl.v(173): truncated value with size 32 to match size of target (5)
-Warning (10230): Verilog HDL assignment warning at Game_Ctrl.v(181): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at Game_Ctrl.v(71): truncated value with size 8 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at Game_Ctrl.v(105): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at Game_Ctrl.v(121): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at Game_Ctrl.v(142): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at Game_Ctrl.v(151): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at Game_Ctrl.v(164): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at Game_Ctrl.v(175): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at Game_Ctrl.v(183): truncated value with size 32 to match size of target (5)
+Warning (10034): Output port "score" at Game_Ctrl.v(23) has no driver
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "array" into its bus
 Info: Elaborating entity "Game_Ctrl_Unit" for hierarchy "Game_Ctrl_Unit:U2"
 Info: Elaborating entity "Snake_Eatting_Apple" for hierarchy "Snake_Eatting_Apple:U3"
@@ -815,6 +826,30 @@ Info: Elaborating entity "ps2_top" for hierarchy "ps2_top:U7"
 Warning (10762): Verilog HDL Case Statement warning at ps2_top.v(283): can't check case statement for completeness because the case expression has too many possible states
 Warning (10762): Verilog HDL Case Statement warning at ps2_top.v(307): can't check case statement for completeness because the case expression has too many possible states
 Warning (10034): Output port "led" at ps2_top.v(11) has no driver
+Warning: Net is missing source, defaulting to GND
+    Warning (12110): Net "score[7]" is missing source, defaulting to GND
+    Warning (12110): Net "score[6]" is missing source, defaulting to GND
+    Warning (12110): Net "score[5]" is missing source, defaulting to GND
+    Warning (12110): Net "score[4]" is missing source, defaulting to GND
+    Warning (12110): Net "score[3]" is missing source, defaulting to GND
+    Warning (12110): Net "score[2]" is missing source, defaulting to GND
+    Warning (12110): Net "score[1]" is missing source, defaulting to GND
+Warning: Net is missing source, defaulting to GND
+    Warning (12110): Net "score[7]" is missing source, defaulting to GND
+    Warning (12110): Net "score[6]" is missing source, defaulting to GND
+    Warning (12110): Net "score[5]" is missing source, defaulting to GND
+    Warning (12110): Net "score[4]" is missing source, defaulting to GND
+    Warning (12110): Net "score[3]" is missing source, defaulting to GND
+    Warning (12110): Net "score[2]" is missing source, defaulting to GND
+    Warning (12110): Net "score[1]" is missing source, defaulting to GND
+Warning: Net is missing source, defaulting to GND
+    Warning (12110): Net "score[7]" is missing source, defaulting to GND
+    Warning (12110): Net "score[6]" is missing source, defaulting to GND
+    Warning (12110): Net "score[5]" is missing source, defaulting to GND
+    Warning (12110): Net "score[4]" is missing source, defaulting to GND
+    Warning (12110): Net "score[3]" is missing source, defaulting to GND
+    Warning (12110): Net "score[2]" is missing source, defaulting to GND
+    Warning (12110): Net "score[1]" is missing source, defaulting to GND
 Info: Inferred 2 megafunctions from design logic
     Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Display_Ctrl:display_ctrl|Div0"
     Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Display_Ctrl:display_ctrl|Div1"
@@ -846,6 +881,7 @@ Info: Found 1 design units, including 1 entities, in source file db/sign_div_uns
     Info: Found entity 1: sign_div_unsign_nlh
 Info: Found 1 design units, including 1 entities, in source file db/alt_u_div_p5f.tdf
     Info: Found entity 1: alt_u_div_p5f
+Warning: 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info: Registers with preset signals will power-up high
 Info: DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning: Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
@@ -870,21 +906,21 @@ Info: 14 registers lost all their fanouts during netlist optimizations. The firs
     Info: Register "Snake:U4|direct_r.DOWN" lost all its fanouts during netlist optimizations.
     Info: Register "Snake:U4|direct_r.LEFT" lost all its fanouts during netlist optimizations.
     Info: Register "Snake:U4|direct_r.UP" lost all its fanouts during netlist optimizations.
-Info: Generated suppressed messages file C:/Users/ssthouse/Desktop/block_killer/top_greedy_snake.map.smsg
-Info: Implemented 3000 device resources after synthesis - the final resource count might be different
+Info: Generated suppressed messages file //Mac/Home/Desktop/block_killer/top_greedy_snake.map.smsg
+Info: Implemented 3001 device resources after synthesis - the final resource count might be different
     Info: Implemented 4 input pins
     Info: Implemented 8 output pins
-    Info: Implemented 2988 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 27 warnings
-    Info: Peak virtual memory: 243 megabytes
-    Info: Processing ended: Sat Jun 04 11:06:34 2016
-    Info: Elapsed time: 00:00:40
-    Info: Total CPU time (on all processors): 00:00:39
+    Info: Implemented 2989 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 53 warnings
+    Info: Peak virtual memory: 249 megabytes
+    Info: Processing ended: Sat Jun 04 18:58:41 2016
+    Info: Elapsed time: 00:00:42
+    Info: Total CPU time (on all processors): 00:00:41
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/ssthouse/Desktop/block_killer/top_greedy_snake.map.smsg.
+The suppressed messages can be found in //Mac/Home/Desktop/block_killer/top_greedy_snake.map.smsg.
 
 

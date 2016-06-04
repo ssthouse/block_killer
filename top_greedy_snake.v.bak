@@ -48,6 +48,9 @@ module top_greedy_snake
 	wire [23:0] column_2;
 	wire [23:0] column_3;
 
+
+	//todo: test
+	wire [2:0] temp_led;
 	State_Ctrl state_ctrl
 	(
 		//clk ret_n
@@ -60,7 +63,7 @@ module top_greedy_snake
 		// game signal
 		.game_state(game_state),
 		//todo test
-		.led(led_out)
+		.led(temp_led)
 	);
 
 
@@ -98,6 +101,7 @@ module top_greedy_snake
 	//game core module
 	Game_Ctrl game_ctrl
 	(
+		.led(led_out),
 		.CLK_50M(CLK_50M),
 		.RST_N(RSTn),
 		//game state
