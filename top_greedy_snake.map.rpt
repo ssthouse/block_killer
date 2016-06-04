@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top_greedy_snake
-Sat Jun 04 09:24:06 2016
+Sat Jun 04 11:06:34 2016
 Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
 
 
@@ -52,15 +52,15 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +------------------------------------+------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Jun 04 09:24:06 2016    ;
+; Analysis & Synthesis Status        ; Successful - Sat Jun 04 11:06:34 2016    ;
 ; Quartus II Version                 ; 9.0 Build 132 02/25/2009 SJ Full Version ;
 ; Revision Name                      ; top_greedy_snake                         ;
 ; Top-level Entity Name              ; top_greedy_snake                         ;
 ; Family                             ; Cyclone III                              ;
-; Total logic elements               ; 1,957                                    ;
-;     Total combinational functions  ; 1,950                                    ;
-;     Dedicated logic registers      ; 263                                      ;
-; Total registers                    ; 263                                      ;
+; Total logic elements               ; 2,940                                    ;
+;     Total combinational functions  ; 2,934                                    ;
+;     Dedicated logic registers      ; 229                                      ;
+; Total registers                    ; 229                                      ;
 ; Total pins                         ; 12                                       ;
 ; Total virtual pins                 ; 0                                        ;
 ; Total memory bits                  ; 0                                        ;
@@ -181,27 +181,27 @@ applicable agreement for further details.
 +---------------------------------------------+---------------+
 ; Resource                                    ; Usage         ;
 +---------------------------------------------+---------------+
-; Estimated Total logic elements              ; 1,957         ;
+; Estimated Total logic elements              ; 2,940         ;
 ;                                             ;               ;
-; Total combinational functions               ; 1950          ;
+; Total combinational functions               ; 2934          ;
 ; Logic element usage by number of LUT inputs ;               ;
-;     -- 4 input functions                    ; 1268          ;
-;     -- 3 input functions                    ; 359           ;
-;     -- <=2 input functions                  ; 323           ;
+;     -- 4 input functions                    ; 2081          ;
+;     -- 3 input functions                    ; 461           ;
+;     -- <=2 input functions                  ; 392           ;
 ;                                             ;               ;
 ; Logic elements by mode                      ;               ;
-;     -- normal mode                          ; 1775          ;
-;     -- arithmetic mode                      ; 175           ;
+;     -- normal mode                          ; 2790          ;
+;     -- arithmetic mode                      ; 144           ;
 ;                                             ;               ;
-; Total registers                             ; 263           ;
-;     -- Dedicated logic registers            ; 263           ;
+; Total registers                             ; 229           ;
+;     -- Dedicated logic registers            ; 229           ;
 ;     -- I/O registers                        ; 0             ;
 ;                                             ;               ;
 ; I/O pins                                    ; 12            ;
 ; Maximum fan-out node                        ; CLK_50M~input ;
-; Maximum fan-out                             ; 263           ;
-; Total fan-out                               ; 7839          ;
-; Average fan-out                             ; 3.50          ;
+; Maximum fan-out                             ; 229           ;
+; Total fan-out                               ; 11617         ;
+; Average fan-out                             ; 3.65          ;
 +---------------------------------------------+---------------+
 
 
@@ -210,7 +210,7 @@ applicable agreement for further details.
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                         ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |top_greedy_snake                         ; 1950 (0)          ; 263 (0)      ; 0           ; 0            ; 0       ; 0         ; 12   ; 0            ; |top_greedy_snake                                                                                                                           ; work         ;
+; |top_greedy_snake                         ; 2934 (0)          ; 229 (0)      ; 0           ; 0            ; 0       ; 0         ; 12   ; 0            ; |top_greedy_snake                                                                                                                           ; work         ;
 ;    |Display_Ctrl:display_ctrl|            ; 357 (235)         ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|Display_Ctrl:display_ctrl                                                                                                 ; work         ;
 ;       |lpm_divide:Div0|                   ; 47 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|Display_Ctrl:display_ctrl|lpm_divide:Div0                                                                                 ; work         ;
 ;          |lpm_divide_nhm:auto_generated|  ; 47 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|Display_Ctrl:display_ctrl|lpm_divide:Div0|lpm_divide_nhm:auto_generated                                                   ; work         ;
@@ -220,11 +220,11 @@ applicable agreement for further details.
 ;          |lpm_divide_mhm:auto_generated|  ; 75 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|Display_Ctrl:display_ctrl|lpm_divide:Div1|lpm_divide_mhm:auto_generated                                                   ; work         ;
 ;             |sign_div_unsign_nlh:divider| ; 75 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|Display_Ctrl:display_ctrl|lpm_divide:Div1|lpm_divide_mhm:auto_generated|sign_div_unsign_nlh:divider                       ; work         ;
 ;                |alt_u_div_p5f:divider|    ; 75 (75)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|Display_Ctrl:display_ctrl|lpm_divide:Div1|lpm_divide_mhm:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_p5f:divider ; work         ;
-;    |Game_Ctrl:game_ctrl|                  ; 1479 (1479)       ; 173 (173)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|Game_Ctrl:game_ctrl                                                                                                       ; work         ;
-;    |Keyboard:U6|                          ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|Keyboard:U6                                                                                                               ; work         ;
-;    |Keyboard_Ctrl:keyboard_ctrl|          ; 6 (6)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|Keyboard_Ctrl:keyboard_ctrl                                                                                               ; work         ;
-;    |State_Ctrl:state_ctrl|                ; 3 (3)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|State_Ctrl:state_ctrl                                                                                                     ; work         ;
-;    |ps2_top:U7|                           ; 96 (96)           ; 57 (57)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|ps2_top:U7                                                                                                                ; work         ;
+;    |Game_Ctrl:game_ctrl|                  ; 2467 (2467)       ; 139 (139)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|Game_Ctrl:game_ctrl                                                                                                       ; work         ;
+;    |Keyboard:U6|                          ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|Keyboard:U6                                                                                                               ; work         ;
+;    |Keyboard_Ctrl:keyboard_ctrl|          ; 4 (4)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|Keyboard_Ctrl:keyboard_ctrl                                                                                               ; work         ;
+;    |State_Ctrl:state_ctrl|                ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|State_Ctrl:state_ctrl                                                                                                     ; work         ;
+;    |ps2_top:U7|                           ; 97 (97)           ; 57 (57)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_greedy_snake|ps2_top:U7                                                                                                                ; work         ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -247,6 +247,8 @@ Encoding Type:  One-Hot
 +----------------------------------------+----------------------------------------+
 ; Register name                          ; Reason for Removal                     ;
 +----------------------------------------+----------------------------------------+
+; Game_Ctrl:game_ctrl|led[2]             ; Stuck at GND due to stuck port data_in ;
+; Game_Ctrl:game_ctrl|led[1]             ; Stuck at VCC due to stuck port data_in ;
 ; Game_Ctrl:game_ctrl|led[0]             ; Stuck at GND due to stuck port data_in ;
 ; Snake:U4|direct_r~10                   ; Lost fanout                            ;
 ; Snake:U4|direct_r~11                   ; Lost fanout                            ;
@@ -262,7 +264,7 @@ Encoding Type:  One-Hot
 ; Snake:U4|direct_r.DOWN                 ; Lost fanout                            ;
 ; Snake:U4|direct_r.LEFT                 ; Lost fanout                            ;
 ; Snake:U4|direct_r.UP                   ; Lost fanout                            ;
-; Total Number of Removed Registers = 15 ;                                        ;
+; Total Number of Removed Registers = 17 ;                                        ;
 +----------------------------------------+----------------------------------------+
 
 
@@ -282,12 +284,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 263   ;
-; Number of registers using Synchronous Clear  ; 12    ;
-; Number of registers using Synchronous Load   ; 55    ;
+; Total registers                              ; 229   ;
+; Number of registers using Synchronous Clear  ; 138   ;
+; Number of registers using Synchronous Load   ; 84    ;
 ; Number of registers using Asynchronous Clear ; 216   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 184   ;
+; Number of registers using Clock Enable       ; 150   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -299,9 +301,9 @@ Encoding Type:  One-Hot
 +----------------------------------------+---------+
 ; Display_Ctrl:display_ctrl|hsync        ; 3       ;
 ; Display_Ctrl:display_ctrl|vsync        ; 2       ;
-; Game_Ctrl:game_ctrl|array[0][0][0]     ; 13      ;
-; Game_Ctrl:game_ctrl|random_num[1]      ; 15      ;
-; Game_Ctrl:game_ctrl|random_num[0]      ; 13      ;
+; Game_Ctrl:game_ctrl|array[0][0][0]     ; 4       ;
+; Game_Ctrl:game_ctrl|random_num[0]      ; 9       ;
+; Game_Ctrl:game_ctrl|random_num[1]      ; 11      ;
 ; Total number of inverted registers = 5 ;         ;
 +----------------------------------------+---------+
 
@@ -311,22 +313,340 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
-; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|led[2]           ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|block_pos[3]     ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|block_pos[2]     ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 32 LEs               ; 64 LEs                 ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|clk_cnt[22]      ;
 ; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |top_greedy_snake|ps2_top:U7|ps2_byte_r[4]             ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[0][0][1]   ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[3][0][0]   ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[2][0][0]   ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[1][0][1]   ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top_greedy_snake|State_Ctrl:state_ctrl|game_state[1]  ;
-; 20:1               ; 2 bits    ; 26 LEs        ; 10 LEs               ; 16 LEs                 ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[0][0][2]   ;
-; 28:1               ; 3 bits    ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[1][0][1]   ;
-; 36:1               ; 3 bits    ; 72 LEs        ; 18 LEs               ; 54 LEs                 ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[2][0][1]   ;
-; 44:1               ; 3 bits    ; 87 LEs        ; 18 LEs               ; 69 LEs                 ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[3][0][1]   ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|block_pos[0]     ;
-; 8:1                ; 12 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|Mux6             ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[0][1][0]   ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[3][7][2]   ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[3][6][2]   ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[3][5][0]   ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[3][4][1]   ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[3][3][2]   ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[3][2][1]   ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[3][1][2]   ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[2][7][2]   ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[2][6][1]   ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[2][5][0]   ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[2][4][0]   ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[2][3][2]   ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[2][2][0]   ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[2][1][0]   ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[1][7][1]   ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[1][6][0]   ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[1][5][2]   ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[1][4][2]   ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[1][3][2]   ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[1][2][0]   ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[1][1][1]   ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[0][7][2]   ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[0][6][2]   ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[0][5][2]   ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[0][4][1]   ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[0][3][0]   ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|array[0][2][0]   ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; Yes        ; |top_greedy_snake|Game_Ctrl:game_ctrl|block_pos[1]     ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2145       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2421       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2697       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2971       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3248       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3525       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3801       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2052       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2328       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2604       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2879       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3155       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3430       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3708       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2055       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2331       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2607       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2882       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3157       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3435       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2057       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2332       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2609       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2885       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3160       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2060       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2336       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2612       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2888       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2063       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2338       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2615       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2067       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2343       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2068       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2071       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2348       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2625       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2901       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3177       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3452       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3728       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2074       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2351       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2627       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2902       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3180       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3455       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3732       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2079       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2353       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2630       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2905       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3183       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3459       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2080       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2358       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2633       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2910       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3185       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2083       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2361       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2635       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2912       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2086       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2364       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2638       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2090       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2367       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2092       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2096       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2371       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2647       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2925       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3199       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3477       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3753       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2099       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2375       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2650       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2928       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3202       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3480       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3756       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2102       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2377       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2654       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2929       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3206       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3483       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2106       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2381       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2656       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2932       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3208       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2108       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2383       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2661       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2936       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2111       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2386       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2662       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2114       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2390       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2117       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2120       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2395       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2671       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2949       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3224       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3500       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3775       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2124       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2398       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2674       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2952       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3228       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3503       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3778       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2126       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2402       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2679       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2954       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3230       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3507       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2129       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2405       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2680       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2957       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3233       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2132       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2408       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2684       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2959       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2134       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2412       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2687       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2137       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2415       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2141       ;
+; 8:1                ; 12 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|Mux16            ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|Mux20            ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|block_pos~30     ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; No         ; |top_greedy_snake|Display_Ctrl:display_ctrl|vga_rgb[2] ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2417       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2694       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2968       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3246       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3521       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3798       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3711       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3438       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3712       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3164       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3441       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3715       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2891       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3166       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3443       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3720       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2617       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2893       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3169       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3447       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3721       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2344       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2621       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2896       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3172       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3450       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3725       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3734       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3461       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3737       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3187       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3463       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3739       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2916       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3192       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3466       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3742       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2641       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2919       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3194       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3469       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3747       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2369       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2644       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2922       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3196       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3474       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3749       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3758       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3486       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3760       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3211       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3488       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3763       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2940       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3215       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3491       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3768       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2666       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2941       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3218       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3494       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3769       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2393       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2668       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2946       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3220       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3497       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3772       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3782       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3508       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3786       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3236       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3511       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3789       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2963       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3238       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3515       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3792       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2691       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~2966       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3241       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3518       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~3793       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|block_pos~32     ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|block_pos~33     ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; No         ; |top_greedy_snake|Display_Ctrl:display_ctrl|vga_rgb[0] ;
 ; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|block_pos~15     ;
-; 32:1               ; 3 bits    ; 63 LEs        ; 63 LEs               ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|Mux50            ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~772        ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~769        ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~779        ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~775        ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~785        ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~781        ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~791        ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~786        ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~797        ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~793        ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~802        ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~798        ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~809        ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~804        ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~813        ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~810        ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~819        ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~817        ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~826        ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~822        ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~832        ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~829        ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~838        ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~835        ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~844        ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~841        ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~851        ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~847        ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~857        ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~852        ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~863        ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~859        ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~1512       ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~1442       ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~1439       ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~1436       ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~1433       ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~1430       ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~1426       ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~1423       ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~1466       ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~1461       ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~1458       ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~1455       ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~1452       ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~1451       ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~1448       ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~1488       ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~1486       ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~1483       ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~1481       ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~1477       ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~1473       ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~1471       ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~1511       ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~1506       ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~1503       ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~1500       ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~1497       ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~1495       ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~1444       ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~1469       ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~1493       ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|array~1516       ;
+; 32:1               ; 3 bits    ; 63 LEs        ; 63 LEs               ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|Mux48            ;
 ; 32:1               ; 3 bits    ; 63 LEs        ; 63 LEs               ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|Mux33            ;
+; 32:1               ; 24 bits   ; 504 LEs       ; 504 LEs              ; 0 LEs                  ; No         ; |top_greedy_snake|Game_Ctrl:game_ctrl|Mux169           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
 
 
@@ -431,7 +751,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
-    Info: Processing started: Sat Jun 04 09:23:47 2016
+    Info: Processing started: Sat Jun 04 11:05:54 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top_greedy_snake -c top_greedy_snake
 Info: Found 1 design units, including 1 entities, in source file SCORE_Display.v
     Info: Found entity 1: SCORE_Display
@@ -475,12 +795,13 @@ Warning (10230): Verilog HDL assignment warning at Display_Ctrl.v(87): truncated
 Warning (10230): Verilog HDL assignment warning at Display_Ctrl.v(88): truncated value with size 32 to match size of target (3)
 Info: Elaborating entity "Game_Ctrl" for hierarchy "Game_Ctrl:game_ctrl"
 Warning (10230): Verilog HDL assignment warning at Game_Ctrl.v(69): truncated value with size 8 to match size of target (5)
-Warning (10230): Verilog HDL assignment warning at Game_Ctrl.v(104): truncated value with size 32 to match size of target (5)
-Warning (10230): Verilog HDL assignment warning at Game_Ctrl.v(138): truncated value with size 32 to match size of target (5)
-Warning (10230): Verilog HDL assignment warning at Game_Ctrl.v(147): truncated value with size 32 to match size of target (5)
-Warning (10230): Verilog HDL assignment warning at Game_Ctrl.v(160): truncated value with size 32 to match size of target (5)
-Warning (10230): Verilog HDL assignment warning at Game_Ctrl.v(171): truncated value with size 32 to match size of target (5)
-Warning (10230): Verilog HDL assignment warning at Game_Ctrl.v(179): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at Game_Ctrl.v(103): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at Game_Ctrl.v(119): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at Game_Ctrl.v(140): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at Game_Ctrl.v(149): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at Game_Ctrl.v(162): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at Game_Ctrl.v(173): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at Game_Ctrl.v(181): truncated value with size 32 to match size of target (5)
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "array" into its bus
 Info: Elaborating entity "Game_Ctrl_Unit" for hierarchy "Game_Ctrl_Unit:U2"
 Info: Elaborating entity "Snake_Eatting_Apple" for hierarchy "Snake_Eatting_Apple:U3"
@@ -532,6 +853,8 @@ Warning: Presettable and clearable registers converted to equivalent circuits wi
     Warning (13310): Register "Game_Ctrl:game_ctrl|block_pos[1]" is converted into an equivalent circuit using register "Game_Ctrl:game_ctrl|block_pos[1]~_emulated" and latch "Game_Ctrl:game_ctrl|block_pos[1]~latch"
 Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "led_out[0]" is stuck at GND
+    Warning (13410): Pin "led_out[1]" is stuck at VCC
+    Warning (13410): Pin "led_out[2]" is stuck at GND
 Info: 14 registers lost all their fanouts during netlist optimizations. The first 14 are displayed below.
     Info: Register "Snake:U4|direct_r~10" lost all its fanouts during netlist optimizations.
     Info: Register "Snake:U4|direct_r~11" lost all its fanouts during netlist optimizations.
@@ -548,15 +871,15 @@ Info: 14 registers lost all their fanouts during netlist optimizations. The firs
     Info: Register "Snake:U4|direct_r.LEFT" lost all its fanouts during netlist optimizations.
     Info: Register "Snake:U4|direct_r.UP" lost all its fanouts during netlist optimizations.
 Info: Generated suppressed messages file C:/Users/ssthouse/Desktop/block_killer/top_greedy_snake.map.smsg
-Info: Implemented 1969 device resources after synthesis - the final resource count might be different
+Info: Implemented 3000 device resources after synthesis - the final resource count might be different
     Info: Implemented 4 input pins
     Info: Implemented 8 output pins
-    Info: Implemented 1957 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 24 warnings
-    Info: Peak virtual memory: 242 megabytes
-    Info: Processing ended: Sat Jun 04 09:24:06 2016
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:19
+    Info: Implemented 2988 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 27 warnings
+    Info: Peak virtual memory: 243 megabytes
+    Info: Processing ended: Sat Jun 04 11:06:34 2016
+    Info: Elapsed time: 00:00:40
+    Info: Total CPU time (on all processors): 00:00:39
 
 
 +------------------------------------------+

@@ -152,7 +152,7 @@ module ps2_top(clk,rst,ps2k_clk,ps2k_data,ps2_byte,ps2_state,led,wei,seg);
 			else begin
 				if(ps2_byte_r == 8'hf0||ps2_state_r<=1'b1)begin	
 							//说明有键按下
-						if(clk_cnt == 32'd40_000_000) begin
+						if(clk_cnt == 32'd12_000_000) begin
 						ps2_state_r<=1'b0;	
 						ps2_byte_r<=8'hf0;//锁存当前键值
 						key_f0<=1'b0;

@@ -68,14 +68,13 @@ module Game_Ctrl
 	//random num
 	reg [4:0] random_num = 8'd3;
 	
-
-
 	//clk count
 	reg [31:0] clk_cnt;
 	reg [31:0] clk_cnt_flash;
 
 	//current block place 0~31: up to down & left to right
 	reg [4:0] block_pos;
+	reg [2:0] temp_color;
 	
 	// four state of game
 	localparam STATE_START = 2'b00;
@@ -113,10 +112,13 @@ module Game_Ctrl
 						for(y=0; y<8; y=y+1)begin
 							array[x][y] <= BLACK;
 						end
-					end	
-					array[0][0] <= BLUE;
+					end
 					game_over <= 0;
-					led <= 3'b100;
+					array[0][0] <= BLUE;
+					//todo init position is 0
+					block_pos <= random_num%4;
+					//clear count
+					clk_cnt <= 0;
 					block_pos <= 0;
 				end
 				STATE_PLAY:begin
@@ -133,8 +135,8 @@ module Game_Ctrl
 							//if not int most left && left block is black
 							if((block_pos%4) > 0
 								&& array[block_pos%4-1][block_pos/4] == BLACK)begin
-								array[(block_pos-1)%4][(block_pos-1)/4] <= array[block_pos%4][block_pos/4];
-								array[block_pos%4][block_pos/4] <= BLACK;
+								array[(block_pos-1)%4][(block_pos-1)/4] = array[block_pos%4][block_pos/4];
+								array[block_pos%4][block_pos/4] = BLACK;
 								block_pos = block_pos - 1;
 							end
 						end
@@ -142,8 +144,8 @@ module Game_Ctrl
 							//if not int most left && left block is black
 							if((block_pos%4) < 3
 								&& array[block_pos%4+1][block_pos/4] == BLACK)begin
-								array[(block_pos+1)%4][(block_pos+1)/4] <= array[block_pos%4][block_pos/4];
-								array[block_pos%4][block_pos/4] <= BLACK;
+								array[(block_pos+1)%4][(block_pos+1)/4] = array[block_pos%4][block_pos/4];
+								array[block_pos%4][block_pos/4] = BLACK;
 								block_pos = block_pos + 1;
 							end
 						end
@@ -158,37 +160,36 @@ module Game_Ctrl
 						//todo down one block
 						if(block_pos/4 == 7)begin
 							block_pos = random_num%4;
-							array[block_pos%4][block_pos/4] <= random_num<18 ? BLUE :
+							array[block_pos%4][block_pos/4] = random_num<18 ? BLUE :
 																random_num<28? GREEN:RED;
 						end
 						//in top && bottom one is not black>>>game over
 						else if(block_pos/4 == 0 && array[block_pos%4][block_pos/4+1] != BLACK)begin
-							array[block_pos%4][block_pos/4] <= BLUE;
+							array[block_pos%4][block_pos/4] = BLUE;
 							game_over <= 1;
 						end
 						//if not in botttom but bottom one is not black
 						else if(array[block_pos%4][block_pos/4+1] != BLACK)begin
 									block_pos = random_num%4;
-									array[block_pos%4][block_pos/4] <= random_num<18 ? BLUE :
+									array[block_pos%4][block_pos/4] = random_num<18 ? BLUE :
 																random_num<28? GREEN:RED;
 						end
 						//go down
 						else begin
-							array[(block_pos+4)%4][(block_pos+4)/4] <= array[block_pos%4][block_pos/4];
-							array[block_pos%4][block_pos/4] <= BLACK;
+							array[(block_pos+4)%4][(block_pos+4)/4] = array[block_pos%4][block_pos/4];
+							array[block_pos%4][block_pos/4] = BLACK;
 							block_pos = block_pos + 4;
 						end
-						
 						
 						//bottom up delete?
 						for(x=0; x<4; x=x+1)begin
 							for(y=0; y<7; y=y+1)begin
 								if(array[x][y] == array[x][y+1] && array[x][y] != BLACK
 									&&array[x][y] != WHITE )begin
-									array[x][y+1] <= array[x][y]==BLUE ? GREEN :
+									array[x][y+1] = array[x][y]==BLUE ? GREEN :
 												array[x][y]==GREEN ? RED :
 												array[x][y]==RED ? WHITE : BLACK;
-									array[x][y]<= BLACK;
+									array[x][y]= BLACK;
 									//todo: delete line	
 									
 								end
@@ -202,12 +203,16 @@ module Game_Ctrl
 								array[2][y] == array[3][y] &&
 								array[0][y] != BLACK && block_pos/4==0) begin
 								//let block above move down
+								//1 hide block
+								temp_color = array[block_pos%4][block_pos/4];
+								array[block_pos%4][block_pos/4] = BLACK;
 								for(x=0; x<y; x=x+1)begin
-									array[0][y-x] <= array[0][y-x-1];
-									array[1][y-x] <= array[1][y-x-1];
-									array[2][y-x] <= array[2][y-x-1];
-									array[3][y-x] <= array[3][y-x-1];
+									array[0][y-x] = array[0][y-x-1];
+									array[1][y-x] = array[1][y-x-1];
+									array[2][y-x] = array[2][y-x-1];
+									array[3][y-x] = array[3][y-x-1];
 								end
+								array[block_pos%4][block_pos/4] = temp_color;
 							end
 						end	
 					end
@@ -216,6 +221,7 @@ module Game_Ctrl
 					end
 				end
 				STATE_OVER:begin
+				/*
 					if(clk_cnt_flash==32'd100_000_001) begin
 						clk_cnt_flash <= 32'd0;
 					end		
@@ -380,8 +386,8 @@ module Game_Ctrl
 					  end     
 					else  begin    
 						clk_cnt_flash <= clk_cnt_flash + 32'd1;
-					end
-				end//
+					end*/
+				end
 			endcase// state end
 		end
 	end

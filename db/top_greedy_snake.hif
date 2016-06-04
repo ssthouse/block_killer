@@ -2319,42 +2319,6 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 
 # end
 # entity
-ps2_top
-# storage
-db|top_greedy_snake.(25).cnf
-db|top_greedy_snake.(25).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-ps2_top.v
-a47d2bd6a47c4ed59cc3efdfe9fb3e1
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-ps2_top:U7
-}
-# macro_sequence
-
-# end
-# entity
 top_greedy_snake
 # storage
 db|top_greedy_snake.(0).cnf
@@ -2391,6 +2355,42 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 
 # end
 # entity
+ps2_top
+# storage
+db|top_greedy_snake.(25).cnf
+db|top_greedy_snake.(25).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+ps2_top.v
+6c7eb6df50bb2443c7868ca1d89a8477
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+ps2_top:U7
+}
+# macro_sequence
+
+# end
+# entity
 Game_Ctrl
 # storage
 db|top_greedy_snake.(20).cnf
@@ -2402,7 +2402,7 @@ ON
 # case_sensitive
 # source_file
 Game_Ctrl.v
-7bc1d8e965c38a91b45fa3ebcf81a8
+7231f9dcfe276e9487b9f5aa66683
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
