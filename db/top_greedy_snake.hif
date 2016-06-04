@@ -2402,7 +2402,7 @@ ON
 # case_sensitive
 # source_file
 Game_Ctrl.v
-1a348497e7706910a165e9837713b77
+bda231944ed6bb54763bf2acfbdc9
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT

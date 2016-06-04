@@ -64,6 +64,20 @@ module Game_Ctrl
 	assign column_3[20:18] = array[3][1];
 	assign column_3[23:21] = array[3][0];
 
+	//random num
+	//reg[31:0] random_num = 32'd0;
+		reg [4:0] random_num = 8'd3;
+		
+		
+		
+		//always@(posedge CLK_50M)
+		//random_num <= random_num + 11'd927;  //用加法产生随机数  
+		
+	
+		
+		//随机数高5位为苹果X坐标 低5位为苹果Y坐标
+
+
 	//clk count
 	reg [31:0] clk_cnt;
 	reg [31:0] clk_cnt_flash;
@@ -116,9 +130,14 @@ module Game_Ctrl
 				end
 				STATE_PLAY:begin
 					led <= 3'b010;
+					
+					//random_num<= random_num << 1;
+					//random_num[0] <= random_num[4]^random_num[3]^random_num[1];
 					//count clk to down the block
 					if(clk_cnt == 32'd25_000_000) 
 						begin
+							random_num<= random_num << 1;
+							random_num[0] <= random_num[4]^random_num[3]^random_num[1];
 							clk_cnt <= 0;
 							
 							//react the keyboard input
@@ -126,8 +145,8 @@ module Game_Ctrl
 								//if not int most left && left block is black
 								if((block_pos%4) > 0
 									&& array[block_pos%4-1][block_pos/4] == BLACK)begin
+									array[(block_pos-1)%4][(block_pos-1)/4] <= array[block_pos%4][block_pos/4];
 									array[block_pos%4][block_pos/4] <= BLACK;
-									array[(block_pos-1)%4][(block_pos-1)/4] <= BLUE;
 									block_pos = block_pos - 1;
 								end
 							end
@@ -135,8 +154,8 @@ module Game_Ctrl
 								//if not int most left && left block is black
 								if((block_pos%4) < 3
 									&& array[block_pos%4+1][block_pos/4] == BLACK)begin
+									array[(block_pos+1)%4][(block_pos+1)/4] <= array[block_pos%4][block_pos/4];
 									array[block_pos%4][block_pos/4] <= BLACK;
-									array[(block_pos+1)%4][(block_pos+1)/4] <= BLUE;
 									block_pos = block_pos + 1;
 								end
 							end
@@ -150,9 +169,9 @@ module Game_Ctrl
 							
 							//todo down one block
 							if(block_pos/4 == 7)begin
-								//reset block_pos
-								block_pos = 0;
-								array[block_pos%4][block_pos/4] <= BLUE;
+								block_pos = random_num%4;
+								array[block_pos%4][block_pos/4] <= random_num<18 ? BLUE :
+																	random_num<28? GREEN:RED;
 							end
 							//in top && bottom one is not black>>>game over
 							else if(block_pos/4 == 0 && array[block_pos%4][block_pos/4+1] != BLACK)begin
@@ -161,13 +180,15 @@ module Game_Ctrl
 							end
 							//if not in botttom but bottom one is not black
 							else if(array[block_pos%4][block_pos/4+1] != BLACK)begin
-								block_pos = 0;
+										block_pos = random_num%4;
+										array[block_pos%4][block_pos/4] <= random_num<18 ? BLUE :
+																	random_num<28? GREEN:RED;
 							end
 							//go down
 							else begin
+								array[(block_pos+4)%4][(block_pos+4)/4] <= array[block_pos%4][block_pos/4];
 								array[block_pos%4][block_pos/4] <= BLACK;
 								block_pos = block_pos + 4;
-								array[block_pos%4][block_pos/4] <= BLUE;
 							end
 							
 							
@@ -191,7 +212,7 @@ module Game_Ctrl
 								if(array[0][y] == array[1][y] && 
 									array[1][y] == array[2][y] &&
 									array[2][y] == array[3][y] &&
-									array[0][y] != BLACK && block_pos ==0) begin
+									array[0][y] != BLACK && block_pos/4==0) begin
 									//let block above move down
 									for(x=0; x<y; x=x+1)begin
 										array[0][y-x] <= array[0][y-x-1];
@@ -199,7 +220,6 @@ module Game_Ctrl
 										array[2][y-x] <= array[2][y-x-1];
 										array[3][y-x] <= array[3][y-x-1];
 									end
-									led <= 3'b111;
 								end
 							end
 							
@@ -210,7 +230,7 @@ module Game_Ctrl
 				end
 				STATE_OVER:begin
 					if(clk_cnt_flash==32'd100_000_001) begin
-						
+						clk_cnt_flash <= 32'd0;
 					end		
 					else if(clk_cnt_flash == 3_000_000)begin		
 					        array[0][0] <= 3'b111;
