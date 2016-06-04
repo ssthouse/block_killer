@@ -131,13 +131,13 @@ module Game_Ctrl
 				STATE_PLAY:begin
 					led <= 3'b010;
 					
-					//random_num<= random_num << 1;
-					//random_num[0] <= random_num[4]^random_num[3]^random_num[1];
+					random_num<= random_num << 1;
+					random_num[0] <= random_num[4]^random_num[3]^random_num[1];
 					//count clk to down the block
 					if(clk_cnt == 32'd25_000_000) 
 						begin
-							random_num<= random_num << 1;
-							random_num[0] <= random_num[4]^random_num[3]^random_num[1];
+							//random_num<= random_num << 1;
+							//random_num[0] <= random_num[4]^random_num[3]^random_num[1];
 							clk_cnt <= 0;
 							
 							//react the keyboard input

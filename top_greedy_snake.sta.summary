@@ -3,27 +3,75 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'CLK_50M'
-Slack : -14.218
-TNS   : -1703.913
+Slack : -14.155
+TNS   : -1772.778
+
+Type  : Slow 1200mV 85C Model Setup 'RSTn'
+Slack : 0.047
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'RSTn'
+Slack : -0.144
+TNS   : -0.234
 
 Type  : Slow 1200mV 85C Model Hold 'CLK_50M'
 Slack : 0.358
 TNS   : 0.000
 
+Type  : Slow 1200mV 85C Model Recovery 'CLK_50M'
+Slack : -1.235
+TNS   : -264.437
+
+Type  : Slow 1200mV 85C Model Removal 'CLK_50M'
+Slack : 1.141
+TNS   : 0.000
+
 Type  : Slow 1200mV 0C Model Setup 'CLK_50M'
-Slack : -12.669
-TNS   : -1502.007
+Slack : -12.517
+TNS   : -1563.483
+
+Type  : Slow 1200mV 0C Model Setup 'RSTn'
+Slack : 0.190
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'RSTn'
+Slack : -0.140
+TNS   : -0.230
 
 Type  : Slow 1200mV 0C Model Hold 'CLK_50M'
 Slack : 0.312
 TNS   : 0.000
 
+Type  : Slow 1200mV 0C Model Recovery 'CLK_50M'
+Slack : -1.052
+TNS   : -225.430
+
+Type  : Slow 1200mV 0C Model Removal 'CLK_50M'
+Slack : 1.058
+TNS   : 0.000
+
 Type  : Fast 1200mV 0C Model Setup 'CLK_50M'
-Slack : -7.663
-TNS   : -865.074
+Slack : -7.724
+TNS   : -924.405
+
+Type  : Fast 1200mV 0C Model Setup 'RSTn'
+Slack : 0.430
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'RSTn'
+Slack : -0.085
+TNS   : -0.143
 
 Type  : Fast 1200mV 0C Model Hold 'CLK_50M'
 Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'CLK_50M'
+Slack : -0.821
+TNS   : -176.201
+
+Type  : Fast 1200mV 0C Model Removal 'CLK_50M'
+Slack : 0.611
 TNS   : 0.000
 
 ------------------------------------------------------------

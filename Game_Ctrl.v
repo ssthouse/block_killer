@@ -1,5 +1,6 @@
 module Game_Ctrl
 (
+	//todo: test useage
 	output reg [2:0]led,
 	input CLK_50M,
 	input RST_N,
@@ -64,14 +65,17 @@ module Game_Ctrl
 	assign column_3[20:18] = array[3][1];
 	assign column_3[23:21] = array[3][0];
 
+	//random num
+	reg [4:0] random_num = 8'd3;
+	
+
+
 	//clk count
 	reg [31:0] clk_cnt;
 	reg [31:0] clk_cnt_flash;
 
 	//current block place 0~31: up to down & left to right
 	reg [4:0] block_pos;
-	reg [1:0] current_block_x;
-	reg [2:0] current_block_y; 
 	
 	// four state of game
 	localparam STATE_START = 2'b00;
@@ -82,6 +86,7 @@ module Game_Ctrl
 	reg left_press;
 	reg right_press;
 	
+	//use in for circle
 	integer x,y;
 
 	always@(posedge CLK_50M or negedge RST_N)
@@ -96,7 +101,7 @@ module Game_Ctrl
 				game_over <= 0;
 				array[0][0] <= BLUE;
 				//todo init position is 0
-				block_pos <= 0;
+				block_pos <= random_num%4;
 				//clear count
 				clk_cnt <= 0;
 			end
@@ -116,94 +121,96 @@ module Game_Ctrl
 				end
 				STATE_PLAY:begin
 					led <= 3'b010;
+					
+					random_num<= random_num << 1;
+					random_num[0] <= random_num[4]^random_num[3]^random_num[1];
 					//count clk to down the block
-					if(clk_cnt == 32'd25_000_000) 
-						begin
-							clk_cnt <= 0;
-							
-							//react the keyboard input
-							if(left_key_press == 1)begin
-								//if not int most left && left block is black
-								if((block_pos%4) > 0
-									&& array[block_pos%4-1][block_pos/4] == BLACK)begin
-									array[block_pos%4][block_pos/4] <= BLACK;
-									array[(block_pos-1)%4][(block_pos-1)/4] <= BLUE;
-									block_pos = block_pos - 1;
-								end
-							end
-							else if(right_key_press == 1)begin
-								//if not int most left && left block is black
-								if((block_pos%4) < 3
-									&& array[block_pos%4+1][block_pos/4] == BLACK)begin
-									array[block_pos%4][block_pos/4] <= BLACK;
-									array[(block_pos+1)%4][(block_pos+1)/4] <= BLUE;
-									block_pos = block_pos + 1;
-								end
-							end
-							if(down_key_press == 1)begin
-								//todo test game over signal out
-								game_over <= 1;
-							end
-							else begin
-								game_over <= 0;
-							end
-							
-							//todo down one block
-							if(block_pos/4 == 7)begin
-								//reset block_pos
-								block_pos = 0;
-								array[block_pos%4][block_pos/4] <= BLUE;
-							end
-							//in top && bottom one is not black>>>game over
-							else if(block_pos/4 == 0 && array[block_pos%4][block_pos/4+1] != BLACK)begin
-								array[block_pos%4][block_pos/4] <= BLUE;
-								game_over <= 1;
-							end
-							//if not in botttom but bottom one is not black
-							else if(array[block_pos%4][block_pos/4+1] != BLACK)begin
-								block_pos = 0;
-							end
-							//go down
-							else begin
+					if(clk_cnt == 32'd25_000_000) begin
+						clk_cnt <= 0;
+						
+						//react the keyboard input
+						if(left_key_press == 1)begin
+							//if not int most left && left block is black
+							if((block_pos%4) > 0
+								&& array[block_pos%4-1][block_pos/4] == BLACK)begin
+								array[(block_pos-1)%4][(block_pos-1)/4] <= array[block_pos%4][block_pos/4];
 								array[block_pos%4][block_pos/4] <= BLACK;
-								block_pos = block_pos + 4;
-								array[block_pos%4][block_pos/4] <= BLUE;
+								block_pos = block_pos - 1;
 							end
-							
-							
-							//bottom up delete?
-							for(x=0; x<4; x=x+1)begin
-								for(y=0; y<7; y=y+1)begin
-									if(array[x][y] == array[x][y+1] && array[x][y] != BLACK
-										&&array[x][y] != WHITE )begin
-										array[x][y+1] <= array[x][y]==BLUE ? GREEN :
-													array[x][y]==GREEN ? RED :
-													array[x][y]==RED ? WHITE : BLACK;
-										array[x][y]<= BLACK;
-										//todo: delete line	
-										
-									end
-								end
-							end
-							
-							//if line complete? >>> delete
-							for(y=0; y<8; y=y+1) begin
-								if(array[0][y] == array[1][y] && 
-									array[1][y] == array[2][y] &&
-									array[2][y] == array[3][y] &&
-									array[0][y] != BLACK && block_pos ==0) begin
-									//let block above move down
-									for(x=0; x<y; x=x+1)begin
-										array[0][y-x] <= array[0][y-x-1];
-										array[1][y-x] <= array[1][y-x-1];
-										array[2][y-x] <= array[2][y-x-1];
-										array[3][y-x] <= array[3][y-x-1];
-									end
-									led <= 3'b111;
-								end
-							end
-							
 						end
+						else if(right_key_press == 1)begin
+							//if not int most left && left block is black
+							if((block_pos%4) < 3
+								&& array[block_pos%4+1][block_pos/4] == BLACK)begin
+								array[(block_pos+1)%4][(block_pos+1)/4] <= array[block_pos%4][block_pos/4];
+								array[block_pos%4][block_pos/4] <= BLACK;
+								block_pos = block_pos + 1;
+							end
+						end
+						if(down_key_press == 1)begin
+							//todo test game over signal out
+							game_over <= 1;
+						end
+						else begin
+							game_over <= 0;
+						end
+						
+						//todo down one block
+						if(block_pos/4 == 7)begin
+							block_pos = random_num%4;
+							array[block_pos%4][block_pos/4] <= random_num<18 ? BLUE :
+																random_num<28? GREEN:RED;
+						end
+						//in top && bottom one is not black>>>game over
+						else if(block_pos/4 == 0 && array[block_pos%4][block_pos/4+1] != BLACK)begin
+							array[block_pos%4][block_pos/4] <= BLUE;
+							game_over <= 1;
+						end
+						//if not in botttom but bottom one is not black
+						else if(array[block_pos%4][block_pos/4+1] != BLACK)begin
+									block_pos = random_num%4;
+									array[block_pos%4][block_pos/4] <= random_num<18 ? BLUE :
+																random_num<28? GREEN:RED;
+						end
+						//go down
+						else begin
+							array[(block_pos+4)%4][(block_pos+4)/4] <= array[block_pos%4][block_pos/4];
+							array[block_pos%4][block_pos/4] <= BLACK;
+							block_pos = block_pos + 4;
+						end
+						
+						
+						//bottom up delete?
+						for(x=0; x<4; x=x+1)begin
+							for(y=0; y<7; y=y+1)begin
+								if(array[x][y] == array[x][y+1] && array[x][y] != BLACK
+									&&array[x][y] != WHITE )begin
+									array[x][y+1] <= array[x][y]==BLUE ? GREEN :
+												array[x][y]==GREEN ? RED :
+												array[x][y]==RED ? WHITE : BLACK;
+									array[x][y]<= BLACK;
+									//todo: delete line	
+									
+								end
+							end
+						end
+						
+						//if line complete? >>> delete
+						for(y=0; y<8; y=y+1) begin
+							if(array[0][y] == array[1][y] && 
+								array[1][y] == array[2][y] &&
+								array[2][y] == array[3][y] &&
+								array[0][y] != BLACK && block_pos/4==0) begin
+								//let block above move down
+								for(x=0; x<y; x=x+1)begin
+									array[0][y-x] <= array[0][y-x-1];
+									array[1][y-x] <= array[1][y-x-1];
+									array[2][y-x] <= array[2][y-x-1];
+									array[3][y-x] <= array[3][y-x-1];
+								end
+							end
+						end	
+					end
 					else begin
 						clk_cnt <= clk_cnt + 32'd1;
 					end
