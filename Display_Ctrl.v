@@ -133,12 +133,12 @@ module Display_Ctrl
 					endcase
 				end
 				STATE_OVER: begin
-					if(x_pos < 119 && y_pos < 48)begin
+					//if(x_pos < 500 && y_pos < 200)begin
 						temp_color <= score_txt_color;
-					end 
-					else begin
-						temp_color <= BLACK;
-					end
+					//end 
+					//else begin
+					//	temp_color <= BLACK;
+					//end
 				end
 			endcase
 		end
@@ -169,12 +169,12 @@ module Display_Ctrl
 	reg [9:0] iDisplay_S_T_Y;
 	SCORE_Display SCORE_Display_1
 	(
-		.iVGA_CLK(CLK_50M),
+		.iVGA_CLK(CLK_25M),
 		.iRST_n(RST_N),
 		.iVGA_X(x_pos),
 		.iVGA_Y(y_pos),
-		.STRING_START_X(iDisplay_SCORE_X),
-		.STRING_START_Y(iDisplay_SCORE_Y),
+		.STRING_START(iDisplay_SCORE_X),
+		.STRING_START_(iDisplay_SCORE_Y),
 		.oRGB(score_txt_color)	
 	);
 endmodule

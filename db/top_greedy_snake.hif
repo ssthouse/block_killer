@@ -1793,6 +1793,60 @@ Game_Ctrl:game_ctrl
 
 # end
 # entity
+SCORE_Display
+# storage
+db|top_greedy_snake.(4).cnf
+db|top_greedy_snake.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+SCORE_Display.v
+b96f86954f33ba9c92867e7b714c38
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+STRING_START_X
+332
+PARAMETER_SIGNED_DEC
+DEF
+STRING_START_Y
+427
+PARAMETER_SIGNED_DEC
+DEF
+STRING_WDITH
+120
+PARAMETER_SIGNED_DEC
+DEF
+STRING_HEIGHT
+48
+PARAMETER_SIGNED_DEC
+DEF
+}
+# hierarchies {
+Display_Ctrl:display_ctrl|SCORE_Display:SCORE_Display_1
+}
+# macro_sequence
+
+# end
+# entity
 Display_Ctrl
 # storage
 db|top_greedy_snake.(3).cnf
@@ -1804,7 +1858,7 @@ ON
 # case_sensitive
 # source_file
 Display_Ctrl.v
-419a7f654fec774ff5444bdf6c33f0
+a160f0db78d62233cfe6409ca98a8c6b
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -1824,52 +1878,6 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 }
 # hierarchies {
 Display_Ctrl:display_ctrl
-}
-# macro_sequence
-
-# end
-# entity
-SCORE_Display
-# storage
-db|top_greedy_snake.(4).cnf
-db|top_greedy_snake.(4).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-SCORE_Display.v
-b023eb2392333261db677826cdb96236
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# user_parameter {
-STRING_WDITH
-120
-PARAMETER_SIGNED_DEC
-DEF
-STRING_HEIGHT
-48
-PARAMETER_SIGNED_DEC
-DEF
-}
-# hierarchies {
-Display_Ctrl:display_ctrl|SCORE_Display:SCORE_Display_1
 }
 # macro_sequence
 

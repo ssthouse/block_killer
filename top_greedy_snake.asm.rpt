@@ -1,5 +1,5 @@
 Assembler report for top_greedy_snake
-Sat Jun 04 21:23:29 2016
+Sat Jun 04 21:57:12 2016
 Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sat Jun 04 21:23:29 2016 ;
+; Assembler Status      ; Successful - Sat Jun 04 21:57:12 2016 ;
 ; Revision Name         ; top_greedy_snake                      ;
 ; Top-level Entity Name ; top_greedy_snake                      ;
 ; Family                ; Cyclone III                           ;
@@ -91,7 +91,7 @@ applicable agreement for further details.
 +----------------+---------------------------------------------------------------+
 ; Device         ; EP3C16F484C6                                                  ;
 ; JTAG usercode  ; 0xFFFFFFFF                                                    ;
-; Checksum       ; 0x002EA0E0                                                    ;
+; Checksum       ; 0x002E9993                                                    ;
 +----------------+---------------------------------------------------------------+
 
 
@@ -101,14 +101,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Assembler
     Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
-    Info: Processing started: Sat Jun 04 21:23:27 2016
+    Info: Processing started: Sat Jun 04 21:57:09 2016
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off top_greedy_snake -c top_greedy_snake
 Info: Writing out detailed assembly data for power analysis
 Info: Assembler is generating device programming files
 Info: Quartus II Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 249 megabytes
-    Info: Processing ended: Sat Jun 04 21:23:29 2016
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Peak virtual memory: 254 megabytes
+    Info: Processing ended: Sat Jun 04 21:57:12 2016
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
 
 

@@ -4,12 +4,12 @@ module SCORE_Display
 		input iRST_n,
 		input [9:0]iVGA_X,
 		input [9:0]iVGA_Y,
-		input [9:0]STRING_START_X,
-		input [9:0]STRING_START_Y, 
+		input [9:0]STRING_START_,
+		input [9:0]STRING_START_, 
 		output reg [2:0]oRGB		
 	);
-//parameter STRING_START_X = 332;
-//parameter STRING_START_Y = 427;
+parameter STRING_START_X = 332;
+parameter STRING_START_Y = 427;
 parameter STRING_WDITH   = 120;
 parameter STRING_HEIGHT  = 48; 
 
@@ -33,7 +33,7 @@ begin
 				begin
 					Addr_Res <= (iVGA_X - STRING_START_X) + (iVGA_Y - STRING_START_Y) * STRING_WDITH;
 					if(Pixel_Out) 
-						oRGB <= 3'b100;
+						oRGB <= 3'b001;
 					else 
 						oRGB <= 3'b000;
 				end
